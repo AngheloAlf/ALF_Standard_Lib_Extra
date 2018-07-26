@@ -1,0 +1,67 @@
+\hypertarget{ALF__bool_8h}{}\section{include/\+A\+L\+F\+\_\+bool.h File Reference}
+\label{ALF__bool_8h}\index{include/\+A\+L\+F\+\_\+bool.\+h@{include/\+A\+L\+F\+\_\+bool.\+h}}
+{\ttfamily \#include \char`\"{}A\+L\+F\+\_\+common.\+h\char`\"{}}\\*
+Include dependency graph for A\+L\+F\+\_\+bool.\+h\+:
+% FIG 0
+This graph shows which files directly or indirectly include this file\+:
+% FIG 1
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{ALF__bool_8h_acbfbf8bbb996c261650a17db32fde283}{A\+L\+F\+\_\+bool\+\_\+major\+\_\+version}~(1)
+\item 
+\#define \hyperlink{ALF__bool_8h_abf3ea00ab4a775b6e248b76ecdc299a6}{A\+L\+F\+\_\+bool\+\_\+minor\+\_\+version}~(0)
+\item 
+\#define \hyperlink{ALF__bool_8h_aad4b967e6bb126c14bd88f867f0fb3d1}{A\+L\+F\+\_\+bool\+\_\+patch\+\_\+version}~(0)
+\item 
+\#define \hyperlink{ALF__bool_8h_afbdb4548565f880d20daabe3d4a76850}{A\+L\+F\+\_\+bool\+\_\+version}~(\hyperlink{ALF__bool_8h_abf3ea00ab4a775b6e248b76ecdc299a6}{A\+L\+F\+\_\+bool\+\_\+major\+\_\+version.\+A\+L\+F\+\_\+bool\+\_\+minor\+\_\+version})
+\item 
+\#define \hyperlink{ALF__bool_8h_ad9a2328ade20ec4240158bfcb4d5c094}{A\+L\+F\+\_\+bool\+\_\+version\+\_\+str}~(\hyperlink{ALF__common_8h_ac8dcedbd61f9ec05e6284411a6bf646a}{A\+L\+F\+\_\+\+S\+TR}(\hyperlink{ALF__bool_8h_acbfbf8bbb996c261650a17db32fde283}{A\+L\+F\+\_\+bool\+\_\+major\+\_\+version})\char`\"{}.\char`\"{}\hyperlink{ALF__common_8h_ac8dcedbd61f9ec05e6284411a6bf646a}{A\+L\+F\+\_\+\+S\+TR}(\hyperlink{ALF__bool_8h_abf3ea00ab4a775b6e248b76ecdc299a6}{A\+L\+F\+\_\+bool\+\_\+minor\+\_\+version})\char`\"{}.\char`\"{}\hyperlink{ALF__common_8h_ac8dcedbd61f9ec05e6284411a6bf646a}{A\+L\+F\+\_\+\+S\+TR}(\hyperlink{ALF__bool_8h_aad4b967e6bb126c14bd88f867f0fb3d1}{A\+L\+F\+\_\+bool\+\_\+patch\+\_\+version}))
+\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{ALF__bool_8h_af6a258d8f3ee5206d682d799316314b1}{bool} \{ \hyperlink{ALF__bool_8h_af6a258d8f3ee5206d682d799316314b1ae9de385ef6fe9bf3360d1038396b884c}{false}, 
+\hyperlink{ALF__bool_8h_af6a258d8f3ee5206d682d799316314b1a08f175a5505a10b9ed657defeb050e4b}{true}
+ \}
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\index{A\+L\+F\+\_\+bool.\+h@{A\+L\+F\+\_\+bool.\+h}!A\+L\+F\+\_\+bool\+\_\+major\+\_\+version@{A\+L\+F\+\_\+bool\+\_\+major\+\_\+version}}
+\index{A\+L\+F\+\_\+bool\+\_\+major\+\_\+version@{A\+L\+F\+\_\+bool\+\_\+major\+\_\+version}!A\+L\+F\+\_\+bool.\+h@{A\+L\+F\+\_\+bool.\+h}}
+\subsubsection[{\texorpdfstring{A\+L\+F\+\_\+bool\+\_\+major\+\_\+version}{ALF_bool_major_version}}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\+L\+F\+\_\+bool\+\_\+major\+\_\+version~(1)}\hypertarget{ALF__bool_8h_acbfbf8bbb996c261650a17db32fde283}{}\label{ALF__bool_8h_acbfbf8bbb996c261650a17db32fde283}
+\index{A\+L\+F\+\_\+bool.\+h@{A\+L\+F\+\_\+bool.\+h}!A\+L\+F\+\_\+bool\+\_\+minor\+\_\+version@{A\+L\+F\+\_\+bool\+\_\+minor\+\_\+version}}
+\index{A\+L\+F\+\_\+bool\+\_\+minor\+\_\+version@{A\+L\+F\+\_\+bool\+\_\+minor\+\_\+version}!A\+L\+F\+\_\+bool.\+h@{A\+L\+F\+\_\+bool.\+h}}
+\subsubsection[{\texorpdfstring{A\+L\+F\+\_\+bool\+\_\+minor\+\_\+version}{ALF_bool_minor_version}}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\+L\+F\+\_\+bool\+\_\+minor\+\_\+version~(0)}\hypertarget{ALF__bool_8h_abf3ea00ab4a775b6e248b76ecdc299a6}{}\label{ALF__bool_8h_abf3ea00ab4a775b6e248b76ecdc299a6}
+\index{A\+L\+F\+\_\+bool.\+h@{A\+L\+F\+\_\+bool.\+h}!A\+L\+F\+\_\+bool\+\_\+patch\+\_\+version@{A\+L\+F\+\_\+bool\+\_\+patch\+\_\+version}}
+\index{A\+L\+F\+\_\+bool\+\_\+patch\+\_\+version@{A\+L\+F\+\_\+bool\+\_\+patch\+\_\+version}!A\+L\+F\+\_\+bool.\+h@{A\+L\+F\+\_\+bool.\+h}}
+\subsubsection[{\texorpdfstring{A\+L\+F\+\_\+bool\+\_\+patch\+\_\+version}{ALF_bool_patch_version}}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\+L\+F\+\_\+bool\+\_\+patch\+\_\+version~(0)}\hypertarget{ALF__bool_8h_aad4b967e6bb126c14bd88f867f0fb3d1}{}\label{ALF__bool_8h_aad4b967e6bb126c14bd88f867f0fb3d1}
+\index{A\+L\+F\+\_\+bool.\+h@{A\+L\+F\+\_\+bool.\+h}!A\+L\+F\+\_\+bool\+\_\+version@{A\+L\+F\+\_\+bool\+\_\+version}}
+\index{A\+L\+F\+\_\+bool\+\_\+version@{A\+L\+F\+\_\+bool\+\_\+version}!A\+L\+F\+\_\+bool.\+h@{A\+L\+F\+\_\+bool.\+h}}
+\subsubsection[{\texorpdfstring{A\+L\+F\+\_\+bool\+\_\+version}{ALF_bool_version}}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\+L\+F\+\_\+bool\+\_\+version~({\bf A\+L\+F\+\_\+bool\+\_\+major\+\_\+version.\+A\+L\+F\+\_\+bool\+\_\+minor\+\_\+version})}\hypertarget{ALF__bool_8h_afbdb4548565f880d20daabe3d4a76850}{}\label{ALF__bool_8h_afbdb4548565f880d20daabe3d4a76850}
+\index{A\+L\+F\+\_\+bool.\+h@{A\+L\+F\+\_\+bool.\+h}!A\+L\+F\+\_\+bool\+\_\+version\+\_\+str@{A\+L\+F\+\_\+bool\+\_\+version\+\_\+str}}
+\index{A\+L\+F\+\_\+bool\+\_\+version\+\_\+str@{A\+L\+F\+\_\+bool\+\_\+version\+\_\+str}!A\+L\+F\+\_\+bool.\+h@{A\+L\+F\+\_\+bool.\+h}}
+\subsubsection[{\texorpdfstring{A\+L\+F\+\_\+bool\+\_\+version\+\_\+str}{ALF_bool_version_str}}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\+L\+F\+\_\+bool\+\_\+version\+\_\+str~({\bf A\+L\+F\+\_\+\+S\+TR}({\bf A\+L\+F\+\_\+bool\+\_\+major\+\_\+version})\char`\"{}.\char`\"{}{\bf A\+L\+F\+\_\+\+S\+TR}({\bf A\+L\+F\+\_\+bool\+\_\+minor\+\_\+version})\char`\"{}.\char`\"{}{\bf A\+L\+F\+\_\+\+S\+TR}({\bf A\+L\+F\+\_\+bool\+\_\+patch\+\_\+version}))}\hypertarget{ALF__bool_8h_ad9a2328ade20ec4240158bfcb4d5c094}{}\label{ALF__bool_8h_ad9a2328ade20ec4240158bfcb4d5c094}
+
+
+\subsection{Enumeration Type Documentation}
+\index{A\+L\+F\+\_\+bool.\+h@{A\+L\+F\+\_\+bool.\+h}!bool@{bool}}
+\index{bool@{bool}!A\+L\+F\+\_\+bool.\+h@{A\+L\+F\+\_\+bool.\+h}}
+\subsubsection[{\texorpdfstring{bool}{bool}}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf bool}}\hypertarget{ALF__bool_8h_af6a258d8f3ee5206d682d799316314b1}{}\label{ALF__bool_8h_af6a258d8f3ee5206d682d799316314b1}
+\begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{false@{false}!A\+L\+F\+\_\+bool.\+h@{A\+L\+F\+\_\+bool.\+h}}\index{A\+L\+F\+\_\+bool.\+h@{A\+L\+F\+\_\+bool.\+h}!false@{false}}\item[{\em 
+false\hypertarget{ALF__bool_8h_af6a258d8f3ee5206d682d799316314b1ae9de385ef6fe9bf3360d1038396b884c}{}\label{ALF__bool_8h_af6a258d8f3ee5206d682d799316314b1ae9de385ef6fe9bf3360d1038396b884c}
+}]\index{true@{true}!A\+L\+F\+\_\+bool.\+h@{A\+L\+F\+\_\+bool.\+h}}\index{A\+L\+F\+\_\+bool.\+h@{A\+L\+F\+\_\+bool.\+h}!true@{true}}\item[{\em 
+true\hypertarget{ALF__bool_8h_af6a258d8f3ee5206d682d799316314b1a08f175a5505a10b9ed657defeb050e4b}{}\label{ALF__bool_8h_af6a258d8f3ee5206d682d799316314b1a08f175a5505a10b9ed657defeb050e4b}
+}]\end{description}
+\end{Desc}
+
+\begin{DoxyCode}
+14                 \{
+15         \textcolor{keyword}{false},
+16         \textcolor{keyword}{true},
+17     \}\hyperlink{ALF__bool_8h_af6a258d8f3ee5206d682d799316314b1}{bool};
+\end{DoxyCode}

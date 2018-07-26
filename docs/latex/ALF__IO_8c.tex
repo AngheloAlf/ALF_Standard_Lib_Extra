@@ -1,0 +1,101 @@
+\hypertarget{ALF__IO_8c}{}\section{src/\+A\+L\+F\+\_\+\+IO.c File Reference}
+\label{ALF__IO_8c}\index{src/\+A\+L\+F\+\_\+\+I\+O.\+c@{src/\+A\+L\+F\+\_\+\+I\+O.\+c}}
+{\ttfamily \#include \char`\"{}A\+L\+F\+\_\+\+I\+O.\+h\char`\"{}}\\*
+Include dependency graph for A\+L\+F\+\_\+\+I\+O.\+c\+:
+% FIG 0
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+char $\ast$ \hyperlink{ALF__IO_8c_adc74e291352847d6d64a43b891c57c73}{A\+L\+F\+\_\+raw\+\_\+input} (const char $\ast$out\+Message)
+\begin{DoxyCompactList}\small\item\em Python-\/like input of data. \end{DoxyCompactList}\item 
+void \hyperlink{ALF__IO_8c_a9b05afd3abc63c8699de02a8edcad61f}{A\+L\+F\+\_\+puthex} (unsigned char character)
+\item 
+void \hyperlink{ALF__IO_8c_af2154141da807745cea3f7f8d647d661}{A\+L\+F\+\_\+printf\+Colored\+Block} (unsigned char character, int with\+Number)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{A\+L\+F\+\_\+\+I\+O.\+c@{A\+L\+F\+\_\+\+I\+O.\+c}!A\+L\+F\+\_\+printf\+Colored\+Block@{A\+L\+F\+\_\+printf\+Colored\+Block}}
+\index{A\+L\+F\+\_\+printf\+Colored\+Block@{A\+L\+F\+\_\+printf\+Colored\+Block}!A\+L\+F\+\_\+\+I\+O.\+c@{A\+L\+F\+\_\+\+I\+O.\+c}}
+\subsubsection[{\texorpdfstring{A\+L\+F\+\_\+printf\+Colored\+Block(unsigned char character, int with\+Number)}{ALF_printfColoredBlock(unsigned char character, int withNumber)}}]{\setlength{\rightskip}{0pt plus 5cm}void A\+L\+F\+\_\+printf\+Colored\+Block (
+\begin{DoxyParamCaption}
+\item[{unsigned char}]{character, }
+\item[{int}]{with\+Number}
+\end{DoxyParamCaption}
+)}\hypertarget{ALF__IO_8c_af2154141da807745cea3f7f8d647d661}{}\label{ALF__IO_8c_af2154141da807745cea3f7f8d647d661}
+
+\begin{DoxyCode}
+46                                                                     \{
+47     \textcolor{keywordflow}{if}(withNumber)\{
+48         printf(\textcolor{stringliteral}{"\(\backslash\)033[%im%i "} \hyperlink{ALF__IO_8h_a0f3fc340b9d3d253c43cb8a1ae4178ab}{ALF\_ANSI\_COLOR\_RESET}, character + 40, character);
+49     \}
+50     \textcolor{keywordflow}{else}\{
+51         printf(\textcolor{stringliteral}{"\(\backslash\)033[%im  "} \hyperlink{ALF__IO_8h_a0f3fc340b9d3d253c43cb8a1ae4178ab}{ALF\_ANSI\_COLOR\_RESET}, character + 40);
+52     \}
+53 \}
+\end{DoxyCode}
+\index{A\+L\+F\+\_\+\+I\+O.\+c@{A\+L\+F\+\_\+\+I\+O.\+c}!A\+L\+F\+\_\+puthex@{A\+L\+F\+\_\+puthex}}
+\index{A\+L\+F\+\_\+puthex@{A\+L\+F\+\_\+puthex}!A\+L\+F\+\_\+\+I\+O.\+c@{A\+L\+F\+\_\+\+I\+O.\+c}}
+\subsubsection[{\texorpdfstring{A\+L\+F\+\_\+puthex(unsigned char character)}{ALF_puthex(unsigned char character)}}]{\setlength{\rightskip}{0pt plus 5cm}void A\+L\+F\+\_\+puthex (
+\begin{DoxyParamCaption}
+\item[{unsigned char}]{character}
+\end{DoxyParamCaption}
+)}\hypertarget{ALF__IO_8c_a9b05afd3abc63c8699de02a8edcad61f}{}\label{ALF__IO_8c_a9b05afd3abc63c8699de02a8edcad61f}
+
+\begin{DoxyCode}
+39                                         \{
+40     \textcolor{keywordflow}{if}(character < 0x10)\{
+41         printf(\textcolor{stringliteral}{"0"});
+42     \}
+43     printf(\textcolor{stringliteral}{"%x"}, character);
+44 \}
+\end{DoxyCode}
+\index{A\+L\+F\+\_\+\+I\+O.\+c@{A\+L\+F\+\_\+\+I\+O.\+c}!A\+L\+F\+\_\+raw\+\_\+input@{A\+L\+F\+\_\+raw\+\_\+input}}
+\index{A\+L\+F\+\_\+raw\+\_\+input@{A\+L\+F\+\_\+raw\+\_\+input}!A\+L\+F\+\_\+\+I\+O.\+c@{A\+L\+F\+\_\+\+I\+O.\+c}}
+\subsubsection[{\texorpdfstring{A\+L\+F\+\_\+raw\+\_\+input(const char $\ast$out\+Message)}{ALF_raw_input(const char *outMessage)}}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ A\+L\+F\+\_\+raw\+\_\+input (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{out\+Message}
+\end{DoxyParamCaption}
+)}\hypertarget{ALF__IO_8c_adc74e291352847d6d64a43b891c57c73}{}\label{ALF__IO_8c_adc74e291352847d6d64a43b891c57c73}
+
+
+Python-\/like input of data. 
+
+This functions prints out a message on screen. Then asks for input via stdin. The input string is propety of the caller, and he have to free it. 
+\begin{DoxyCode}
+3                                            \{
+4     printf(\textcolor{stringliteral}{"%s"}, outMessage);
+5 
+6     \textcolor{keywordtype}{int} inSize = 32;
+7     \textcolor{keywordtype}{char} *inData = malloc(\textcolor{keyword}{sizeof}(\textcolor{keywordtype}{char})*inSize);
+8     \textcolor{keywordflow}{if}(!fgets(inData, inSize, stdin))\{ \textcolor{comment}{// No se pudo leer}
+9         free(inData);
+10         \textcolor{keywordflow}{return} NULL;
+11     \}
+12 
+13     \textcolor{keywordtype}{size\_t} len = strlen(inData);
+14     \textcolor{keywordflow}{if}(inData[len-1] == \textcolor{charliteral}{'\(\backslash\)n'})\{ \textcolor{comment}{// String completo}
+15         inData[len-1] = \textcolor{charliteral}{'\(\backslash\)0'}; \textcolor{comment}{// Eliminando el salto de linea}
+16         inData = realloc(inData, \textcolor{keyword}{sizeof}(\textcolor{keywordtype}{char})*len); \textcolor{comment}{// Liberando memoria no necesaria.}
+17         \textcolor{keywordflow}{return} inData;
+18     \}
+19     \textcolor{keywordflow}{else}\{ \textcolor{comment}{// No se encontro el salto de linea. A seguir leyendo!}
+20         \textcolor{keywordtype}{char} *auxData = malloc(\textcolor{keyword}{sizeof}(\textcolor{keywordtype}{char})*inSize*2); \textcolor{comment}{// String mas grande}
+21         strcpy(auxData, inData); \textcolor{comment}{// Copiando datos al string final}
+22         \textcolor{keywordflow}{while}(fgets(inData, inSize, stdin))\{ \textcolor{comment}{// Lee datos de stdin}
+23             strcat(auxData, inData); \textcolor{comment}{// Se concatena al string grande}
+24             len = strlen(auxData);
+25             \textcolor{keywordflow}{if}(auxData[len-1] == \textcolor{charliteral}{'\(\backslash\)n'})\{ \textcolor{comment}{// Revisando si tenemos toodo el string}
+26                 auxData[len-1] = \textcolor{charliteral}{'\(\backslash\)0'}; \textcolor{comment}{// Elimina salto de linea}
+27                 free(inData);
+28                 auxData = realloc(auxData, \textcolor{keyword}{sizeof}(\textcolor{keywordtype}{char})*len); \textcolor{comment}{// Liberando memoria no necesaria.}
+29                 \textcolor{keywordflow}{return} auxData; \textcolor{comment}{// Yay!}
+30             \}
+31             auxData = realloc(auxData, \textcolor{keyword}{sizeof}(\textcolor{keywordtype}{char})*(len + inSize)); \textcolor{comment}{//String mas grande!}
+32         \}
+33         free(inData);
+34         free(auxData);
+35         \textcolor{keywordflow}{return} NULL; \textcolor{comment}{// En caso de error}
+36     \}
+37 \}
+\end{DoxyCode}

@@ -1,0 +1,123 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="ALF__std__extra_8h" kind="file" language="C++">
+    <compoundname>ALF_std_extra.h</compoundname>
+    <includes refid="ALF__common_8h" local="yes">ALF_common.h</includes>
+    <includes refid="ALF__dso__loader_8h" local="yes">ALF_dso_loader.h</includes>
+    <incdepgraph>
+      <node id="209">
+        <label>stdlib.h</label>
+      </node>
+      <node id="208">
+        <label>ALF_dso_loader.h</label>
+        <link refid="ALF__dso__loader_8h"/>
+        <childnode refid="207" relation="include">
+        </childnode>
+        <childnode refid="209" relation="include">
+        </childnode>
+        <childnode refid="210" relation="include">
+        </childnode>
+        <childnode refid="211" relation="include">
+        </childnode>
+      </node>
+      <node id="207">
+        <label>ALF_common.h</label>
+        <link refid="ALF__common_8h"/>
+      </node>
+      <node id="210">
+        <label>string.h</label>
+      </node>
+      <node id="206">
+        <label>include/ALF_std_extra.h</label>
+        <link refid="ALF_std_extra.h"/>
+        <childnode refid="207" relation="include">
+        </childnode>
+        <childnode refid="208" relation="include">
+        </childnode>
+      </node>
+      <node id="211">
+        <label>dlfcn.h</label>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="ALF__std__extra_8h_1a8f409278226064fe0cad48bede02d0b4" prot="public" static="no">
+        <name>ALF_std_extra_major_version</name>
+        <initializer>(1)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ALF_std_extra.h" line="6" column="9" bodyfile="include/ALF_std_extra.h" bodystart="6" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="ALF__std__extra_8h_1a3fa1073f04f87311d11390c43def22a0" prot="public" static="no">
+        <name>ALF_std_extra_minor_version</name>
+        <initializer>(0)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ALF_std_extra.h" line="7" column="9" bodyfile="include/ALF_std_extra.h" bodystart="7" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="ALF__std__extra_8h_1af9242030e17930eb0781f4c6ccfd8c72" prot="public" static="no">
+        <name>ALF_std_extra_patch_version</name>
+        <initializer>(0)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ALF_std_extra.h" line="8" column="9" bodyfile="include/ALF_std_extra.h" bodystart="8" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="ALF__std__extra_8h_1afc0cc83f7e78c90727f9eb5df10c6a2c" prot="public" static="no">
+        <name>ALF_std_extra_version</name>
+        <initializer>(<ref refid="ALF__std__extra_8h_1a3fa1073f04f87311d11390c43def22a0" kindref="member">ALF_std_extra_major_version.ALF_std_extra_minor_version</ref>)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ALF_std_extra.h" line="9" column="9" bodyfile="include/ALF_std_extra.h" bodystart="9" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="ALF__std__extra_8h_1a9fbda3942512ea21cfa10528e1672929" prot="public" static="no">
+        <name>ALF_std_extra_version_str</name>
+        <initializer>(<ref refid="ALF__common_8h_1ac8dcedbd61f9ec05e6284411a6bf646a" kindref="member">ALF_STR</ref>(<ref refid="ALF__std__extra_8h_1a8f409278226064fe0cad48bede02d0b4" kindref="member">ALF_std_extra_major_version</ref>)&quot;.&quot;<ref refid="ALF__common_8h_1ac8dcedbd61f9ec05e6284411a6bf646a" kindref="member">ALF_STR</ref>(<ref refid="ALF__std__extra_8h_1a3fa1073f04f87311d11390c43def22a0" kindref="member">ALF_std_extra_minor_version</ref>)&quot;.&quot;<ref refid="ALF__common_8h_1ac8dcedbd61f9ec05e6284411a6bf646a" kindref="member">ALF_STR</ref>(<ref refid="ALF__std__extra_8h_1af9242030e17930eb0781f4c6ccfd8c72" kindref="member">ALF_std_extra_patch_version</ref>))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ALF_std_extra.h" line="10" column="9" bodyfile="include/ALF_std_extra.h" bodystart="10" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>ALF_std_extra_h</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ALF_std_extra_h</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="ALF__common_8h" kindref="compound">ALF_common.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6" refid="ALF__std__extra_8h_1a8f409278226064fe0cad48bede02d0b4" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ALF_std_extra_major_version<sp/>(1)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7" refid="ALF__std__extra_8h_1a3fa1073f04f87311d11390c43def22a0" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ALF_std_extra_minor_version<sp/>(0)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8" refid="ALF__std__extra_8h_1af9242030e17930eb0781f4c6ccfd8c72" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ALF_std_extra_patch_version<sp/>(0)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9" refid="ALF__std__extra_8h_1afc0cc83f7e78c90727f9eb5df10c6a2c" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ALF_std_extra_version<sp/>(ALF_std_extra_major_version.ALF_std_extra_minor_version)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10" refid="ALF__std__extra_8h_1a9fbda3942512ea21cfa10528e1672929" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ALF_std_extra_version_str<sp/>(ALF_STR(ALF_std_extra_major_version)&quot;.&quot;ALF_STR(ALF_std_extra_minor_version)&quot;.&quot;ALF_STR(ALF_std_extra_patch_version))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="ALF__dso__loader_8h" kindref="compound">ALF_dso_loader.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>ALF_std_extra_h<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="include/ALF_std_extra.h"/>
+  </compounddef>
+</doxygen>

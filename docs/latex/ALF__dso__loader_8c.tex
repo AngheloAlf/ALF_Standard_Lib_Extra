@@ -1,0 +1,102 @@
+\hypertarget{ALF__dso__loader_8c}{}\section{src/extra/\+A\+L\+F\+\_\+dso\+\_\+loader.c File Reference}
+\label{ALF__dso__loader_8c}\index{src/extra/\+A\+L\+F\+\_\+dso\+\_\+loader.\+c@{src/extra/\+A\+L\+F\+\_\+dso\+\_\+loader.\+c}}
+{\ttfamily \#include \char`\"{}A\+L\+F\+\_\+dso\+\_\+loader.\+h\char`\"{}}\\*
+{\ttfamily \#include $<$stdio.\+h$>$}\\*
+Include dependency graph for A\+L\+F\+\_\+dso\+\_\+loader.\+c\+:
+% FIG 0
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{ALF__dso__loader_8h_af3792a64fee3466efa5b2191f6ddafa0}{A\+L\+F\+\_\+\+D\+S\+O\+\_\+handl} \hyperlink{ALF__dso__loader_8c_ae1b435a5149e0b88cddcdee460e4ecbf}{A\+L\+F\+\_\+\+D\+S\+O\+\_\+load\+\_\+file} (const char $\ast$file)
+\item 
+\hyperlink{ALF__dso__loader_8h_ac117ba90b55b08361002d8608b15d3a5}{A\+L\+F\+\_\+\+D\+S\+O\+\_\+func} \hyperlink{ALF__dso__loader_8c_aa0b2033f4210c48d0573c4c7a3cd498b}{A\+L\+F\+\_\+\+D\+S\+O\+\_\+load\+\_\+function} (\hyperlink{ALF__dso__loader_8h_af3792a64fee3466efa5b2191f6ddafa0}{A\+L\+F\+\_\+\+D\+S\+O\+\_\+handl} handler, const char $\ast$function)
+\item 
+int \hyperlink{ALF__dso__loader_8c_aed8b2aba3c4f1d914a1edd73cf617fb1}{A\+L\+F\+\_\+\+D\+S\+O\+\_\+close\+\_\+file} (\hyperlink{ALF__dso__loader_8h_af3792a64fee3466efa5b2191f6ddafa0}{A\+L\+F\+\_\+\+D\+S\+O\+\_\+handl} handler)
+\item 
+char $\ast$ \hyperlink{ALF__dso__loader_8c_a9e56afd91fd7a6e49ed84066a8a53500}{A\+L\+F\+\_\+\+D\+S\+O\+\_\+get\+\_\+last\+\_\+error} (void)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{A\+L\+F\+\_\+dso\+\_\+loader.\+c@{A\+L\+F\+\_\+dso\+\_\+loader.\+c}!A\+L\+F\+\_\+\+D\+S\+O\+\_\+close\+\_\+file@{A\+L\+F\+\_\+\+D\+S\+O\+\_\+close\+\_\+file}}
+\index{A\+L\+F\+\_\+\+D\+S\+O\+\_\+close\+\_\+file@{A\+L\+F\+\_\+\+D\+S\+O\+\_\+close\+\_\+file}!A\+L\+F\+\_\+dso\+\_\+loader.\+c@{A\+L\+F\+\_\+dso\+\_\+loader.\+c}}
+\subsubsection[{\texorpdfstring{A\+L\+F\+\_\+\+D\+S\+O\+\_\+close\+\_\+file(\+A\+L\+F\+\_\+\+D\+S\+O\+\_\+handl handler)}{ALF_DSO_close_file(ALF_DSO_handl handler)}}]{\setlength{\rightskip}{0pt plus 5cm}int A\+L\+F\+\_\+\+D\+S\+O\+\_\+close\+\_\+file (
+\begin{DoxyParamCaption}
+\item[{{\bf A\+L\+F\+\_\+\+D\+S\+O\+\_\+handl}}]{handler}
+\end{DoxyParamCaption}
+)}\hypertarget{ALF__dso__loader_8c_aed8b2aba3c4f1d914a1edd73cf617fb1}{}\label{ALF__dso__loader_8c_aed8b2aba3c4f1d914a1edd73cf617fb1}
+
+\begin{DoxyCode}
+24                                              \{
+25     \textcolor{keywordtype}{int} retVal = 0;
+26 \textcolor{preprocessor}{    #ifdef \_WIN32}
+27         retVal = !FreeLibrary((HMODULE)handler); \textcolor{comment}{// Returns nonzero in success}
+28 \textcolor{preprocessor}{    #else}
+29         retVal = dlclose(handler);
+30 \textcolor{preprocessor}{    #endif}
+31     \textcolor{keywordflow}{return} retVal;
+32 \}
+\end{DoxyCode}
+\index{A\+L\+F\+\_\+dso\+\_\+loader.\+c@{A\+L\+F\+\_\+dso\+\_\+loader.\+c}!A\+L\+F\+\_\+\+D\+S\+O\+\_\+get\+\_\+last\+\_\+error@{A\+L\+F\+\_\+\+D\+S\+O\+\_\+get\+\_\+last\+\_\+error}}
+\index{A\+L\+F\+\_\+\+D\+S\+O\+\_\+get\+\_\+last\+\_\+error@{A\+L\+F\+\_\+\+D\+S\+O\+\_\+get\+\_\+last\+\_\+error}!A\+L\+F\+\_\+dso\+\_\+loader.\+c@{A\+L\+F\+\_\+dso\+\_\+loader.\+c}}
+\subsubsection[{\texorpdfstring{A\+L\+F\+\_\+\+D\+S\+O\+\_\+get\+\_\+last\+\_\+error(void)}{ALF_DSO_get_last_error(void)}}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ A\+L\+F\+\_\+\+D\+S\+O\+\_\+get\+\_\+last\+\_\+error (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{ALF__dso__loader_8c_a9e56afd91fd7a6e49ed84066a8a53500}{}\label{ALF__dso__loader_8c_a9e56afd91fd7a6e49ed84066a8a53500}
+
+\begin{DoxyCode}
+34                                   \{
+35     \textcolor{keywordtype}{char} *result = NULL;
+36 
+37 \textcolor{preprocessor}{    #ifdef \_\_WIN32\_\_}
+38         result = malloc(\textcolor{keyword}{sizeof}(\textcolor{keywordtype}{char}) * 32);
+39         sprintf(result, \textcolor{stringliteral}{"%lu"}, GetLastError());
+40 \textcolor{preprocessor}{    #else}
+41         \textcolor{keywordtype}{char} *aux = dlerror();
+42         result = malloc(\textcolor{keyword}{sizeof}(\textcolor{keywordtype}{char}) * (strlen(aux) + 1));
+43         strcpy(result, aux);
+44 \textcolor{preprocessor}{    #endif}
+45 
+46     \textcolor{keywordflow}{return} result;
+47 \}
+\end{DoxyCode}
+\index{A\+L\+F\+\_\+dso\+\_\+loader.\+c@{A\+L\+F\+\_\+dso\+\_\+loader.\+c}!A\+L\+F\+\_\+\+D\+S\+O\+\_\+load\+\_\+file@{A\+L\+F\+\_\+\+D\+S\+O\+\_\+load\+\_\+file}}
+\index{A\+L\+F\+\_\+\+D\+S\+O\+\_\+load\+\_\+file@{A\+L\+F\+\_\+\+D\+S\+O\+\_\+load\+\_\+file}!A\+L\+F\+\_\+dso\+\_\+loader.\+c@{A\+L\+F\+\_\+dso\+\_\+loader.\+c}}
+\subsubsection[{\texorpdfstring{A\+L\+F\+\_\+\+D\+S\+O\+\_\+load\+\_\+file(const char $\ast$file)}{ALF_DSO_load_file(const char *file)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf A\+L\+F\+\_\+\+D\+S\+O\+\_\+handl} A\+L\+F\+\_\+\+D\+S\+O\+\_\+load\+\_\+file (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{file}
+\end{DoxyParamCaption}
+)}\hypertarget{ALF__dso__loader_8c_ae1b435a5149e0b88cddcdee460e4ecbf}{}\label{ALF__dso__loader_8c_ae1b435a5149e0b88cddcdee460e4ecbf}
+
+\begin{DoxyCode}
+4                                                  \{
+5     \hyperlink{ALF__dso__loader_8h_af3792a64fee3466efa5b2191f6ddafa0}{ALF\_DSO\_handl} handler = NULL;
+6 \textcolor{preprocessor}{    #ifdef \_WIN32}
+7         handler = (\hyperlink{ALF__dso__loader_8h_af3792a64fee3466efa5b2191f6ddafa0}{ALF\_DSO\_handl})LoadLibrary(file);
+8 \textcolor{preprocessor}{    #else}
+9         handler = (\hyperlink{ALF__dso__loader_8h_af3792a64fee3466efa5b2191f6ddafa0}{ALF\_DSO\_handl})dlopen(file, RTLD\_LAZY);
+10 \textcolor{preprocessor}{    #endif}
+11     \textcolor{keywordflow}{return} handler;
+12 \}
+\end{DoxyCode}
+\index{A\+L\+F\+\_\+dso\+\_\+loader.\+c@{A\+L\+F\+\_\+dso\+\_\+loader.\+c}!A\+L\+F\+\_\+\+D\+S\+O\+\_\+load\+\_\+function@{A\+L\+F\+\_\+\+D\+S\+O\+\_\+load\+\_\+function}}
+\index{A\+L\+F\+\_\+\+D\+S\+O\+\_\+load\+\_\+function@{A\+L\+F\+\_\+\+D\+S\+O\+\_\+load\+\_\+function}!A\+L\+F\+\_\+dso\+\_\+loader.\+c@{A\+L\+F\+\_\+dso\+\_\+loader.\+c}}
+\subsubsection[{\texorpdfstring{A\+L\+F\+\_\+\+D\+S\+O\+\_\+load\+\_\+function(\+A\+L\+F\+\_\+\+D\+S\+O\+\_\+handl handler, const char $\ast$function)}{ALF_DSO_load_function(ALF_DSO_handl handler, const char *function)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf A\+L\+F\+\_\+\+D\+S\+O\+\_\+func} A\+L\+F\+\_\+\+D\+S\+O\+\_\+load\+\_\+function (
+\begin{DoxyParamCaption}
+\item[{{\bf A\+L\+F\+\_\+\+D\+S\+O\+\_\+handl}}]{handler, }
+\item[{const char $\ast$}]{function}
+\end{DoxyParamCaption}
+)}\hypertarget{ALF__dso__loader_8c_aa0b2033f4210c48d0573c4c7a3cd498b}{}\label{ALF__dso__loader_8c_aa0b2033f4210c48d0573c4c7a3cd498b}
+
+\begin{DoxyCode}
+14                                                                                \{
+15     \hyperlink{ALF__dso__loader_8h_ac117ba90b55b08361002d8608b15d3a5}{ALF\_DSO\_func} func = NULL;
+16 \textcolor{preprocessor}{    #ifdef \_WIN32}
+17         func = (\hyperlink{ALF__dso__loader_8h_ac117ba90b55b08361002d8608b15d3a5}{ALF\_DSO\_func})GetProcAddress((HMODULE)handler, \textcolor{keyword}{function});
+18 \textcolor{preprocessor}{    #else}
+19         func = (\hyperlink{ALF__dso__loader_8h_ac117ba90b55b08361002d8608b15d3a5}{ALF\_DSO\_func})dlsym(handler, \textcolor{keyword}{function});
+20 \textcolor{preprocessor}{    #endif}
+21     \textcolor{keywordflow}{return} func;
+22 \}
+\end{DoxyCode}

@@ -1,0 +1,146 @@
+.TH "include/ALF_dso_loader.h" 3 "Wed Jul 18 2018" "Version 1.0" "ALF Standard Lib" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+include/ALF_dso_loader.h \- 
+.SH SYNOPSIS
+.br
+.PP
+\fC#include 'ALF_common\&.h'\fP
+.br
+\fC#include <stdlib\&.h>\fP
+.br
+\fC#include <string\&.h>\fP
+.br
+\fC#include <dlfcn\&.h>\fP
+.br
+
+.SS "Macros"
+
+.in +1c
+.ti -1c
+.RI "#define \fBALF_dso_loader_major_version\fP   (1)"
+.br
+.ti -1c
+.RI "#define \fBALF_dso_loader_minor_version\fP   (0)"
+.br
+.ti -1c
+.RI "#define \fBALF_dso_loader_patch_version\fP   (0)"
+.br
+.ti -1c
+.RI "#define \fBALF_dso_loader_version\fP   (\fBALF_dso_loader_major_version\&.ALF_dso_loader_minor_version\fP)"
+.br
+.ti -1c
+.RI "#define \fBALF_dso_loader_version_str\fP   (\fBALF_STR\fP(\fBALF_dso_loader_major_version\fP)'\&.'\fBALF_STR\fP(\fBALF_dso_loader_minor_version\fP)'\&.'\fBALF_STR\fP(\fBALF_dso_loader_patch_version\fP))"
+.br
+.in -1c
+.SS "Typedefs"
+
+.in +1c
+.ti -1c
+.RI "typedef void * \fBALF_DSO_handl\fP"
+.br
+.ti -1c
+.RI "typedef void * \fBALF_DSO_func\fP"
+.br
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBALF_DSO_handl\fP \fBALF_DSO_load_file\fP (const char *file)"
+.br
+.ti -1c
+.RI "\fBALF_DSO_func\fP \fBALF_DSO_load_function\fP (\fBALF_DSO_handl\fP handler, const char *function)"
+.br
+.ti -1c
+.RI "int \fBALF_DSO_close_file\fP (\fBALF_DSO_handl\fP handler)"
+.br
+.ti -1c
+.RI "char * \fBALF_DSO_get_last_error\fP (void)"
+.br
+.in -1c
+.SH "Macro Definition Documentation"
+.PP 
+.SS "#define ALF_dso_loader_major_version   (1)"
+
+.SS "#define ALF_dso_loader_minor_version   (0)"
+
+.SS "#define ALF_dso_loader_patch_version   (0)"
+
+.SS "#define ALF_dso_loader_version   (\fBALF_dso_loader_major_version\&.ALF_dso_loader_minor_version\fP)"
+
+.SS "#define ALF_dso_loader_version_str   (\fBALF_STR\fP(\fBALF_dso_loader_major_version\fP)'\&.'\fBALF_STR\fP(\fBALF_dso_loader_minor_version\fP)'\&.'\fBALF_STR\fP(\fBALF_dso_loader_patch_version\fP))"
+
+.SH "Typedef Documentation"
+.PP 
+.SS "typedef void* \fBALF_DSO_func\fP"
+
+.SS "typedef void* \fBALF_DSO_handl\fP"
+
+.SH "Function Documentation"
+.PP 
+.SS "int ALF_DSO_close_file (\fBALF_DSO_handl\fP handler)"
+
+.PP
+.nf
+24                                              {
+25     int retVal = 0;
+26     #ifdef _WIN32
+27         retVal = !FreeLibrary((HMODULE)handler); // Returns nonzero in success
+28     #else
+29         retVal = dlclose(handler);
+30     #endif
+31     return retVal;
+32 }
+.fi
+.SS "char* ALF_DSO_get_last_error (void)"
+
+.PP
+.nf
+34                                   {
+35     char *result = NULL;
+36 
+37     #ifdef __WIN32__
+38         result = malloc(sizeof(char) * 32);
+39         sprintf(result, "%lu", GetLastError());
+40     #else
+41         char *aux = dlerror();
+42         result = malloc(sizeof(char) * (strlen(aux) + 1));
+43         strcpy(result, aux);
+44     #endif
+45 
+46     return result;
+47 }
+.fi
+.SS "\fBALF_DSO_handl\fP ALF_DSO_load_file (const char * file)"
+
+.PP
+.nf
+4                                                  {
+5     ALF_DSO_handl handler = NULL;
+6     #ifdef _WIN32
+7         handler = (ALF_DSO_handl)LoadLibrary(file);
+8     #else
+9         handler = (ALF_DSO_handl)dlopen(file, RTLD_LAZY);
+10     #endif
+11     return handler;
+12 }
+.fi
+.SS "\fBALF_DSO_func\fP ALF_DSO_load_function (\fBALF_DSO_handl\fP handler, const char * function)"
+
+.PP
+.nf
+14                                                                                {
+15     ALF_DSO_func func = NULL;
+16     #ifdef _WIN32
+17         func = (ALF_DSO_func)GetProcAddress((HMODULE)handler, function);
+18     #else
+19         func = (ALF_DSO_func)dlsym(handler, function);
+20     #endif
+21     return func;
+22 }
+.fi
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for ALF Standard Lib from the source code\&.

@@ -1,0 +1,120 @@
+\hypertarget{ALF__str_8c}{}\section{src/\+A\+L\+F\+\_\+str.c File Reference}
+\label{ALF__str_8c}\index{src/\+A\+L\+F\+\_\+str.\+c@{src/\+A\+L\+F\+\_\+str.\+c}}
+{\ttfamily \#include \char`\"{}A\+L\+F\+\_\+str.\+h\char`\"{}}\\*
+Include dependency graph for A\+L\+F\+\_\+str.\+c\+:
+% FIG 0
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+char $\ast$$\ast$ \hyperlink{ALF__str_8c_afedba9b74fed7ee54e793acd664efad5}{A\+L\+F\+\_\+split} (char $\ast$string, char $\ast$delimiters)
+\item 
+void \hyperlink{ALF__str_8c_a7a88a1c47ef4d52250aa69ec115e1b93}{A\+L\+F\+\_\+char\+Copy} (unsigned char $\ast$dst, const unsigned char $\ast$src, size\+\_\+t size)
+\item 
+unsigned char $\ast$ \hyperlink{ALF__str_8c_a932315cc22b5cf39ca4e2d87b3e6675c}{A\+L\+F\+\_\+new\+Char\+From\+Index} (const unsigned char $\ast$src, size\+\_\+t size, size\+\_\+t start)
+\item 
+char $\ast$ \hyperlink{ALF__str_8c_a53a799bbb9946fbc756629cf7ac24121}{A\+L\+F\+\_\+change\+Extension} (const char $\ast$word, const char $\ast$new\+Ext, int len\+Ext)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{A\+L\+F\+\_\+str.\+c@{A\+L\+F\+\_\+str.\+c}!A\+L\+F\+\_\+change\+Extension@{A\+L\+F\+\_\+change\+Extension}}
+\index{A\+L\+F\+\_\+change\+Extension@{A\+L\+F\+\_\+change\+Extension}!A\+L\+F\+\_\+str.\+c@{A\+L\+F\+\_\+str.\+c}}
+\subsubsection[{\texorpdfstring{A\+L\+F\+\_\+change\+Extension(const char $\ast$word, const char $\ast$new\+Ext, int len\+Ext)}{ALF_changeExtension(const char *word, const char *newExt, int lenExt)}}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ A\+L\+F\+\_\+change\+Extension (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{word, }
+\item[{const char $\ast$}]{new\+Ext, }
+\item[{int}]{len\+Ext}
+\end{DoxyParamCaption}
+)}\hypertarget{ALF__str_8c_a53a799bbb9946fbc756629cf7ac24121}{}\label{ALF__str_8c_a53a799bbb9946fbc756629cf7ac24121}
+
+\begin{DoxyCode}
+30                                                                            \{
+31     \textcolor{keywordtype}{int} oldLen = 0, lastDotLen = 0, lenChange = 0;
+32     \textcolor{keywordtype}{char}* newWord;
+33 
+34     \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i = 0; word[i]!= 0x0; i++)\{
+35         \textcolor{keywordflow}{if}(word[i] == \textcolor{charliteral}{'.'})\{
+36             lastDotLen = i;
+37         \}
+38         oldLen += 1;
+39     \}
+40 
+41     \textcolor{keywordflow}{if}(lastDotLen != 0)\{
+42         lenChange = lastDotLen;
+43     \}
+44     \textcolor{keywordflow}{else}\{
+45         lenChange = oldLen;
+46     \}
+47     newWord = malloc(\textcolor{keyword}{sizeof}(\textcolor{keywordtype}{char})*(lenChange + lenExt + 2));
+48 
+49     \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i = 0; i < lenChange; i++)\{
+50         newWord[i] = word[i];
+51     \}
+52     newWord[lenChange] = \textcolor{charliteral}{'.'};
+53     \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i = 0; i < lenExt; i++)\{
+54         newWord[lenChange + i + 1] = newExt[i];
+55     \}
+56     newWord[lenChange + lenExt + 1] = 0x0;
+57 
+58     \textcolor{keywordflow}{return} newWord;
+59 \}
+\end{DoxyCode}
+\index{A\+L\+F\+\_\+str.\+c@{A\+L\+F\+\_\+str.\+c}!A\+L\+F\+\_\+char\+Copy@{A\+L\+F\+\_\+char\+Copy}}
+\index{A\+L\+F\+\_\+char\+Copy@{A\+L\+F\+\_\+char\+Copy}!A\+L\+F\+\_\+str.\+c@{A\+L\+F\+\_\+str.\+c}}
+\subsubsection[{\texorpdfstring{A\+L\+F\+\_\+char\+Copy(unsigned char $\ast$dst, const unsigned char $\ast$src, size\+\_\+t size)}{ALF_charCopy(unsigned char *dst, const unsigned char *src, size_t size)}}]{\setlength{\rightskip}{0pt plus 5cm}void A\+L\+F\+\_\+char\+Copy (
+\begin{DoxyParamCaption}
+\item[{unsigned char $\ast$}]{dst, }
+\item[{const unsigned char $\ast$}]{src, }
+\item[{size\+\_\+t}]{size}
+\end{DoxyParamCaption}
+)}\hypertarget{ALF__str_8c_a7a88a1c47ef4d52250aa69ec115e1b93}{}\label{ALF__str_8c_a7a88a1c47ef4d52250aa69ec115e1b93}
+
+\begin{DoxyCode}
+16                                                                             \{
+17     \textcolor{keywordflow}{for}(\textcolor{keywordtype}{size\_t} i = 0; i < size; i++)\{
+18         dst[i] = src[i];
+19     \}
+20 \}
+\end{DoxyCode}
+\index{A\+L\+F\+\_\+str.\+c@{A\+L\+F\+\_\+str.\+c}!A\+L\+F\+\_\+new\+Char\+From\+Index@{A\+L\+F\+\_\+new\+Char\+From\+Index}}
+\index{A\+L\+F\+\_\+new\+Char\+From\+Index@{A\+L\+F\+\_\+new\+Char\+From\+Index}!A\+L\+F\+\_\+str.\+c@{A\+L\+F\+\_\+str.\+c}}
+\subsubsection[{\texorpdfstring{A\+L\+F\+\_\+new\+Char\+From\+Index(const unsigned char $\ast$src, size\+\_\+t size, size\+\_\+t start)}{ALF_newCharFromIndex(const unsigned char *src, size_t size, size_t start)}}]{\setlength{\rightskip}{0pt plus 5cm}unsigned char$\ast$ A\+L\+F\+\_\+new\+Char\+From\+Index (
+\begin{DoxyParamCaption}
+\item[{const unsigned char $\ast$}]{src, }
+\item[{size\+\_\+t}]{size, }
+\item[{size\+\_\+t}]{start}
+\end{DoxyParamCaption}
+)}\hypertarget{ALF__str_8c_a932315cc22b5cf39ca4e2d87b3e6675c}{}\label{ALF__str_8c_a932315cc22b5cf39ca4e2d87b3e6675c}
+
+\begin{DoxyCode}
+22                                                                                         \{
+23     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char}* dst = malloc(\textcolor{keyword}{sizeof}(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char}));
+24     \textcolor{keywordflow}{for}(\textcolor{keywordtype}{size\_t} i = 0; i < size; i++)\{
+25         dst[i] = src[start + i];
+26     \}
+27     \textcolor{keywordflow}{return} dst;
+28 \}
+\end{DoxyCode}
+\index{A\+L\+F\+\_\+str.\+c@{A\+L\+F\+\_\+str.\+c}!A\+L\+F\+\_\+split@{A\+L\+F\+\_\+split}}
+\index{A\+L\+F\+\_\+split@{A\+L\+F\+\_\+split}!A\+L\+F\+\_\+str.\+c@{A\+L\+F\+\_\+str.\+c}}
+\subsubsection[{\texorpdfstring{A\+L\+F\+\_\+split(char $\ast$string, char $\ast$delimiters)}{ALF_split(char *string, char *delimiters)}}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$$\ast$ A\+L\+F\+\_\+split (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{string, }
+\item[{char $\ast$}]{delimiters}
+\end{DoxyParamCaption}
+)}\hypertarget{ALF__str_8c_afedba9b74fed7ee54e793acd664efad5}{}\label{ALF__str_8c_afedba9b74fed7ee54e793acd664efad5}
+
+\begin{DoxyCode}
+3                                                 \{
+4     \textcolor{keywordtype}{char} **splitted = malloc(\textcolor{keyword}{sizeof}(\textcolor{keywordtype}{char} *));
+5     \textcolor{keywordtype}{char} *token = strtok(\textcolor{keywordtype}{string}, delimiters);
+6     \textcolor{keywordtype}{int} i = 0;
+7     splitted[i++] = token;
+8     \textcolor{keywordflow}{while}(token != NULL)\{
+9         splitted = realloc(splitted, \textcolor{keyword}{sizeof}(\textcolor{keywordtype}{char} *) * (i + 1));
+10         token = strtok(NULL, delimiters);
+11         splitted[i++] = token;
+12     \}
+13     \textcolor{keywordflow}{return} splitted;
+14 \}
+\end{DoxyCode}

@@ -1,0 +1,165 @@
+\hypertarget{ALF__dict_8c}{}\section{src/\+A\+L\+F\+\_\+dict.c File Reference}
+\label{ALF__dict_8c}\index{src/\+A\+L\+F\+\_\+dict.\+c@{src/\+A\+L\+F\+\_\+dict.\+c}}
+{\ttfamily \#include \char`\"{}A\+L\+F\+\_\+dict.\+h\char`\"{}}\\*
+Include dependency graph for A\+L\+F\+\_\+dict.\+c\+:
+% FIG 0
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{structALF__Dict}{A\+L\+F\+\_\+\+Dict} $\ast$ \hyperlink{ALF__dict_8c_a4c25803a36ba43c9887482f9338fffa6}{A\+L\+F\+\_\+dict\+\_\+init} (void)
+\item 
+int \hyperlink{ALF__dict_8c_ae9e42b0cb2f0344beca767de6fd610d8}{A\+L\+F\+\_\+dict\+\_\+add} (\hyperlink{structALF__Dict}{A\+L\+F\+\_\+\+Dict} $\ast$dict, const char $\ast$key, void $\ast$value)
+\item 
+void $\ast$ \hyperlink{ALF__dict_8c_a99f047933c746d3dd537ec362d145a88}{A\+L\+F\+\_\+dict\+\_\+get} (\hyperlink{structALF__Dict}{A\+L\+F\+\_\+\+Dict} $\ast$dict, const char $\ast$key)
+\item 
+int \hyperlink{ALF__dict_8c_ad4c79216626c3050278a8b4d07aac796}{A\+L\+F\+\_\+dict\+\_\+delete} (\hyperlink{structALF__Dict}{A\+L\+F\+\_\+\+Dict} $\ast$dict, const char $\ast$key)
+\item 
+int \hyperlink{ALF__dict_8c_ae4d23e124821b6164d64947aecc41c0a}{A\+L\+F\+\_\+dict\+\_\+length} (\hyperlink{structALF__Dict}{A\+L\+F\+\_\+\+Dict} $\ast$dict)
+\item 
+void \hyperlink{ALF__dict_8c_aaabe57df0f57d9614aa973f04235e95a}{A\+L\+F\+\_\+dict\+\_\+free} (\hyperlink{structALF__Dict}{A\+L\+F\+\_\+\+Dict} $\ast$dict)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{A\+L\+F\+\_\+dict.\+c@{A\+L\+F\+\_\+dict.\+c}!A\+L\+F\+\_\+dict\+\_\+add@{A\+L\+F\+\_\+dict\+\_\+add}}
+\index{A\+L\+F\+\_\+dict\+\_\+add@{A\+L\+F\+\_\+dict\+\_\+add}!A\+L\+F\+\_\+dict.\+c@{A\+L\+F\+\_\+dict.\+c}}
+\subsubsection[{\texorpdfstring{A\+L\+F\+\_\+dict\+\_\+add(\+A\+L\+F\+\_\+\+Dict $\ast$dict, const char $\ast$key, void $\ast$value)}{ALF_dict_add(ALF_Dict *dict, const char *key, void *value)}}]{\setlength{\rightskip}{0pt plus 5cm}int A\+L\+F\+\_\+dict\+\_\+add (
+\begin{DoxyParamCaption}
+\item[{{\bf A\+L\+F\+\_\+\+Dict} $\ast$}]{dict, }
+\item[{const char $\ast$}]{key, }
+\item[{void $\ast$}]{value}
+\end{DoxyParamCaption}
+)}\hypertarget{ALF__dict_8c_ae9e42b0cb2f0344beca767de6fd610d8}{}\label{ALF__dict_8c_ae9e42b0cb2f0344beca767de6fd610d8}
+
+\begin{DoxyCode}
+11                                                               \{
+12     \hyperlink{structALF__Dict}{ALF\_Dict} *aux = dict;
+13     \textcolor{keywordflow}{for}(; aux->\hyperlink{structALF__Dict_abf4da60193bf9ced8fb3c8b013e23f18}{next} != NULL; aux = aux->\hyperlink{structALF__Dict_abf4da60193bf9ced8fb3c8b013e23f18}{next})\{
+14         \textcolor{keywordflow}{if}(strcmp(aux->\hyperlink{structALF__Dict_a8850433b9edd2131631fdea81f005ebf}{key}, key) == 0)\{
+15             aux->\hyperlink{structALF__Dict_a00b3284fe9ac4af7137cbdac1a61f67a}{value} = value;
+16             \textcolor{keywordflow}{return} 0;
+17         \}
+18     \}
+19     aux->\hyperlink{structALF__Dict_abf4da60193bf9ced8fb3c8b013e23f18}{next} = \hyperlink{ALF__dict_8c_a4c25803a36ba43c9887482f9338fffa6}{ALF\_dict\_init}();
+20     aux->\hyperlink{structALF__Dict_a00b3284fe9ac4af7137cbdac1a61f67a}{value} = value;
+21     aux->\hyperlink{structALF__Dict_a8850433b9edd2131631fdea81f005ebf}{key} = malloc(\textcolor{keyword}{sizeof}(\textcolor{keywordtype}{char} *) * (strlen(key) + 1));
+22     strcpy(aux->\hyperlink{structALF__Dict_a8850433b9edd2131631fdea81f005ebf}{key}, key);
+23     \textcolor{keywordflow}{return} 0;
+24 \}
+\end{DoxyCode}
+\index{A\+L\+F\+\_\+dict.\+c@{A\+L\+F\+\_\+dict.\+c}!A\+L\+F\+\_\+dict\+\_\+delete@{A\+L\+F\+\_\+dict\+\_\+delete}}
+\index{A\+L\+F\+\_\+dict\+\_\+delete@{A\+L\+F\+\_\+dict\+\_\+delete}!A\+L\+F\+\_\+dict.\+c@{A\+L\+F\+\_\+dict.\+c}}
+\subsubsection[{\texorpdfstring{A\+L\+F\+\_\+dict\+\_\+delete(\+A\+L\+F\+\_\+\+Dict $\ast$dict, const char $\ast$key)}{ALF_dict_delete(ALF_Dict *dict, const char *key)}}]{\setlength{\rightskip}{0pt plus 5cm}int A\+L\+F\+\_\+dict\+\_\+delete (
+\begin{DoxyParamCaption}
+\item[{{\bf A\+L\+F\+\_\+\+Dict} $\ast$}]{dict, }
+\item[{const char $\ast$}]{key}
+\end{DoxyParamCaption}
+)}\hypertarget{ALF__dict_8c_ad4c79216626c3050278a8b4d07aac796}{}\label{ALF__dict_8c_ad4c79216626c3050278a8b4d07aac796}
+
+\begin{DoxyCode}
+36                                                     \{
+37     \hyperlink{structALF__Dict}{ALF\_Dict} *aux = dict, *aux2;
+38     \textcolor{keywordflow}{if}(aux->\hyperlink{structALF__Dict_a8850433b9edd2131631fdea81f005ebf}{key} != NULL && strcmp(aux->\hyperlink{structALF__Dict_a8850433b9edd2131631fdea81f005ebf}{key}, key) == 0)\{
+39         free(aux->\hyperlink{structALF__Dict_a8850433b9edd2131631fdea81f005ebf}{key});
+40         aux2 = aux->\hyperlink{structALF__Dict_abf4da60193bf9ced8fb3c8b013e23f18}{next};
+41         aux->\hyperlink{structALF__Dict_a8850433b9edd2131631fdea81f005ebf}{key} = aux2->key;
+42         aux->\hyperlink{structALF__Dict_a00b3284fe9ac4af7137cbdac1a61f67a}{value} = aux2->value;
+43         \textcolor{keywordflow}{if}(aux->\hyperlink{structALF__Dict_abf4da60193bf9ced8fb3c8b013e23f18}{next} != NULL)\{
+44             aux->\hyperlink{structALF__Dict_abf4da60193bf9ced8fb3c8b013e23f18}{next} = aux2->next;
+45         \}
+46         \textcolor{keywordflow}{else}\{
+47             aux->\hyperlink{structALF__Dict_abf4da60193bf9ced8fb3c8b013e23f18}{next} = NULL;
+48         \}
+49         free(aux2->next);
+50         \textcolor{keywordflow}{return} 0;
+51     \}
+52     \textcolor{keywordflow}{if}(aux->\hyperlink{structALF__Dict_abf4da60193bf9ced8fb3c8b013e23f18}{next} != NULL)\{
+53         \textcolor{keywordflow}{for} (; ((\hyperlink{structALF__Dict}{ALF\_Dict} *)(aux->\hyperlink{structALF__Dict_abf4da60193bf9ced8fb3c8b013e23f18}{next}))->next != NULL; aux = aux->
+      \hyperlink{structALF__Dict_abf4da60193bf9ced8fb3c8b013e23f18}{next})\{
+54             aux2 = aux->\hyperlink{structALF__Dict_abf4da60193bf9ced8fb3c8b013e23f18}{next};
+55             \textcolor{keywordflow}{if} (strcmp(aux2->key, key) == 0)\{
+56                 free(aux2->key);
+57                 aux2 = aux2->next;
+58                 free(aux->\hyperlink{structALF__Dict_abf4da60193bf9ced8fb3c8b013e23f18}{next});
+59                 aux->\hyperlink{structALF__Dict_abf4da60193bf9ced8fb3c8b013e23f18}{next} = aux2;
+60                 \textcolor{keywordflow}{return} 0;
+61             \}
+62         \}
+63     \}
+64     \textcolor{keywordflow}{return} -2;
+65 \}
+\end{DoxyCode}
+\index{A\+L\+F\+\_\+dict.\+c@{A\+L\+F\+\_\+dict.\+c}!A\+L\+F\+\_\+dict\+\_\+free@{A\+L\+F\+\_\+dict\+\_\+free}}
+\index{A\+L\+F\+\_\+dict\+\_\+free@{A\+L\+F\+\_\+dict\+\_\+free}!A\+L\+F\+\_\+dict.\+c@{A\+L\+F\+\_\+dict.\+c}}
+\subsubsection[{\texorpdfstring{A\+L\+F\+\_\+dict\+\_\+free(\+A\+L\+F\+\_\+\+Dict $\ast$dict)}{ALF_dict_free(ALF_Dict *dict)}}]{\setlength{\rightskip}{0pt plus 5cm}void A\+L\+F\+\_\+dict\+\_\+free (
+\begin{DoxyParamCaption}
+\item[{{\bf A\+L\+F\+\_\+\+Dict} $\ast$}]{dict}
+\end{DoxyParamCaption}
+)}\hypertarget{ALF__dict_8c_aaabe57df0f57d9614aa973f04235e95a}{}\label{ALF__dict_8c_aaabe57df0f57d9614aa973f04235e95a}
+
+\begin{DoxyCode}
+77                                   \{
+78     \textcolor{keywordflow}{if}(dict->\hyperlink{structALF__Dict_abf4da60193bf9ced8fb3c8b013e23f18}{next} != NULL)\{
+79         \hyperlink{ALF__dict_8c_aaabe57df0f57d9614aa973f04235e95a}{ALF\_dict\_free}(dict->\hyperlink{structALF__Dict_abf4da60193bf9ced8fb3c8b013e23f18}{next});
+80     \}
+81     free(dict->\hyperlink{structALF__Dict_a8850433b9edd2131631fdea81f005ebf}{key});
+82     free(dict);
+83     \textcolor{keywordflow}{return};
+84 \}
+\end{DoxyCode}
+\index{A\+L\+F\+\_\+dict.\+c@{A\+L\+F\+\_\+dict.\+c}!A\+L\+F\+\_\+dict\+\_\+get@{A\+L\+F\+\_\+dict\+\_\+get}}
+\index{A\+L\+F\+\_\+dict\+\_\+get@{A\+L\+F\+\_\+dict\+\_\+get}!A\+L\+F\+\_\+dict.\+c@{A\+L\+F\+\_\+dict.\+c}}
+\subsubsection[{\texorpdfstring{A\+L\+F\+\_\+dict\+\_\+get(\+A\+L\+F\+\_\+\+Dict $\ast$dict, const char $\ast$key)}{ALF_dict_get(ALF_Dict *dict, const char *key)}}]{\setlength{\rightskip}{0pt plus 5cm}void$\ast$ A\+L\+F\+\_\+dict\+\_\+get (
+\begin{DoxyParamCaption}
+\item[{{\bf A\+L\+F\+\_\+\+Dict} $\ast$}]{dict, }
+\item[{const char $\ast$}]{key}
+\end{DoxyParamCaption}
+)}\hypertarget{ALF__dict_8c_a99f047933c746d3dd537ec362d145a88}{}\label{ALF__dict_8c_a99f047933c746d3dd537ec362d145a88}
+
+\begin{DoxyCode}
+26                                                    \{
+27     \hyperlink{structALF__Dict}{ALF\_Dict} *aux = dict;
+28     \textcolor{keywordflow}{for}(; aux != NULL && aux->\hyperlink{structALF__Dict_a8850433b9edd2131631fdea81f005ebf}{key} != NULL; aux = aux->\hyperlink{structALF__Dict_abf4da60193bf9ced8fb3c8b013e23f18}{next})\{
+29         \textcolor{keywordflow}{if}(strcmp(aux->\hyperlink{structALF__Dict_a8850433b9edd2131631fdea81f005ebf}{key}, key) == 0)\{
+30             \textcolor{keywordflow}{return} aux->\hyperlink{structALF__Dict_a00b3284fe9ac4af7137cbdac1a61f67a}{value};
+31         \}
+32     \}
+33     \textcolor{keywordflow}{return} NULL;
+34 \}
+\end{DoxyCode}
+\index{A\+L\+F\+\_\+dict.\+c@{A\+L\+F\+\_\+dict.\+c}!A\+L\+F\+\_\+dict\+\_\+init@{A\+L\+F\+\_\+dict\+\_\+init}}
+\index{A\+L\+F\+\_\+dict\+\_\+init@{A\+L\+F\+\_\+dict\+\_\+init}!A\+L\+F\+\_\+dict.\+c@{A\+L\+F\+\_\+dict.\+c}}
+\subsubsection[{\texorpdfstring{A\+L\+F\+\_\+dict\+\_\+init(void)}{ALF_dict_init(void)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf A\+L\+F\+\_\+\+Dict}$\ast$ A\+L\+F\+\_\+dict\+\_\+init (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{ALF__dict_8c_a4c25803a36ba43c9887482f9338fffa6}{}\label{ALF__dict_8c_a4c25803a36ba43c9887482f9338fffa6}
+
+\begin{DoxyCode}
+3                              \{
+4     \hyperlink{structALF__Dict}{ALF\_Dict} *dict = malloc(\textcolor{keyword}{sizeof}(\hyperlink{structALF__Dict}{ALF\_Dict} *));
+5     dict->\hyperlink{structALF__Dict_abf4da60193bf9ced8fb3c8b013e23f18}{next} = NULL;
+6     dict->\hyperlink{structALF__Dict_a00b3284fe9ac4af7137cbdac1a61f67a}{value} = NULL;
+7     dict->\hyperlink{structALF__Dict_a8850433b9edd2131631fdea81f005ebf}{key} = NULL;
+8     \textcolor{keywordflow}{return} dict;
+9 \}
+\end{DoxyCode}
+\index{A\+L\+F\+\_\+dict.\+c@{A\+L\+F\+\_\+dict.\+c}!A\+L\+F\+\_\+dict\+\_\+length@{A\+L\+F\+\_\+dict\+\_\+length}}
+\index{A\+L\+F\+\_\+dict\+\_\+length@{A\+L\+F\+\_\+dict\+\_\+length}!A\+L\+F\+\_\+dict.\+c@{A\+L\+F\+\_\+dict.\+c}}
+\subsubsection[{\texorpdfstring{A\+L\+F\+\_\+dict\+\_\+length(\+A\+L\+F\+\_\+\+Dict $\ast$dict)}{ALF_dict_length(ALF_Dict *dict)}}]{\setlength{\rightskip}{0pt plus 5cm}int A\+L\+F\+\_\+dict\+\_\+length (
+\begin{DoxyParamCaption}
+\item[{{\bf A\+L\+F\+\_\+\+Dict} $\ast$}]{dict}
+\end{DoxyParamCaption}
+)}\hypertarget{ALF__dict_8c_ae4d23e124821b6164d64947aecc41c0a}{}\label{ALF__dict_8c_ae4d23e124821b6164d64947aecc41c0a}
+
+\begin{DoxyCode}
+67                                    \{
+68     \hyperlink{structALF__Dict}{ALF\_Dict} *aux = dict;
+69     \textcolor{keywordtype}{int} len = 0;
+70     \textcolor{keywordflow}{for}(; aux->\hyperlink{structALF__Dict_abf4da60193bf9ced8fb3c8b013e23f18}{next} != NULL; aux = aux->\hyperlink{structALF__Dict_abf4da60193bf9ced8fb3c8b013e23f18}{next})\{
+71         len += 1;
+72     \}
+73 
+74     \textcolor{keywordflow}{return} len;
+75 \}
+\end{DoxyCode}

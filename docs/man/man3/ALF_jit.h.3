@@ -1,0 +1,215 @@
+.TH "include/ALF_jit.h" 3 "Wed Jul 18 2018" "Version 1.0" "ALF Standard Lib" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+include/ALF_jit.h \- 
+.SH SYNOPSIS
+.br
+.PP
+\fC#include 'ALF_common\&.h'\fP
+.br
+\fC#include <stdint\&.h>\fP
+.br
+\fC#include <unistd\&.h>\fP
+.br
+\fC#include <sys/mman\&.h>\fP
+.br
+
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "struct \fBALF_jit_buf\fP"
+.br
+.in -1c
+.SS "Macros"
+
+.in +1c
+.ti -1c
+.RI "#define \fBALF_jit_major_version\fP   (1)"
+.br
+.ti -1c
+.RI "#define \fBALF_jit_minor_version\fP   (0)"
+.br
+.ti -1c
+.RI "#define \fBALF_jit_patch_version\fP   (0)"
+.br
+.ti -1c
+.RI "#define \fBALF_jit_version\fP   (\fBALF_jit_major_version\&.ALF_jit_minor_version\fP)"
+.br
+.ti -1c
+.RI "#define \fBALF_jit_version_str\fP   (\fBALF_STR\fP(\fBALF_jit_major_version\fP)'\&.'\fBALF_STR\fP(\fBALF_jit_minor_version\fP)'\&.'\fBALF_STR\fP(\fBALF_jit_patch_version\fP))"
+.br
+.ti -1c
+.RI "#define \fBALF_PAGE_SIZE\fP()   sysconf(_SC_PAGESIZE)"
+.br
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBALF_jit_buf\fP * \fBALF_jit_init\fP (void)"
+.br
+.RI "\fICreates a buffer for use as a JIT\&. \fP"
+.ti -1c
+.RI "uint64_t \fBALF_jit_get_avaible_size\fP (\fBALF_jit_buf\fP *handler)"
+.br
+.RI "\fIReturns the aviable size for code\&. \fP"
+.ti -1c
+.RI "int \fBALF_jit_instruction\fP (\fBALF_jit_buf\fP *handler, int size, uint64_t ins)"
+.br
+.RI "\fIInserts a instruction in the code\&. \fP"
+.ti -1c
+.RI "int \fBALF_jit_immediate\fP (\fBALF_jit_buf\fP *handler, int size, const void *value)"
+.br
+.RI "\fIInserts an immediate (number) in the code\&. \fP"
+.ti -1c
+.RI "int \fBALF_jit_finalize\fP (\fBALF_jit_buf\fP *handler)"
+.br
+.RI "\fIPrepares the code to be executed\&. \fP"
+.ti -1c
+.RI "void \fBALF_jit_free\fP (\fBALF_jit_buf\fP *handler)"
+.br
+.RI "\fIFree the memory\&. \fP"
+.ti -1c
+.RI "char * \fBALF_jit_get_error\fP (void)"
+.br
+.RI "\fIReturns the last error\&. \fP"
+.in -1c
+.SH "Macro Definition Documentation"
+.PP 
+.SS "#define ALF_jit_major_version   (1)"
+
+.SS "#define ALF_jit_minor_version   (0)"
+
+.SS "#define ALF_jit_patch_version   (0)"
+
+.SS "#define ALF_jit_version   (\fBALF_jit_major_version\&.ALF_jit_minor_version\fP)"
+
+.SS "#define ALF_jit_version_str   (\fBALF_STR\fP(\fBALF_jit_major_version\fP)'\&.'\fBALF_STR\fP(\fBALF_jit_minor_version\fP)'\&.'\fBALF_STR\fP(\fBALF_jit_patch_version\fP))"
+
+.SS "#define ALF_PAGE_SIZE()   sysconf(_SC_PAGESIZE)"
+
+.SH "Function Documentation"
+.PP 
+.SS "int ALF_jit_finalize (\fBALF_jit_buf\fP * handler)"
+
+.PP
+Prepares the code to be executed\&. 
+.PP
+.nf
+54                                           {
+55     if (handler->state & 0x1){
+56         ALF_jit_error = "JIT buffer can already be executed\&.";
+57         return 1;
+58     }
+59 
+60     #ifdef _WIN32
+61         DWORD old;
+62         VirtualProtect(handler->code, ALF_PAGE_SIZE(), PAGE_EXECUTE_READ, &old);
+63     #else
+64         mprotect(handler->code, ALF_PAGE_SIZE(), PROT_READ | PROT_EXEC);
+65     #endif
+66     handler->state |= 0x1;
+67     return 0;
+68 }
+.fi
+.SS "void ALF_jit_free (\fBALF_jit_buf\fP * handler)"
+
+.PP
+Free the memory\&. 
+.PP
+.nf
+70                                        {
+71     #ifdef _WIN32
+72         VirtualFree(handler->code, 0, MEM_RELEASE);
+73     #else
+74         munmap(handler->code, ALF_PAGE_SIZE());
+75     #endif
+76     free(handler);
+77     // handler->state |= 0x2;
+78 }
+.fi
+.SS "uint64_t ALF_jit_get_avaible_size (\fBALF_jit_buf\fP * handler)"
+
+.PP
+Returns the aviable size for code\&. 
+.PP
+.nf
+21                                                        {
+22     return ALF_PAGE_SIZE() - sizeof(uint64_t) - sizeof(uint8_t) - handler->position*sizeof(uint8_t);
+23 }
+.fi
+.SS "char* ALF_jit_get_error (void)"
+
+.PP
+Returns the last error\&. 
+.PP
+.nf
+80                              {
+81     return ALF_jit_error;
+82 }
+.fi
+.SS "int ALF_jit_immediate (\fBALF_jit_buf\fP * handler, int size, const void * value)"
+
+.PP
+Inserts an immediate (number) in the code\&. 
+.PP
+.nf
+40                                                                         {
+41     if (handler->state & 0x1){
+42         ALF_jit_error = "JIT buffer is finalized\&. Can't write on it\&.";
+43         return 1;
+44     }
+45     if(ALF_jit_get_avaible_size(handler) < size){
+46         ALF_jit_error = "Input data is bigger than free space\&.";
+47         return 2;
+48     }
+49     memcpy(handler->code + handler->position, value, size);
+50     handler->position += size;
+51     return 0;
+52 }
+.fi
+.SS "\fBALF_jit_buf\fP* ALF_jit_init (void)"
+
+.PP
+Creates a buffer for use as a JIT\&. 
+.PP
+.nf
+8                                {
+9     ALF_jit_buf *handler = malloc(sizeof(ALF_jit_buf *));
+10     #ifdef _WIN32
+11         DWORD type = MEM_RESERVE | MEM_COMMIT;
+12         handler->code = (uint8_t *)VirtualAlloc(NULL, ALF_PAGE_SIZE(), type, PAGE_READWRITE);
+13     #else
+14         int prot = PROT_READ | PROT_WRITE;
+15         int flags = MAP_ANONYMOUS | MAP_PRIVATE;
+16         handler->code = (uint8_t *)mmap(NULL, ALF_PAGE_SIZE(), prot, flags, -1, 0);
+17     #endif
+18     return handler;
+19 }
+.fi
+.SS "int ALF_jit_instruction (\fBALF_jit_buf\fP * handler, int size, uint64_t ins)"
+
+.PP
+Inserts a instruction in the code\&. 
+.PP
+.nf
+25                                                                      {
+26     if (handler->state & 0x1){
+27         ALF_jit_error = "JIT buffer is finalized\&. Can't write on it\&.";
+28         return 1;
+29     }
+30     if(ALF_jit_get_avaible_size(handler) < size){
+31         ALF_jit_error = "Input data is bigger than free space\&.";
+32         return 2;
+33     }
+34     for (int i = size - 1; i >= 0; i--){
+35         handler->code[handler->position++] = (ins >> (i * 8)) & 0xff;
+36     }
+37     return 0;
+38 }
+.fi
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for ALF Standard Lib from the source code\&.

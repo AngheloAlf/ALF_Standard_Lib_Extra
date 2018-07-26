@@ -1,0 +1,300 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="ALF__jit_8c" kind="file" language="C++">
+    <compoundname>ALF_jit.c</compoundname>
+    <includes refid="ALF__jit_8h" local="yes">ALF_jit.h</includes>
+    <includes local="no">stdlib.h</includes>
+    <includes local="no">string.h</includes>
+    <incdepgraph>
+      <node id="240">
+        <label>stdint.h</label>
+      </node>
+      <node id="243">
+        <label>stdlib.h</label>
+      </node>
+      <node id="242">
+        <label>sys/mman.h</label>
+      </node>
+      <node id="239">
+        <label>ALF_common.h</label>
+        <link refid="ALF__common_8h"/>
+      </node>
+      <node id="244">
+        <label>string.h</label>
+      </node>
+      <node id="241">
+        <label>unistd.h</label>
+      </node>
+      <node id="237">
+        <label>src/ALF_jit.c</label>
+        <link refid="ALF_jit.c"/>
+        <childnode refid="238" relation="include">
+        </childnode>
+        <childnode refid="243" relation="include">
+        </childnode>
+        <childnode refid="244" relation="include">
+        </childnode>
+      </node>
+      <node id="238">
+        <label>ALF_jit.h</label>
+        <link refid="ALF__jit_8h"/>
+        <childnode refid="239" relation="include">
+        </childnode>
+        <childnode refid="240" relation="include">
+        </childnode>
+        <childnode refid="241" relation="include">
+        </childnode>
+        <childnode refid="242" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="ALF__jit_8c_1a2f010ea7524c7b7c4d93f1f87065175b" prot="public" static="no" mutable="no">
+        <type>char *</type>
+        <definition>char* ALF_jit_error</definition>
+        <argsstring></argsstring>
+        <name>ALF_jit_error</name>
+        <initializer>= &quot;&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/ALF_jit.c" line="6" column="1" bodyfile="src/ALF_jit.c" bodystart="6" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="ALF__jit_8c_1a1e52026c469713a85a081580661f5e14" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structALF__jit__buf" kindref="compound">ALF_jit_buf</ref> *</type>
+        <definition>ALF_jit_buf* ALF_jit_init</definition>
+        <argsstring>(void)</argsstring>
+        <name>ALF_jit_init</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Creates a buffer for use as a JIT. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/ALF_jit.c" line="8" column="1" bodyfile="src/ALF_jit.c" bodystart="8" bodyend="19"/>
+      </memberdef>
+      <memberdef kind="function" id="ALF__jit_8c_1a6c0f56bf19a83bebfd1942486186b4d0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint64_t</type>
+        <definition>uint64_t ALF_jit_get_avaible_size</definition>
+        <argsstring>(ALF_jit_buf *handler)</argsstring>
+        <name>ALF_jit_get_avaible_size</name>
+        <param>
+          <type><ref refid="structALF__jit__buf" kindref="compound">ALF_jit_buf</ref> *</type>
+          <declname>handler</declname>
+        </param>
+        <briefdescription>
+<para>Returns the aviable size for code. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/ALF_jit.c" line="21" column="1" bodyfile="src/ALF_jit.c" bodystart="21" bodyend="23"/>
+      </memberdef>
+      <memberdef kind="function" id="ALF__jit_8c_1a298a02002b9226a1343ecfae10dc4fa5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int ALF_jit_instruction</definition>
+        <argsstring>(ALF_jit_buf *handler, int size, uint64_t ins)</argsstring>
+        <name>ALF_jit_instruction</name>
+        <param>
+          <type><ref refid="structALF__jit__buf" kindref="compound">ALF_jit_buf</ref> *</type>
+          <declname>handler</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>size</declname>
+        </param>
+        <param>
+          <type>uint64_t</type>
+          <declname>ins</declname>
+        </param>
+        <briefdescription>
+<para>Inserts a instruction in the code. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/ALF_jit.c" line="25" column="1" bodyfile="src/ALF_jit.c" bodystart="25" bodyend="38"/>
+      </memberdef>
+      <memberdef kind="function" id="ALF__jit_8c_1a2dc746cdd4d3df122d3b803c8b0bf0ee" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int ALF_jit_immediate</definition>
+        <argsstring>(ALF_jit_buf *handler, int size, const void *value)</argsstring>
+        <name>ALF_jit_immediate</name>
+        <param>
+          <type><ref refid="structALF__jit__buf" kindref="compound">ALF_jit_buf</ref> *</type>
+          <declname>handler</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>size</declname>
+        </param>
+        <param>
+          <type>const void *</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+<para>Inserts an immediate (number) in the code. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/ALF_jit.c" line="40" column="1" bodyfile="src/ALF_jit.c" bodystart="40" bodyend="52"/>
+      </memberdef>
+      <memberdef kind="function" id="ALF__jit_8c_1abd0c9114908538df9775332ad3622391" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int ALF_jit_finalize</definition>
+        <argsstring>(ALF_jit_buf *handler)</argsstring>
+        <name>ALF_jit_finalize</name>
+        <param>
+          <type><ref refid="structALF__jit__buf" kindref="compound">ALF_jit_buf</ref> *</type>
+          <declname>handler</declname>
+        </param>
+        <briefdescription>
+<para>Prepares the code to be executed. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/ALF_jit.c" line="54" column="1" bodyfile="src/ALF_jit.c" bodystart="54" bodyend="68"/>
+      </memberdef>
+      <memberdef kind="function" id="ALF__jit_8c_1a429b9d59938f59383feb7939a47fa1de" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ALF_jit_free</definition>
+        <argsstring>(ALF_jit_buf *handler)</argsstring>
+        <name>ALF_jit_free</name>
+        <param>
+          <type><ref refid="structALF__jit__buf" kindref="compound">ALF_jit_buf</ref> *</type>
+          <declname>handler</declname>
+        </param>
+        <briefdescription>
+<para>Free the memory. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/ALF_jit.c" line="70" column="1" bodyfile="src/ALF_jit.c" bodystart="70" bodyend="78"/>
+      </memberdef>
+      <memberdef kind="function" id="ALF__jit_8c_1aaf4683874adbb3f4fbd03f079e1c5df3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>char *</type>
+        <definition>char* ALF_jit_get_error</definition>
+        <argsstring>(void)</argsstring>
+        <name>ALF_jit_get_error</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Returns the last error. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/ALF_jit.c" line="80" column="1" bodyfile="src/ALF_jit.c" bodystart="80" bodyend="82"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&quot;<ref refid="ALF__jit_8h" kindref="compound">ALF_jit.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdlib.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;string.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<ref refid="ALF__jit_8c_1a2f010ea7524c7b7c4d93f1f87065175b" kindref="member">ALF_jit_error</ref><sp/>=<sp/></highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"><ref refid="structALF__jit__buf" kindref="compound">ALF_jit_buf</ref><sp/>*<ref refid="ALF__jit_8c_1a1e52026c469713a85a081580661f5e14" kindref="member">ALF_jit_init</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">){</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structALF__jit__buf" kindref="compound">ALF_jit_buf</ref><sp/>*handler<sp/>=<sp/>malloc(</highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(<ref refid="structALF__jit__buf" kindref="compound">ALF_jit_buf</ref><sp/>*));</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#ifdef<sp/>_WIN32</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>DWORD<sp/>type<sp/>=<sp/>MEM_RESERVE<sp/>|<sp/>MEM_COMMIT;</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>handler-&gt;<ref refid="structALF__jit__buf_1acc94d6814de68a2c11e60ea2ae924385" kindref="member">code</ref><sp/>=<sp/>(uint8_t<sp/>*)VirtualAlloc(NULL,<sp/><ref refid="ALF__jit_8h_1aaf251cd4751f0ede5cf0cf0e838f7bc8" kindref="member">ALF_PAGE_SIZE</ref>(),<sp/>type,<sp/>PAGE_READWRITE);</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>prot<sp/>=<sp/>PROT_READ<sp/>|<sp/>PROT_WRITE;</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>flags<sp/>=<sp/>MAP_ANONYMOUS<sp/>|<sp/>MAP_PRIVATE;</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>handler-&gt;<ref refid="structALF__jit__buf_1acc94d6814de68a2c11e60ea2ae924385" kindref="member">code</ref><sp/>=<sp/>(uint8_t<sp/>*)mmap(NULL,<sp/><ref refid="ALF__jit_8h_1aaf251cd4751f0ede5cf0cf0e838f7bc8" kindref="member">ALF_PAGE_SIZE</ref>(),<sp/>prot,<sp/>flags,<sp/>-1,<sp/>0);</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>handler;</highlight></codeline>
+<codeline lineno="19"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal">uint64_t<sp/><ref refid="ALF__jit_8c_1a6c0f56bf19a83bebfd1942486186b4d0" kindref="member">ALF_jit_get_avaible_size</ref>(<ref refid="structALF__jit__buf" kindref="compound">ALF_jit_buf</ref><sp/>*handler){</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="ALF__jit_8h_1aaf251cd4751f0ede5cf0cf0e838f7bc8" kindref="member">ALF_PAGE_SIZE</ref>()<sp/>-<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(uint64_t)<sp/>-<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(uint8_t)<sp/>-<sp/>handler-&gt;<ref refid="structALF__jit__buf_1a6a35d3d3e3a0033c118119bdec30df10" kindref="member">position</ref>*</highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(uint8_t);</highlight></codeline>
+<codeline lineno="23"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="ALF__jit_8c_1a298a02002b9226a1343ecfae10dc4fa5" kindref="member">ALF_jit_instruction</ref>(<ref refid="structALF__jit__buf" kindref="compound">ALF_jit_buf</ref><sp/>*handler,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>size,<sp/>uint64_t<sp/>ins){</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(handler-&gt;<ref refid="structALF__jit__buf_1a6c8c4d0af0f8cc06d141f6babe8236b6" kindref="member">state</ref><sp/>&amp;<sp/>0x1){</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="ALF__jit_8c_1a2f010ea7524c7b7c4d93f1f87065175b" kindref="member">ALF_jit_error</ref><sp/>=<sp/></highlight><highlight class="stringliteral">&quot;JIT<sp/>buffer<sp/>is<sp/>finalized.<sp/>Can&apos;t<sp/>write<sp/>on<sp/>it.&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>1;</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<ref refid="ALF__jit_8c_1a6c0f56bf19a83bebfd1942486186b4d0" kindref="member">ALF_jit_get_avaible_size</ref>(handler)<sp/>&lt;<sp/>size){</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="ALF__jit_8c_1a2f010ea7524c7b7c4d93f1f87065175b" kindref="member">ALF_jit_error</ref><sp/>=<sp/></highlight><highlight class="stringliteral">&quot;Input<sp/>data<sp/>is<sp/>bigger<sp/>than<sp/>free<sp/>space.&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>2;</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>size<sp/>-<sp/>1;<sp/>i<sp/>&gt;=<sp/>0;<sp/>i--){</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>handler-&gt;<ref refid="structALF__jit__buf_1acc94d6814de68a2c11e60ea2ae924385" kindref="member">code</ref>[handler-&gt;<ref refid="structALF__jit__buf_1a6a35d3d3e3a0033c118119bdec30df10" kindref="member">position</ref>++]<sp/>=<sp/>(ins<sp/>&gt;&gt;<sp/>(i<sp/>*<sp/>8))<sp/>&amp;<sp/>0xff;</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="38"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="ALF__jit_8c_1a2dc746cdd4d3df122d3b803c8b0bf0ee" kindref="member">ALF_jit_immediate</ref>(<ref refid="structALF__jit__buf" kindref="compound">ALF_jit_buf</ref><sp/>*handler,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>size,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*value){</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(handler-&gt;<ref refid="structALF__jit__buf_1a6c8c4d0af0f8cc06d141f6babe8236b6" kindref="member">state</ref><sp/>&amp;<sp/>0x1){</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="ALF__jit_8c_1a2f010ea7524c7b7c4d93f1f87065175b" kindref="member">ALF_jit_error</ref><sp/>=<sp/></highlight><highlight class="stringliteral">&quot;JIT<sp/>buffer<sp/>is<sp/>finalized.<sp/>Can&apos;t<sp/>write<sp/>on<sp/>it.&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>1;</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<ref refid="ALF__jit_8c_1a6c0f56bf19a83bebfd1942486186b4d0" kindref="member">ALF_jit_get_avaible_size</ref>(handler)<sp/>&lt;<sp/>size){</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="ALF__jit_8c_1a2f010ea7524c7b7c4d93f1f87065175b" kindref="member">ALF_jit_error</ref><sp/>=<sp/></highlight><highlight class="stringliteral">&quot;Input<sp/>data<sp/>is<sp/>bigger<sp/>than<sp/>free<sp/>space.&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>2;</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/>memcpy(handler-&gt;<ref refid="structALF__jit__buf_1acc94d6814de68a2c11e60ea2ae924385" kindref="member">code</ref><sp/>+<sp/>handler-&gt;<ref refid="structALF__jit__buf_1a6a35d3d3e3a0033c118119bdec30df10" kindref="member">position</ref>,<sp/>value,<sp/>size);</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/>handler-&gt;<ref refid="structALF__jit__buf_1a6a35d3d3e3a0033c118119bdec30df10" kindref="member">position</ref><sp/>+=<sp/>size;</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="52"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="ALF__jit_8c_1abd0c9114908538df9775332ad3622391" kindref="member">ALF_jit_finalize</ref>(<ref refid="structALF__jit__buf" kindref="compound">ALF_jit_buf</ref><sp/>*handler){</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(handler-&gt;<ref refid="structALF__jit__buf_1a6c8c4d0af0f8cc06d141f6babe8236b6" kindref="member">state</ref><sp/>&amp;<sp/>0x1){</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="ALF__jit_8c_1a2f010ea7524c7b7c4d93f1f87065175b" kindref="member">ALF_jit_error</ref><sp/>=<sp/></highlight><highlight class="stringliteral">&quot;JIT<sp/>buffer<sp/>can<sp/>already<sp/>be<sp/>executed.&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>1;</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#ifdef<sp/>_WIN32</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>DWORD<sp/>old;</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>VirtualProtect(handler-&gt;<ref refid="structALF__jit__buf_1acc94d6814de68a2c11e60ea2ae924385" kindref="member">code</ref>,<sp/><ref refid="ALF__jit_8h_1aaf251cd4751f0ede5cf0cf0e838f7bc8" kindref="member">ALF_PAGE_SIZE</ref>(),<sp/>PAGE_EXECUTE_READ,<sp/>&amp;old);</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mprotect(handler-&gt;<ref refid="structALF__jit__buf_1acc94d6814de68a2c11e60ea2ae924385" kindref="member">code</ref>,<sp/><ref refid="ALF__jit_8h_1aaf251cd4751f0ede5cf0cf0e838f7bc8" kindref="member">ALF_PAGE_SIZE</ref>(),<sp/>PROT_READ<sp/>|<sp/>PROT_EXEC);</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/>handler-&gt;<ref refid="structALF__jit__buf_1a6c8c4d0af0f8cc06d141f6babe8236b6" kindref="member">state</ref><sp/>|=<sp/>0x1;</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="68"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="ALF__jit_8c_1a429b9d59938f59383feb7939a47fa1de" kindref="member">ALF_jit_free</ref>(<ref refid="structALF__jit__buf" kindref="compound">ALF_jit_buf</ref><sp/>*handler){</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#ifdef<sp/>_WIN32</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>VirtualFree(handler-&gt;<ref refid="structALF__jit__buf_1acc94d6814de68a2c11e60ea2ae924385" kindref="member">code</ref>,<sp/>0,<sp/>MEM_RELEASE);</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>munmap(handler-&gt;<ref refid="structALF__jit__buf_1acc94d6814de68a2c11e60ea2ae924385" kindref="member">code</ref>,<sp/><ref refid="ALF__jit_8h_1aaf251cd4751f0ede5cf0cf0e838f7bc8" kindref="member">ALF_PAGE_SIZE</ref>());</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/>free(handler);</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>handler-&gt;state<sp/>|=<sp/>0x2;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="78"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight></codeline>
+<codeline lineno="80"><highlight class="normal"></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<ref refid="ALF__jit_8c_1aaf4683874adbb3f4fbd03f079e1c5df3" kindref="member">ALF_jit_get_error</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">){</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="ALF__jit_8c_1a2f010ea7524c7b7c4d93f1f87065175b" kindref="member">ALF_jit_error</ref>;</highlight></codeline>
+<codeline lineno="82"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight></codeline>
+<codeline lineno="84"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>_WIN32</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/><ref refid="ALF__jit_8h_1aaf251cd4751f0ede5cf0cf0e838f7bc8" kindref="member">ALF_PAGE_SIZE</ref>()(){</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>SYSTEM_INFO<sp/>system_info;</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>GetSystemInfo(&amp;system_info);</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>system_info.dwPageSize;</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="src/ALF_jit.c"/>
+  </compounddef>
+</doxygen>

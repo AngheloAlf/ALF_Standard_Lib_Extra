@@ -1,0 +1,70 @@
+.TH "include/ALF_bool.h" 3 "Wed Jul 18 2018" "Version 1.0" "ALF Standard Lib" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+include/ALF_bool.h \- 
+.SH SYNOPSIS
+.br
+.PP
+\fC#include 'ALF_common\&.h'\fP
+.br
+
+.SS "Macros"
+
+.in +1c
+.ti -1c
+.RI "#define \fBALF_bool_major_version\fP   (1)"
+.br
+.ti -1c
+.RI "#define \fBALF_bool_minor_version\fP   (0)"
+.br
+.ti -1c
+.RI "#define \fBALF_bool_patch_version\fP   (0)"
+.br
+.ti -1c
+.RI "#define \fBALF_bool_version\fP   (\fBALF_bool_major_version\&.ALF_bool_minor_version\fP)"
+.br
+.ti -1c
+.RI "#define \fBALF_bool_version_str\fP   (\fBALF_STR\fP(\fBALF_bool_major_version\fP)'\&.'\fBALF_STR\fP(\fBALF_bool_minor_version\fP)'\&.'\fBALF_STR\fP(\fBALF_bool_patch_version\fP))"
+.br
+.in -1c
+.SS "Enumerations"
+
+.in +1c
+.ti -1c
+.RI "enum \fBbool\fP { \fBfalse\fP, \fBtrue\fP }"
+.br
+.in -1c
+.SH "Macro Definition Documentation"
+.PP 
+.SS "#define ALF_bool_major_version   (1)"
+
+.SS "#define ALF_bool_minor_version   (0)"
+
+.SS "#define ALF_bool_patch_version   (0)"
+
+.SS "#define ALF_bool_version   (\fBALF_bool_major_version\&.ALF_bool_minor_version\fP)"
+
+.SS "#define ALF_bool_version_str   (\fBALF_STR\fP(\fBALF_bool_major_version\fP)'\&.'\fBALF_STR\fP(\fBALF_bool_minor_version\fP)'\&.'\fBALF_STR\fP(\fBALF_bool_patch_version\fP))"
+
+.SH "Enumeration Type Documentation"
+.PP 
+.SS "enum \fBbool\fP"
+
+.PP
+\fBEnumerator\fP
+.in +1c
+.TP
+\fB\fIfalse \fP\fP
+.TP
+\fB\fItrue \fP\fP
+.PP
+.nf
+14                 {
+15         false,
+16         true,
+17     }bool;
+.fi
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for ALF Standard Lib from the source code\&.

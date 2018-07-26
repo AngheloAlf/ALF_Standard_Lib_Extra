@@ -1,0 +1,397 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="ALF__OS_8c" kind="file" language="C++">
+    <compoundname>ALF_OS.c</compoundname>
+    <includes refid="ALF__OS_8h" local="yes">ALF_OS.h</includes>
+    <incdepgraph>
+      <node id="246">
+        <label>src/ALF_OS.c</label>
+        <link refid="ALF_OS.c"/>
+        <childnode refid="247" relation="include">
+        </childnode>
+      </node>
+      <node id="248">
+        <label>ALF_common.h</label>
+        <link refid="ALF__common_8h"/>
+      </node>
+      <node id="247">
+        <label>ALF_OS.h</label>
+        <link refid="ALF__OS_8h"/>
+        <childnode refid="248" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="ALF__OS_8c_1ac3aabc6ca82687aea9b215201e72e19c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>char</type>
+        <definition>char ALF_isWindows</definition>
+        <argsstring>(void)</argsstring>
+        <name>ALF_isWindows</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/ALF_OS.c" line="7" column="1" bodyfile="src/ALF_OS.c" bodystart="7" bodyend="13"/>
+      </memberdef>
+      <memberdef kind="function" id="ALF__OS_8c_1a6bc1be8b569f23983df74028b601f615" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>char</type>
+        <definition>char ALF_isOSX</definition>
+        <argsstring>(void)</argsstring>
+        <name>ALF_isOSX</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/ALF_OS.c" line="14" column="1" bodyfile="src/ALF_OS.c" bodystart="14" bodyend="20"/>
+      </memberdef>
+      <memberdef kind="function" id="ALF__OS_8c_1a63ad832a05d0398903fe1a4eadb73dd1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>char</type>
+        <definition>char ALF_isLinux</definition>
+        <argsstring>(void)</argsstring>
+        <name>ALF_isLinux</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/ALF_OS.c" line="21" column="1" bodyfile="src/ALF_OS.c" bodystart="21" bodyend="27"/>
+      </memberdef>
+      <memberdef kind="function" id="ALF__OS_8c_1acf26f72ecb4ecdd27a206ec35877a315" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>char</type>
+        <definition>char ALF_isWindows32</definition>
+        <argsstring>(void)</argsstring>
+        <name>ALF_isWindows32</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/ALF_OS.c" line="29" column="1" bodyfile="src/ALF_OS.c" bodystart="29" bodyend="35"/>
+      </memberdef>
+      <memberdef kind="function" id="ALF__OS_8c_1a789c881bee38049aa2b72e7ab816d02a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>char</type>
+        <definition>char ALF_isWindows64</definition>
+        <argsstring>(void)</argsstring>
+        <name>ALF_isWindows64</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/ALF_OS.c" line="36" column="1" bodyfile="src/ALF_OS.c" bodystart="36" bodyend="42"/>
+      </memberdef>
+      <memberdef kind="function" id="ALF__OS_8c_1a0f5b9008d84b99f1233a30d1f064cdcc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>char</type>
+        <definition>char ALF_isUnix</definition>
+        <argsstring>(void)</argsstring>
+        <name>ALF_isUnix</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/ALF_OS.c" line="44" column="1" bodyfile="src/ALF_OS.c" bodystart="44" bodyend="50"/>
+      </memberdef>
+      <memberdef kind="function" id="ALF__OS_8c_1a620cbe089d0b3954afd6d088447033c3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>char</type>
+        <definition>char ALF_isUnixOther</definition>
+        <argsstring>(void)</argsstring>
+        <name>ALF_isUnixOther</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/ALF_OS.c" line="51" column="1" bodyfile="src/ALF_OS.c" bodystart="51" bodyend="61"/>
+      </memberdef>
+      <memberdef kind="function" id="ALF__OS_8c_1a63be7a22b89efb5f2e8676b850d85e66" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>char</type>
+        <definition>char ALF_isPosix</definition>
+        <argsstring>(void)</argsstring>
+        <name>ALF_isPosix</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/ALF_OS.c" line="63" column="1" bodyfile="src/ALF_OS.c" bodystart="63" bodyend="69"/>
+      </memberdef>
+      <memberdef kind="function" id="ALF__OS_8c_1af79985de7b31fd20e4b5baaa0162271f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>char</type>
+        <definition>char ALF_isAndroid</definition>
+        <argsstring>(void)</argsstring>
+        <name>ALF_isAndroid</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/ALF_OS.c" line="71" column="1" bodyfile="src/ALF_OS.c" bodystart="71" bodyend="77"/>
+      </memberdef>
+      <memberdef kind="function" id="ALF__OS_8c_1a5de464f6434bf6126d2f790c01ff6285" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>char</type>
+        <definition>char ALF_isIOS</definition>
+        <argsstring>(void)</argsstring>
+        <name>ALF_isIOS</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/ALF_OS.c" line="79" column="1" bodyfile="src/ALF_OS.c" bodystart="79" bodyend="85"/>
+      </memberdef>
+      <memberdef kind="function" id="ALF__OS_8c_1acf5f74eeb34a4d4a681d23d9b438748a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>char</type>
+        <definition>char ALF_isIOSSimulator</definition>
+        <argsstring>(void)</argsstring>
+        <name>ALF_isIOSSimulator</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/ALF_OS.c" line="86" column="1" bodyfile="src/ALF_OS.c" bodystart="86" bodyend="92"/>
+      </memberdef>
+      <memberdef kind="function" id="ALF__OS_8c_1a8acd523707ab064898afd953128b79a5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>char</type>
+        <definition>char ALF_isOSXOther</definition>
+        <argsstring>(void)</argsstring>
+        <name>ALF_isOSXOther</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/ALF_OS.c" line="94" column="1" bodyfile="src/ALF_OS.c" bodystart="94" bodyend="100"/>
+      </memberdef>
+      <memberdef kind="function" id="ALF__OS_8c_1ad56e00ee02e1678488c879379b00cb11" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>char</type>
+        <definition>char ALF_isAppleOther</definition>
+        <argsstring>(void)</argsstring>
+        <name>ALF_isAppleOther</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/ALF_OS.c" line="101" column="1" bodyfile="src/ALF_OS.c" bodystart="101" bodyend="107"/>
+      </memberdef>
+      <memberdef kind="function" id="ALF__OS_8c_1a2d24648f128d22e21115cc313d2cb708" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>char</type>
+        <definition>char ALF_isFreeBSD</definition>
+        <argsstring>(void)</argsstring>
+        <name>ALF_isFreeBSD</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/ALF_OS.c" line="109" column="1" bodyfile="src/ALF_OS.c" bodystart="109" bodyend="115"/>
+      </memberdef>
+      <memberdef kind="function" id="ALF__OS_8c_1a633f4cdcacf06c71047293cfeb1b44bc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>char</type>
+        <definition>char ALF_isOther</definition>
+        <argsstring>(void)</argsstring>
+        <name>ALF_isOther</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Detects the not detected by this library. </para>        </briefdescription>
+        <detaileddescription>
+<para>Returns 1 only if none of the others are detected by this library. 0 Otherwise. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/ALF_OS.c" line="117" column="1" bodyfile="src/ALF_OS.c" bodystart="117" bodyend="123"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&quot;<ref refid="ALF__OS_8h" kindref="compound">ALF_OS.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined(__unix__)<sp/>||<sp/>defined(__APPLE__)<sp/>||<sp/>defined(__MACH__)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#<sp/><sp/><sp/>include<sp/>&lt;unistd.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/><ref refid="ALF__OS_8c_1ac3aabc6ca82687aea9b215201e72e19c" kindref="member">ALF_isWindows</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">){</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#ifdef<sp/>_WIN32</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>1;</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/><ref refid="ALF__OS_8c_1a6bc1be8b569f23983df74028b601f615" kindref="member">ALF_isOSX</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">){</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#if<sp/>__APPLE__</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>1;</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/><ref refid="ALF__OS_8c_1a63ad832a05d0398903fe1a4eadb73dd1" kindref="member">ALF_isLinux</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">){</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#if<sp/>__linux__</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>1;</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/><ref refid="ALF__OS_8c_1acf26f72ecb4ecdd27a206ec35877a315" kindref="member">ALF_isWindows32</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">){</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#if<sp/>defined(_WIN32)<sp/>&amp;&amp;<sp/>!defined(_WIN64)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>1;</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/><ref refid="ALF__OS_8c_1a789c881bee38049aa2b72e7ab816d02a" kindref="member">ALF_isWindows64</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">){</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#ifdef<sp/>_WIN64</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>1;</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/><ref refid="ALF__OS_8c_1a0f5b9008d84b99f1233a30d1f064cdcc" kindref="member">ALF_isUnix</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">){</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#if<sp/>__unix__</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>1;</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/><ref refid="ALF__OS_8c_1a620cbe089d0b3954afd6d088447033c3" kindref="member">ALF_isUnixOther</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">){</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#if<sp/>__unix__</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>#if<sp/>!defined(__APPLE__)<sp/>&amp;&amp;<sp/>!defined(__ANDROID__)<sp/>&amp;&amp;<sp/>!defined(__linux__)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>1;</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>#else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/><ref refid="ALF__OS_8c_1a63be7a22b89efb5f2e8676b850d85e66" kindref="member">ALF_isPosix</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">){</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#ifdef<sp/>_POSIX_VERSION</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>1;</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/><ref refid="ALF__OS_8c_1af79985de7b31fd20e4b5baaa0162271f" kindref="member">ALF_isAndroid</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">){</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#if<sp/>__unix__<sp/>&amp;&amp;<sp/><sp/>defined(__ANDROID__)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>1;</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="77"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/><ref refid="ALF__OS_8c_1a5de464f6434bf6126d2f790c01ff6285" kindref="member">ALF_isIOS</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">){</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#if<sp/>__APPLE__<sp/>&amp;&amp;<sp/>TARGET_OS_IPHONE</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>1;</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="85"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/><ref refid="ALF__OS_8c_1acf5f74eeb34a4d4a681d23d9b438748a" kindref="member">ALF_isIOSSimulator</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">){</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#if<sp/>__APPLE__<sp/>&amp;&amp;<sp/>TARGET_IPHONE_SIMULATOR</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>1;</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="92"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"></highlight></codeline>
+<codeline lineno="94"><highlight class="normal"></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/><ref refid="ALF__OS_8c_1a8acd523707ab064898afd953128b79a5" kindref="member">ALF_isOSXOther</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">){</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#if<sp/>__APPLE__<sp/>&amp;&amp;<sp/>TARGET_OS_MAC</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>1;</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="100"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/><ref refid="ALF__OS_8c_1ad56e00ee02e1678488c879379b00cb11" kindref="member">ALF_isAppleOther</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">){</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#if<sp/>__APPLE__<sp/>&amp;&amp;<sp/>!TARGET_IPHONE_SIMULATOR<sp/>&amp;&amp;<sp/>!TARGET_IPHONE_SIMULATOR<sp/>&amp;&amp;<sp/>!TARGET_OS_MAC</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>1;</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="107"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"></highlight></codeline>
+<codeline lineno="109"><highlight class="normal"></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/><ref refid="ALF__OS_8c_1a2d24648f128d22e21115cc313d2cb708" kindref="member">ALF_isFreeBSD</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">){</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#ifdef<sp/>__FreeBSD__</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>1;</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="115"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"></highlight></codeline>
+<codeline lineno="117"><highlight class="normal"></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/><ref refid="ALF__OS_8c_1a633f4cdcacf06c71047293cfeb1b44bc" kindref="member">ALF_isOther</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">){</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#if<sp/>!defined(__WIN32__)<sp/>&amp;&amp;<sp/>!defined(__APPLE__)<sp/>&amp;&amp;<sp/>!defined(__unix__)<sp/>&amp;&amp;<sp/>!defined(_POSIX_VERSION)<sp/>&amp;&amp;<sp/>!defined(__FreeBSD__)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>1;</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="123"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="src/ALF_OS.c"/>
+  </compounddef>
+</doxygen>

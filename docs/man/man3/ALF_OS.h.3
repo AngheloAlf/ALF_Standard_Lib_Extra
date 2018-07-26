@@ -1,0 +1,306 @@
+.TH "include/ALF_OS.h" 3 "Wed Jul 18 2018" "Version 1.0" "ALF Standard Lib" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+include/ALF_OS.h \- 
+.SH SYNOPSIS
+.br
+.PP
+\fC#include 'ALF_common\&.h'\fP
+.br
+
+.SS "Macros"
+
+.in +1c
+.ti -1c
+.RI "#define \fBALF_OS_major_version\fP   (1)"
+.br
+.ti -1c
+.RI "#define \fBALF_OS_minor_version\fP   (0)"
+.br
+.ti -1c
+.RI "#define \fBALF_OS_patch_version\fP   (0)"
+.br
+.ti -1c
+.RI "#define \fBALF_OS_version\fP   (\fBALF_OS_major_version\&.ALF_OS_minor_version\fP)"
+.br
+.ti -1c
+.RI "#define \fBALF_OS_version_str\fP   (\fBALF_STR\fP(\fBALF_OS_major_version\fP)'\&.'\fBALF_STR\fP(\fBALF_OS_minor_version\fP)'\&.'\fBALF_STR\fP(\fBALF_OS_patch_version\fP))"
+.br
+.ti -1c
+.RI "#define \fBALF_isMac\fP()   \fBALF_isOSX\fP()"
+.br
+.ti -1c
+.RI "#define \fBALF_isIphone\fP()   \fBALF_isIOS\fP()"
+.br
+.ti -1c
+.RI "#define \fBALF_isIphoneSimulator\fP()   \fBALF_isIOSSimulator\fP()"
+.br
+.ti -1c
+.RI "#define \fBALF_isMACOther\fP()   \fBALF_isOSXOther\fP()"
+.br
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "char \fBALF_isWindows\fP (void)"
+.br
+.ti -1c
+.RI "char \fBALF_isOSX\fP (void)"
+.br
+.ti -1c
+.RI "char \fBALF_isLinux\fP (void)"
+.br
+.ti -1c
+.RI "char \fBALF_isWindows32\fP (void)"
+.br
+.ti -1c
+.RI "char \fBALF_isWindows64\fP (void)"
+.br
+.ti -1c
+.RI "char \fBALF_isUnix\fP (void)"
+.br
+.ti -1c
+.RI "char \fBALF_isUnixOther\fP (void)"
+.br
+.ti -1c
+.RI "char \fBALF_isPosix\fP (void)"
+.br
+.ti -1c
+.RI "char \fBALF_isAndroid\fP (void)"
+.br
+.ti -1c
+.RI "char \fBALF_isIOS\fP (void)"
+.br
+.ti -1c
+.RI "char \fBALF_isIOSSimulator\fP (void)"
+.br
+.ti -1c
+.RI "char \fBALF_isOSXOther\fP (void)"
+.br
+.ti -1c
+.RI "char \fBALF_isAppleOther\fP (void)"
+.br
+.ti -1c
+.RI "char \fBALF_isFreeBSD\fP (void)"
+.br
+.ti -1c
+.RI "char \fBALF_isOther\fP (void)"
+.br
+.RI "\fIDetects the not detected by this library\&. \fP"
+.in -1c
+.SH "Detailed Description"
+.PP 
+A Operative System detector using the defined macros\&. This library tries to detect differents operative systems using the macros defined by the compiler\&. Any of the function return non-zero if at compile time detected it was compiled on the system it think it is\&. 0 Otherwise\&. Some macros are implemented, so the caller can use any of them by any name\&. 
+.SH "Macro Definition Documentation"
+.PP 
+.SS "#define ALF_isIphone()   \fBALF_isIOS\fP()"
+
+.SS "#define ALF_isIphoneSimulator()   \fBALF_isIOSSimulator\fP()"
+
+.SS "#define ALF_isMac()   \fBALF_isOSX\fP()"
+
+.SS "#define ALF_isMACOther()   \fBALF_isOSXOther\fP()"
+
+.SS "#define ALF_OS_major_version   (1)"
+
+.SS "#define ALF_OS_minor_version   (0)"
+
+.SS "#define ALF_OS_patch_version   (0)"
+
+.SS "#define ALF_OS_version   (\fBALF_OS_major_version\&.ALF_OS_minor_version\fP)"
+
+.SS "#define ALF_OS_version_str   (\fBALF_STR\fP(\fBALF_OS_major_version\fP)'\&.'\fBALF_STR\fP(\fBALF_OS_minor_version\fP)'\&.'\fBALF_STR\fP(\fBALF_OS_patch_version\fP))"
+
+.SH "Function Documentation"
+.PP 
+.SS "char ALF_isAndroid (void)"
+
+.PP
+.nf
+71                         {
+72     #if __unix__ &&  defined(__ANDROID__)
+73     return 1;
+74     #else
+75     return 0;
+76     #endif
+77 }
+.fi
+.SS "char ALF_isAppleOther (void)"
+
+.PP
+.nf
+101                            {
+102     #if __APPLE__ && !TARGET_IPHONE_SIMULATOR && !TARGET_IPHONE_SIMULATOR && !TARGET_OS_MAC
+103     return 1;
+104     #else
+105     return 0;
+106     #endif
+107 }
+.fi
+.SS "char ALF_isFreeBSD (void)"
+
+.PP
+.nf
+109                         {
+110     #ifdef __FreeBSD__
+111     return 1;
+112     #else
+113     return 0;
+114     #endif
+115 }
+.fi
+.SS "char ALF_isIOS (void)"
+
+.PP
+.nf
+79                     {
+80     #if __APPLE__ && TARGET_OS_IPHONE
+81     return 1;
+82     #else
+83     return 0;
+84     #endif
+85 }
+.fi
+.SS "char ALF_isIOSSimulator (void)"
+
+.PP
+.nf
+86                              {
+87     #if __APPLE__ && TARGET_IPHONE_SIMULATOR
+88     return 1;
+89     #else
+90     return 0;
+91     #endif
+92 }
+.fi
+.SS "char ALF_isLinux (void)"
+
+.PP
+.nf
+21                       {
+22     #if __linux__
+23     return 1;
+24     #else
+25     return 0;
+26     #endif
+27 }
+.fi
+.SS "char ALF_isOSX (void)"
+
+.PP
+.nf
+14                     {
+15     #if __APPLE__
+16     return 1;
+17     #else
+18     return 0;
+19     #endif
+20 }
+.fi
+.SS "char ALF_isOSXOther (void)"
+
+.PP
+.nf
+94                          {
+95     #if __APPLE__ && TARGET_OS_MAC
+96     return 1;
+97     #else
+98     return 0;
+99     #endif
+100 }
+.fi
+.SS "char ALF_isOther (void)"
+
+.PP
+Detects the not detected by this library\&. Returns 1 only if none of the others are detected by this library\&. 0 Otherwise\&. 
+.PP
+.nf
+117                       {
+118     #if !defined(__WIN32__) && !defined(__APPLE__) && !defined(__unix__) && !defined(_POSIX_VERSION) && !defined(__FreeBSD__)
+119     return 1;
+120     #else
+121     return 0;
+122     #endif
+123 }
+.fi
+.SS "char ALF_isPosix (void)"
+
+.PP
+.nf
+63                       {
+64     #ifdef _POSIX_VERSION
+65     return 1;
+66     #else
+67     return 0;
+68     #endif
+69 }
+.fi
+.SS "char ALF_isUnix (void)"
+
+.PP
+.nf
+44                      {
+45     #if __unix__
+46     return 1;
+47     #else
+48     return 0;
+49     #endif
+50 }
+.fi
+.SS "char ALF_isUnixOther (void)"
+
+.PP
+.nf
+51                           {
+52     #if __unix__
+53         #if !defined(__APPLE__) && !defined(__ANDROID__) && !defined(__linux__)
+54         return 1;
+55         #else
+56         return 0;
+57         #endif
+58     #else
+59     return 0;
+60     #endif
+61 }
+.fi
+.SS "char ALF_isWindows (void)"
+
+.PP
+.nf
+7                         {
+8     #ifdef _WIN32
+9     return 1;
+10     #else
+11     return 0;
+12     #endif
+13 }
+.fi
+.SS "char ALF_isWindows32 (void)"
+
+.PP
+.nf
+29                           {
+30     #if defined(_WIN32) && !defined(_WIN64)
+31     return 1;
+32     #else
+33     return 0;
+34     #endif
+35 }
+.fi
+.SS "char ALF_isWindows64 (void)"
+
+.PP
+.nf
+36                           {
+37     #ifdef _WIN64
+38     return 1;
+39     #else
+40     return 0;
+41     #endif
+42 }
+.fi
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for ALF Standard Lib from the source code\&.

@@ -1,0 +1,211 @@
+\hypertarget{ALF__jit_8c}{}\section{src/\+A\+L\+F\+\_\+jit.c File Reference}
+\label{ALF__jit_8c}\index{src/\+A\+L\+F\+\_\+jit.\+c@{src/\+A\+L\+F\+\_\+jit.\+c}}
+{\ttfamily \#include \char`\"{}A\+L\+F\+\_\+jit.\+h\char`\"{}}\\*
+{\ttfamily \#include $<$stdlib.\+h$>$}\\*
+{\ttfamily \#include $<$string.\+h$>$}\\*
+Include dependency graph for A\+L\+F\+\_\+jit.\+c\+:
+% FIG 0
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{structALF__jit__buf}{A\+L\+F\+\_\+jit\+\_\+buf} $\ast$ \hyperlink{ALF__jit_8c_a1e52026c469713a85a081580661f5e14}{A\+L\+F\+\_\+jit\+\_\+init} (void)
+\begin{DoxyCompactList}\small\item\em Creates a buffer for use as a J\+IT. \end{DoxyCompactList}\item 
+uint64\+\_\+t \hyperlink{ALF__jit_8c_a6c0f56bf19a83bebfd1942486186b4d0}{A\+L\+F\+\_\+jit\+\_\+get\+\_\+avaible\+\_\+size} (\hyperlink{structALF__jit__buf}{A\+L\+F\+\_\+jit\+\_\+buf} $\ast$handler)
+\begin{DoxyCompactList}\small\item\em Returns the aviable size for code. \end{DoxyCompactList}\item 
+int \hyperlink{ALF__jit_8c_a298a02002b9226a1343ecfae10dc4fa5}{A\+L\+F\+\_\+jit\+\_\+instruction} (\hyperlink{structALF__jit__buf}{A\+L\+F\+\_\+jit\+\_\+buf} $\ast$handler, int size, uint64\+\_\+t ins)
+\begin{DoxyCompactList}\small\item\em Inserts a instruction in the code. \end{DoxyCompactList}\item 
+int \hyperlink{ALF__jit_8c_a2dc746cdd4d3df122d3b803c8b0bf0ee}{A\+L\+F\+\_\+jit\+\_\+immediate} (\hyperlink{structALF__jit__buf}{A\+L\+F\+\_\+jit\+\_\+buf} $\ast$handler, int size, const void $\ast$value)
+\begin{DoxyCompactList}\small\item\em Inserts an immediate (number) in the code. \end{DoxyCompactList}\item 
+int \hyperlink{ALF__jit_8c_abd0c9114908538df9775332ad3622391}{A\+L\+F\+\_\+jit\+\_\+finalize} (\hyperlink{structALF__jit__buf}{A\+L\+F\+\_\+jit\+\_\+buf} $\ast$handler)
+\begin{DoxyCompactList}\small\item\em Prepares the code to be executed. \end{DoxyCompactList}\item 
+void \hyperlink{ALF__jit_8c_a429b9d59938f59383feb7939a47fa1de}{A\+L\+F\+\_\+jit\+\_\+free} (\hyperlink{structALF__jit__buf}{A\+L\+F\+\_\+jit\+\_\+buf} $\ast$handler)
+\begin{DoxyCompactList}\small\item\em Free the memory. \end{DoxyCompactList}\item 
+char $\ast$ \hyperlink{ALF__jit_8c_aaf4683874adbb3f4fbd03f079e1c5df3}{A\+L\+F\+\_\+jit\+\_\+get\+\_\+error} (void)
+\begin{DoxyCompactList}\small\item\em Returns the last error. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+char $\ast$ \hyperlink{ALF__jit_8c_a2f010ea7524c7b7c4d93f1f87065175b}{A\+L\+F\+\_\+jit\+\_\+error} = \char`\"{}\char`\"{}
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{A\+L\+F\+\_\+jit.\+c@{A\+L\+F\+\_\+jit.\+c}!A\+L\+F\+\_\+jit\+\_\+finalize@{A\+L\+F\+\_\+jit\+\_\+finalize}}
+\index{A\+L\+F\+\_\+jit\+\_\+finalize@{A\+L\+F\+\_\+jit\+\_\+finalize}!A\+L\+F\+\_\+jit.\+c@{A\+L\+F\+\_\+jit.\+c}}
+\subsubsection[{\texorpdfstring{A\+L\+F\+\_\+jit\+\_\+finalize(\+A\+L\+F\+\_\+jit\+\_\+buf $\ast$handler)}{ALF_jit_finalize(ALF_jit_buf *handler)}}]{\setlength{\rightskip}{0pt plus 5cm}int A\+L\+F\+\_\+jit\+\_\+finalize (
+\begin{DoxyParamCaption}
+\item[{{\bf A\+L\+F\+\_\+jit\+\_\+buf} $\ast$}]{handler}
+\end{DoxyParamCaption}
+)}\hypertarget{ALF__jit_8c_abd0c9114908538df9775332ad3622391}{}\label{ALF__jit_8c_abd0c9114908538df9775332ad3622391}
+
+
+Prepares the code to be executed. 
+
+
+\begin{DoxyCode}
+54                                           \{
+55     \textcolor{keywordflow}{if} (handler->\hyperlink{structALF__jit__buf_a6c8c4d0af0f8cc06d141f6babe8236b6}{state} & 0x1)\{
+56         \hyperlink{ALF__jit_8c_a2f010ea7524c7b7c4d93f1f87065175b}{ALF\_jit\_error} = \textcolor{stringliteral}{"JIT buffer can already be executed."};
+57         \textcolor{keywordflow}{return} 1;
+58     \}
+59 
+60 \textcolor{preprocessor}{    #ifdef \_WIN32}
+61         DWORD old;
+62         VirtualProtect(handler->\hyperlink{structALF__jit__buf_acc94d6814de68a2c11e60ea2ae924385}{code}, \hyperlink{ALF__jit_8h_aaf251cd4751f0ede5cf0cf0e838f7bc8}{ALF\_PAGE\_SIZE}(), PAGE\_EXECUTE\_READ, &old);
+63 \textcolor{preprocessor}{    #else}
+64         mprotect(handler->\hyperlink{structALF__jit__buf_acc94d6814de68a2c11e60ea2ae924385}{code}, \hyperlink{ALF__jit_8h_aaf251cd4751f0ede5cf0cf0e838f7bc8}{ALF\_PAGE\_SIZE}(), PROT\_READ | PROT\_EXEC);
+65 \textcolor{preprocessor}{    #endif}
+66     handler->\hyperlink{structALF__jit__buf_a6c8c4d0af0f8cc06d141f6babe8236b6}{state} |= 0x1;
+67     \textcolor{keywordflow}{return} 0;
+68 \}
+\end{DoxyCode}
+\index{A\+L\+F\+\_\+jit.\+c@{A\+L\+F\+\_\+jit.\+c}!A\+L\+F\+\_\+jit\+\_\+free@{A\+L\+F\+\_\+jit\+\_\+free}}
+\index{A\+L\+F\+\_\+jit\+\_\+free@{A\+L\+F\+\_\+jit\+\_\+free}!A\+L\+F\+\_\+jit.\+c@{A\+L\+F\+\_\+jit.\+c}}
+\subsubsection[{\texorpdfstring{A\+L\+F\+\_\+jit\+\_\+free(\+A\+L\+F\+\_\+jit\+\_\+buf $\ast$handler)}{ALF_jit_free(ALF_jit_buf *handler)}}]{\setlength{\rightskip}{0pt plus 5cm}void A\+L\+F\+\_\+jit\+\_\+free (
+\begin{DoxyParamCaption}
+\item[{{\bf A\+L\+F\+\_\+jit\+\_\+buf} $\ast$}]{handler}
+\end{DoxyParamCaption}
+)}\hypertarget{ALF__jit_8c_a429b9d59938f59383feb7939a47fa1de}{}\label{ALF__jit_8c_a429b9d59938f59383feb7939a47fa1de}
+
+
+Free the memory. 
+
+
+\begin{DoxyCode}
+70                                        \{
+71 \textcolor{preprocessor}{    #ifdef \_WIN32}
+72         VirtualFree(handler->\hyperlink{structALF__jit__buf_acc94d6814de68a2c11e60ea2ae924385}{code}, 0, MEM\_RELEASE);
+73 \textcolor{preprocessor}{    #else}
+74         munmap(handler->\hyperlink{structALF__jit__buf_acc94d6814de68a2c11e60ea2ae924385}{code}, \hyperlink{ALF__jit_8h_aaf251cd4751f0ede5cf0cf0e838f7bc8}{ALF\_PAGE\_SIZE}());
+75 \textcolor{preprocessor}{    #endif}
+76     free(handler);
+77     \textcolor{comment}{// handler->state |= 0x2;}
+78 \}
+\end{DoxyCode}
+\index{A\+L\+F\+\_\+jit.\+c@{A\+L\+F\+\_\+jit.\+c}!A\+L\+F\+\_\+jit\+\_\+get\+\_\+avaible\+\_\+size@{A\+L\+F\+\_\+jit\+\_\+get\+\_\+avaible\+\_\+size}}
+\index{A\+L\+F\+\_\+jit\+\_\+get\+\_\+avaible\+\_\+size@{A\+L\+F\+\_\+jit\+\_\+get\+\_\+avaible\+\_\+size}!A\+L\+F\+\_\+jit.\+c@{A\+L\+F\+\_\+jit.\+c}}
+\subsubsection[{\texorpdfstring{A\+L\+F\+\_\+jit\+\_\+get\+\_\+avaible\+\_\+size(\+A\+L\+F\+\_\+jit\+\_\+buf $\ast$handler)}{ALF_jit_get_avaible_size(ALF_jit_buf *handler)}}]{\setlength{\rightskip}{0pt plus 5cm}uint64\+\_\+t A\+L\+F\+\_\+jit\+\_\+get\+\_\+avaible\+\_\+size (
+\begin{DoxyParamCaption}
+\item[{{\bf A\+L\+F\+\_\+jit\+\_\+buf} $\ast$}]{handler}
+\end{DoxyParamCaption}
+)}\hypertarget{ALF__jit_8c_a6c0f56bf19a83bebfd1942486186b4d0}{}\label{ALF__jit_8c_a6c0f56bf19a83bebfd1942486186b4d0}
+
+
+Returns the aviable size for code. 
+
+
+\begin{DoxyCode}
+21                                                        \{
+22     \textcolor{keywordflow}{return} \hyperlink{ALF__jit_8h_aaf251cd4751f0ede5cf0cf0e838f7bc8}{ALF\_PAGE\_SIZE}() - \textcolor{keyword}{sizeof}(uint64\_t) - \textcolor{keyword}{sizeof}(uint8\_t) - handler->
+      \hyperlink{structALF__jit__buf_a6a35d3d3e3a0033c118119bdec30df10}{position}*\textcolor{keyword}{sizeof}(uint8\_t);
+23 \}
+\end{DoxyCode}
+\index{A\+L\+F\+\_\+jit.\+c@{A\+L\+F\+\_\+jit.\+c}!A\+L\+F\+\_\+jit\+\_\+get\+\_\+error@{A\+L\+F\+\_\+jit\+\_\+get\+\_\+error}}
+\index{A\+L\+F\+\_\+jit\+\_\+get\+\_\+error@{A\+L\+F\+\_\+jit\+\_\+get\+\_\+error}!A\+L\+F\+\_\+jit.\+c@{A\+L\+F\+\_\+jit.\+c}}
+\subsubsection[{\texorpdfstring{A\+L\+F\+\_\+jit\+\_\+get\+\_\+error(void)}{ALF_jit_get_error(void)}}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ A\+L\+F\+\_\+jit\+\_\+get\+\_\+error (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{ALF__jit_8c_aaf4683874adbb3f4fbd03f079e1c5df3}{}\label{ALF__jit_8c_aaf4683874adbb3f4fbd03f079e1c5df3}
+
+
+Returns the last error. 
+
+
+\begin{DoxyCode}
+80                              \{
+81     \textcolor{keywordflow}{return} \hyperlink{ALF__jit_8c_a2f010ea7524c7b7c4d93f1f87065175b}{ALF\_jit\_error};
+82 \}
+\end{DoxyCode}
+\index{A\+L\+F\+\_\+jit.\+c@{A\+L\+F\+\_\+jit.\+c}!A\+L\+F\+\_\+jit\+\_\+immediate@{A\+L\+F\+\_\+jit\+\_\+immediate}}
+\index{A\+L\+F\+\_\+jit\+\_\+immediate@{A\+L\+F\+\_\+jit\+\_\+immediate}!A\+L\+F\+\_\+jit.\+c@{A\+L\+F\+\_\+jit.\+c}}
+\subsubsection[{\texorpdfstring{A\+L\+F\+\_\+jit\+\_\+immediate(\+A\+L\+F\+\_\+jit\+\_\+buf $\ast$handler, int size, const void $\ast$value)}{ALF_jit_immediate(ALF_jit_buf *handler, int size, const void *value)}}]{\setlength{\rightskip}{0pt plus 5cm}int A\+L\+F\+\_\+jit\+\_\+immediate (
+\begin{DoxyParamCaption}
+\item[{{\bf A\+L\+F\+\_\+jit\+\_\+buf} $\ast$}]{handler, }
+\item[{int}]{size, }
+\item[{const void $\ast$}]{value}
+\end{DoxyParamCaption}
+)}\hypertarget{ALF__jit_8c_a2dc746cdd4d3df122d3b803c8b0bf0ee}{}\label{ALF__jit_8c_a2dc746cdd4d3df122d3b803c8b0bf0ee}
+
+
+Inserts an immediate (number) in the code. 
+
+
+\begin{DoxyCode}
+40                                                                         \{
+41     \textcolor{keywordflow}{if} (handler->\hyperlink{structALF__jit__buf_a6c8c4d0af0f8cc06d141f6babe8236b6}{state} & 0x1)\{
+42         \hyperlink{ALF__jit_8c_a2f010ea7524c7b7c4d93f1f87065175b}{ALF\_jit\_error} = \textcolor{stringliteral}{"JIT buffer is finalized. Can't write on it."};
+43         \textcolor{keywordflow}{return} 1;
+44     \}
+45     \textcolor{keywordflow}{if}(\hyperlink{ALF__jit_8c_a6c0f56bf19a83bebfd1942486186b4d0}{ALF\_jit\_get\_avaible\_size}(handler) < size)\{
+46         \hyperlink{ALF__jit_8c_a2f010ea7524c7b7c4d93f1f87065175b}{ALF\_jit\_error} = \textcolor{stringliteral}{"Input data is bigger than free space."};
+47         \textcolor{keywordflow}{return} 2;
+48     \}
+49     memcpy(handler->\hyperlink{structALF__jit__buf_acc94d6814de68a2c11e60ea2ae924385}{code} + handler->\hyperlink{structALF__jit__buf_a6a35d3d3e3a0033c118119bdec30df10}{position}, value, size);
+50     handler->\hyperlink{structALF__jit__buf_a6a35d3d3e3a0033c118119bdec30df10}{position} += size;
+51     \textcolor{keywordflow}{return} 0;
+52 \}
+\end{DoxyCode}
+\index{A\+L\+F\+\_\+jit.\+c@{A\+L\+F\+\_\+jit.\+c}!A\+L\+F\+\_\+jit\+\_\+init@{A\+L\+F\+\_\+jit\+\_\+init}}
+\index{A\+L\+F\+\_\+jit\+\_\+init@{A\+L\+F\+\_\+jit\+\_\+init}!A\+L\+F\+\_\+jit.\+c@{A\+L\+F\+\_\+jit.\+c}}
+\subsubsection[{\texorpdfstring{A\+L\+F\+\_\+jit\+\_\+init(void)}{ALF_jit_init(void)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf A\+L\+F\+\_\+jit\+\_\+buf}$\ast$ A\+L\+F\+\_\+jit\+\_\+init (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{ALF__jit_8c_a1e52026c469713a85a081580661f5e14}{}\label{ALF__jit_8c_a1e52026c469713a85a081580661f5e14}
+
+
+Creates a buffer for use as a J\+IT. 
+
+
+\begin{DoxyCode}
+8                                \{
+9     \hyperlink{structALF__jit__buf}{ALF\_jit\_buf} *handler = malloc(\textcolor{keyword}{sizeof}(\hyperlink{structALF__jit__buf}{ALF\_jit\_buf} *));
+10 \textcolor{preprocessor}{    #ifdef \_WIN32}
+11         DWORD type = MEM\_RESERVE | MEM\_COMMIT;
+12         handler->\hyperlink{structALF__jit__buf_acc94d6814de68a2c11e60ea2ae924385}{code} = (uint8\_t *)VirtualAlloc(NULL, \hyperlink{ALF__jit_8h_aaf251cd4751f0ede5cf0cf0e838f7bc8}{ALF\_PAGE\_SIZE}(), type, 
+      PAGE\_READWRITE);
+13 \textcolor{preprocessor}{    #else}
+14         \textcolor{keywordtype}{int} prot = PROT\_READ | PROT\_WRITE;
+15         \textcolor{keywordtype}{int} flags = MAP\_ANONYMOUS | MAP\_PRIVATE;
+16         handler->\hyperlink{structALF__jit__buf_acc94d6814de68a2c11e60ea2ae924385}{code} = (uint8\_t *)mmap(NULL, \hyperlink{ALF__jit_8h_aaf251cd4751f0ede5cf0cf0e838f7bc8}{ALF\_PAGE\_SIZE}(), prot, flags, -1, 0);
+17 \textcolor{preprocessor}{    #endif}
+18     \textcolor{keywordflow}{return} handler;
+19 \}
+\end{DoxyCode}
+\index{A\+L\+F\+\_\+jit.\+c@{A\+L\+F\+\_\+jit.\+c}!A\+L\+F\+\_\+jit\+\_\+instruction@{A\+L\+F\+\_\+jit\+\_\+instruction}}
+\index{A\+L\+F\+\_\+jit\+\_\+instruction@{A\+L\+F\+\_\+jit\+\_\+instruction}!A\+L\+F\+\_\+jit.\+c@{A\+L\+F\+\_\+jit.\+c}}
+\subsubsection[{\texorpdfstring{A\+L\+F\+\_\+jit\+\_\+instruction(\+A\+L\+F\+\_\+jit\+\_\+buf $\ast$handler, int size, uint64\+\_\+t ins)}{ALF_jit_instruction(ALF_jit_buf *handler, int size, uint64_t ins)}}]{\setlength{\rightskip}{0pt plus 5cm}int A\+L\+F\+\_\+jit\+\_\+instruction (
+\begin{DoxyParamCaption}
+\item[{{\bf A\+L\+F\+\_\+jit\+\_\+buf} $\ast$}]{handler, }
+\item[{int}]{size, }
+\item[{uint64\+\_\+t}]{ins}
+\end{DoxyParamCaption}
+)}\hypertarget{ALF__jit_8c_a298a02002b9226a1343ecfae10dc4fa5}{}\label{ALF__jit_8c_a298a02002b9226a1343ecfae10dc4fa5}
+
+
+Inserts a instruction in the code. 
+
+
+\begin{DoxyCode}
+25                                                                      \{
+26     \textcolor{keywordflow}{if} (handler->\hyperlink{structALF__jit__buf_a6c8c4d0af0f8cc06d141f6babe8236b6}{state} & 0x1)\{
+27         \hyperlink{ALF__jit_8c_a2f010ea7524c7b7c4d93f1f87065175b}{ALF\_jit\_error} = \textcolor{stringliteral}{"JIT buffer is finalized. Can't write on it."};
+28         \textcolor{keywordflow}{return} 1;
+29     \}
+30     \textcolor{keywordflow}{if}(\hyperlink{ALF__jit_8c_a6c0f56bf19a83bebfd1942486186b4d0}{ALF\_jit\_get\_avaible\_size}(handler) < size)\{
+31         \hyperlink{ALF__jit_8c_a2f010ea7524c7b7c4d93f1f87065175b}{ALF\_jit\_error} = \textcolor{stringliteral}{"Input data is bigger than free space."};
+32         \textcolor{keywordflow}{return} 2;
+33     \}
+34     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = size - 1; i >= 0; i--)\{
+35         handler->\hyperlink{structALF__jit__buf_acc94d6814de68a2c11e60ea2ae924385}{code}[handler->\hyperlink{structALF__jit__buf_a6a35d3d3e3a0033c118119bdec30df10}{position}++] = (ins >> (i * 8)) & 0xff;
+36     \}
+37     \textcolor{keywordflow}{return} 0;
+38 \}
+\end{DoxyCode}
+
+
+\subsection{Variable Documentation}
+\index{A\+L\+F\+\_\+jit.\+c@{A\+L\+F\+\_\+jit.\+c}!A\+L\+F\+\_\+jit\+\_\+error@{A\+L\+F\+\_\+jit\+\_\+error}}
+\index{A\+L\+F\+\_\+jit\+\_\+error@{A\+L\+F\+\_\+jit\+\_\+error}!A\+L\+F\+\_\+jit.\+c@{A\+L\+F\+\_\+jit.\+c}}
+\subsubsection[{\texorpdfstring{A\+L\+F\+\_\+jit\+\_\+error}{ALF_jit_error}}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ A\+L\+F\+\_\+jit\+\_\+error = \char`\"{}\char`\"{}}\hypertarget{ALF__jit_8c_a2f010ea7524c7b7c4d93f1f87065175b}{}\label{ALF__jit_8c_a2f010ea7524c7b7c4d93f1f87065175b}

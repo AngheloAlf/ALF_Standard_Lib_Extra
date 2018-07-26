@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="dir_d44c64559bbebec7f509842c48db8b23" kind="dir">
+    <compoundname>include</compoundname>
+    <innerfile refid="ALF__bool_8h">ALF_bool.h</innerfile>
+    <innerfile refid="ALF__common_8h">ALF_common.h</innerfile>
+    <innerfile refid="ALF__dict_8h">ALF_dict.h</innerfile>
+    <innerfile refid="ALF__dso__loader_8h">ALF_dso_loader.h</innerfile>
+    <innerfile refid="ALF__IO_8h">ALF_IO.h</innerfile>
+    <innerfile refid="ALF__jit_8h">ALF_jit.h</innerfile>
+    <innerfile refid="ALF__OS_8h">ALF_OS.h</innerfile>
+    <innerfile refid="ALF__std_8h">ALF_std.h</innerfile>
+    <innerfile refid="ALF__std__extra_8h">ALF_std_extra.h</innerfile>
+    <innerfile refid="ALF__str_8h">ALF_str.h</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="include/"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,145 @@
+.TH "src/ALF_dict.c" 3 "Wed Jul 18 2018" "Version 1.0" "ALF Standard Lib" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+src/ALF_dict.c \- 
+.SH SYNOPSIS
+.br
+.PP
+\fC#include 'ALF_dict\&.h'\fP
+.br
+
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBALF_Dict\fP * \fBALF_dict_init\fP (void)"
+.br
+.ti -1c
+.RI "int \fBALF_dict_add\fP (\fBALF_Dict\fP *dict, const char *key, void *value)"
+.br
+.ti -1c
+.RI "void * \fBALF_dict_get\fP (\fBALF_Dict\fP *dict, const char *key)"
+.br
+.ti -1c
+.RI "int \fBALF_dict_delete\fP (\fBALF_Dict\fP *dict, const char *key)"
+.br
+.ti -1c
+.RI "int \fBALF_dict_length\fP (\fBALF_Dict\fP *dict)"
+.br
+.ti -1c
+.RI "void \fBALF_dict_free\fP (\fBALF_Dict\fP *dict)"
+.br
+.in -1c
+.SH "Function Documentation"
+.PP 
+.SS "int ALF_dict_add (\fBALF_Dict\fP * dict, const char * key, void * value)"
+
+.PP
+.nf
+11                                                               {
+12     ALF_Dict *aux = dict;
+13     for(; aux->next != NULL; aux = aux->next){
+14         if(strcmp(aux->key, key) == 0){
+15             aux->value = value;
+16             return 0;
+17         }
+18     }
+19     aux->next = ALF_dict_init();
+20     aux->value = value;
+21     aux->key = malloc(sizeof(char *) * (strlen(key) + 1));
+22     strcpy(aux->key, key);
+23     return 0;
+24 }
+.fi
+.SS "int ALF_dict_delete (\fBALF_Dict\fP * dict, const char * key)"
+
+.PP
+.nf
+36                                                     {
+37     ALF_Dict *aux = dict, *aux2;
+38     if(aux->key != NULL && strcmp(aux->key, key) == 0){
+39         free(aux->key);
+40         aux2 = aux->next;
+41         aux->key = aux2->key;
+42         aux->value = aux2->value;
+43         if(aux->next != NULL){
+44             aux->next = aux2->next;
+45         }
+46         else{
+47             aux->next = NULL;
+48         }
+49         free(aux2->next);
+50         return 0;
+51     }
+52     if(aux->next != NULL){
+53         for (; ((ALF_Dict *)(aux->next))->next != NULL; aux = aux->next){
+54             aux2 = aux->next;
+55             if (strcmp(aux2->key, key) == 0){
+56                 free(aux2->key);
+57                 aux2 = aux2->next;
+58                 free(aux->next);
+59                 aux->next = aux2;
+60                 return 0;
+61             }
+62         }
+63     }
+64     return -2;
+65 }
+.fi
+.SS "void ALF_dict_free (\fBALF_Dict\fP * dict)"
+
+.PP
+.nf
+77                                   {
+78     if(dict->next != NULL){
+79         ALF_dict_free(dict->next);
+80     }
+81     free(dict->key);
+82     free(dict);
+83     return;
+84 }
+.fi
+.SS "void* ALF_dict_get (\fBALF_Dict\fP * dict, const char * key)"
+
+.PP
+.nf
+26                                                    {
+27     ALF_Dict *aux = dict;
+28     for(; aux != NULL && aux->key != NULL; aux = aux->next){
+29         if(strcmp(aux->key, key) == 0){
+30             return aux->value;
+31         }
+32     }
+33     return NULL;
+34 }
+.fi
+.SS "\fBALF_Dict\fP* ALF_dict_init (void)"
+
+.PP
+.nf
+3                              {
+4     ALF_Dict *dict = malloc(sizeof(ALF_Dict *));
+5     dict->next = NULL;
+6     dict->value = NULL;
+7     dict->key = NULL;
+8     return dict;
+9 }
+.fi
+.SS "int ALF_dict_length (\fBALF_Dict\fP * dict)"
+
+.PP
+.nf
+67                                    {
+68     ALF_Dict *aux = dict;
+69     int len = 0;
+70     for(; aux->next != NULL; aux = aux->next){
+71         len += 1;
+72     }
+73 
+74     return len;
+75 }
+.fi
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for ALF Standard Lib from the source code\&.

@@ -1,0 +1,178 @@
+.TH "include/ALF_IO.h" 3 "Wed Jul 18 2018" "Version 1.0" "ALF Standard Lib" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+include/ALF_IO.h \- 
+.SH SYNOPSIS
+.br
+.PP
+\fC#include 'ALF_common\&.h'\fP
+.br
+\fC#include <string\&.h>\fP
+.br
+\fC#include <stdlib\&.h>\fP
+.br
+\fC#include <stdio\&.h>\fP
+.br
+
+.SS "Macros"
+
+.in +1c
+.ti -1c
+.RI "#define \fBALF_IO_major_version\fP   (1)"
+.br
+.ti -1c
+.RI "#define \fBALF_IO_minor_version\fP   (0)"
+.br
+.ti -1c
+.RI "#define \fBALF_IO_patch_version\fP   (0)"
+.br
+.ti -1c
+.RI "#define \fBALF_IO_version\fP   (\fBALF_IO_major_version\&.ALF_IO_minor_version\fP)"
+.br
+.ti -1c
+.RI "#define \fBALF_IO_version_str\fP   (\fBALF_STR\fP(\fBALF_IO_major_version\fP)'\&.'\fBALF_STR\fP(\fBALF_IO_minor_version\fP)'\&.'\fBALF_STR\fP(\fBALF_IO_patch_version\fP))"
+.br
+.ti -1c
+.RI "#define \fBALF_ANSI_COLOR_BLACK\fP   '\\x1b[30m'"
+.br
+.ti -1c
+.RI "#define \fBALF_ANSI_COLOR_RED\fP   '\\x1b[31m'"
+.br
+.ti -1c
+.RI "#define \fBALF_ANSI_COLOR_GREEN\fP   '\\x1b[32m'"
+.br
+.ti -1c
+.RI "#define \fBALF_ANSI_COLOR_YELLOW\fP   '\\x1b[33m'"
+.br
+.ti -1c
+.RI "#define \fBALF_ANSI_COLOR_BLUE\fP   '\\x1b[34m'"
+.br
+.ti -1c
+.RI "#define \fBALF_ANSI_COLOR_MAGENTA\fP   '\\x1b[35m'"
+.br
+.ti -1c
+.RI "#define \fBALF_ANSI_COLOR_CYAN\fP   '\\x1b[36m'"
+.br
+.ti -1c
+.RI "#define \fBALF_ANSI_COLOR_WHITE\fP   '\\x1b[37m'"
+.br
+.ti -1c
+.RI "#define \fBALF_ANSI_COLOR_RESET\fP   '\\x1b[0m'"
+.br
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "char * \fBALF_raw_input\fP (const char *outMessage)"
+.br
+.RI "\fIPython-like input of data\&. \fP"
+.ti -1c
+.RI "void \fBALF_puthex\fP (unsigned char character)"
+.br
+.ti -1c
+.RI "void \fBALF_printfColoredBlock\fP (unsigned char character, int withNumber)"
+.br
+.in -1c
+.SH "Macro Definition Documentation"
+.PP 
+.SS "#define ALF_ANSI_COLOR_BLACK   '\\x1b[30m'"
+
+.SS "#define ALF_ANSI_COLOR_BLUE   '\\x1b[34m'"
+
+.SS "#define ALF_ANSI_COLOR_CYAN   '\\x1b[36m'"
+
+.SS "#define ALF_ANSI_COLOR_GREEN   '\\x1b[32m'"
+
+.SS "#define ALF_ANSI_COLOR_MAGENTA   '\\x1b[35m'"
+
+.SS "#define ALF_ANSI_COLOR_RED   '\\x1b[31m'"
+
+.SS "#define ALF_ANSI_COLOR_RESET   '\\x1b[0m'"
+
+.SS "#define ALF_ANSI_COLOR_WHITE   '\\x1b[37m'"
+
+.SS "#define ALF_ANSI_COLOR_YELLOW   '\\x1b[33m'"
+
+.SS "#define ALF_IO_major_version   (1)"
+
+.SS "#define ALF_IO_minor_version   (0)"
+
+.SS "#define ALF_IO_patch_version   (0)"
+
+.SS "#define ALF_IO_version   (\fBALF_IO_major_version\&.ALF_IO_minor_version\fP)"
+
+.SS "#define ALF_IO_version_str   (\fBALF_STR\fP(\fBALF_IO_major_version\fP)'\&.'\fBALF_STR\fP(\fBALF_IO_minor_version\fP)'\&.'\fBALF_STR\fP(\fBALF_IO_patch_version\fP))"
+
+.SH "Function Documentation"
+.PP 
+.SS "void ALF_printfColoredBlock (unsigned char character, int withNumber)"
+
+.PP
+.nf
+46                                                                     {
+47     if(withNumber){
+48         printf("\033[%im%i " ALF_ANSI_COLOR_RESET, character + 40, character);
+49     }
+50     else{
+51         printf("\033[%im  " ALF_ANSI_COLOR_RESET, character + 40);
+52     }
+53 }
+.fi
+.SS "void ALF_puthex (unsigned char character)"
+
+.PP
+.nf
+39                                         {
+40     if(character < 0x10){
+41         printf("0");
+42     }
+43     printf("%x", character);
+44 }
+.fi
+.SS "char* ALF_raw_input (const char * outMessage)"
+
+.PP
+Python-like input of data\&. This functions prints out a message on screen\&. Then asks for input via stdin\&. The input string is propety of the caller, and he have to free it\&. 
+.PP
+.nf
+3                                            {
+4     printf("%s", outMessage);
+5 
+6     int inSize = 32;
+7     char *inData = malloc(sizeof(char)*inSize);
+8     if(!fgets(inData, inSize, stdin)){ // No se pudo leer
+9         free(inData);
+10         return NULL;
+11     }
+12 
+13     size_t len = strlen(inData);
+14     if(inData[len-1] == '\n'){ // String completo
+15         inData[len-1] = '\0'; // Eliminando el salto de linea
+16         inData = realloc(inData, sizeof(char)*len); // Liberando memoria no necesaria\&.
+17         return inData;
+18     }
+19     else{ // No se encontro el salto de linea\&. A seguir leyendo!
+20         char *auxData = malloc(sizeof(char)*inSize*2); // String mas grande
+21         strcpy(auxData, inData); // Copiando datos al string final
+22         while(fgets(inData, inSize, stdin)){ // Lee datos de stdin
+23             strcat(auxData, inData); // Se concatena al string grande
+24             len = strlen(auxData);
+25             if(auxData[len-1] == '\n'){ // Revisando si tenemos toodo el string
+26                 auxData[len-1] = '\0'; // Elimina salto de linea
+27                 free(inData);
+28                 auxData = realloc(auxData, sizeof(char)*len); // Liberando memoria no necesaria\&.
+29                 return auxData; // Yay!
+30             }
+31             auxData = realloc(auxData, sizeof(char)*(len + inSize)); //String mas grande!
+32         }
+33         free(inData);
+34         free(auxData);
+35         return NULL; // En caso de error
+36     }
+37 }
+.fi
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for ALF Standard Lib from the source code\&.

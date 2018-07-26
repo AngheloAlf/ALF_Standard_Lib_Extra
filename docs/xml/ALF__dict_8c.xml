@@ -1,0 +1,245 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="ALF__dict_8c" kind="file" language="C++">
+    <compoundname>ALF_dict.c</compoundname>
+    <includes refid="ALF__dict_8h" local="yes">ALF_dict.h</includes>
+    <incdepgraph>
+      <node id="227">
+        <label>stdlib.h</label>
+      </node>
+      <node id="224">
+        <label>src/ALF_dict.c</label>
+        <link refid="ALF_dict.c"/>
+        <childnode refid="225" relation="include">
+        </childnode>
+      </node>
+      <node id="225">
+        <label>ALF_dict.h</label>
+        <link refid="ALF__dict_8h"/>
+        <childnode refid="226" relation="include">
+        </childnode>
+        <childnode refid="227" relation="include">
+        </childnode>
+        <childnode refid="228" relation="include">
+        </childnode>
+      </node>
+      <node id="226">
+        <label>ALF_common.h</label>
+        <link refid="ALF__common_8h"/>
+      </node>
+      <node id="228">
+        <label>string.h</label>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="ALF__dict_8c_1a4c25803a36ba43c9887482f9338fffa6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structALF__Dict" kindref="compound">ALF_Dict</ref> *</type>
+        <definition>ALF_Dict* ALF_dict_init</definition>
+        <argsstring>(void)</argsstring>
+        <name>ALF_dict_init</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/ALF_dict.c" line="3" column="1" bodyfile="src/ALF_dict.c" bodystart="3" bodyend="9"/>
+      </memberdef>
+      <memberdef kind="function" id="ALF__dict_8c_1ae9e42b0cb2f0344beca767de6fd610d8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int ALF_dict_add</definition>
+        <argsstring>(ALF_Dict *dict, const char *key, void *value)</argsstring>
+        <name>ALF_dict_add</name>
+        <param>
+          <type><ref refid="structALF__Dict" kindref="compound">ALF_Dict</ref> *</type>
+          <declname>dict</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>key</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/ALF_dict.c" line="11" column="1" bodyfile="src/ALF_dict.c" bodystart="11" bodyend="24"/>
+      </memberdef>
+      <memberdef kind="function" id="ALF__dict_8c_1a99f047933c746d3dd537ec362d145a88" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void *</type>
+        <definition>void* ALF_dict_get</definition>
+        <argsstring>(ALF_Dict *dict, const char *key)</argsstring>
+        <name>ALF_dict_get</name>
+        <param>
+          <type><ref refid="structALF__Dict" kindref="compound">ALF_Dict</ref> *</type>
+          <declname>dict</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>key</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/ALF_dict.c" line="26" column="1" bodyfile="src/ALF_dict.c" bodystart="26" bodyend="34"/>
+      </memberdef>
+      <memberdef kind="function" id="ALF__dict_8c_1ad4c79216626c3050278a8b4d07aac796" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int ALF_dict_delete</definition>
+        <argsstring>(ALF_Dict *dict, const char *key)</argsstring>
+        <name>ALF_dict_delete</name>
+        <param>
+          <type><ref refid="structALF__Dict" kindref="compound">ALF_Dict</ref> *</type>
+          <declname>dict</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>key</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/ALF_dict.c" line="36" column="1" bodyfile="src/ALF_dict.c" bodystart="36" bodyend="65"/>
+      </memberdef>
+      <memberdef kind="function" id="ALF__dict_8c_1ae4d23e124821b6164d64947aecc41c0a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int ALF_dict_length</definition>
+        <argsstring>(ALF_Dict *dict)</argsstring>
+        <name>ALF_dict_length</name>
+        <param>
+          <type><ref refid="structALF__Dict" kindref="compound">ALF_Dict</ref> *</type>
+          <declname>dict</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/ALF_dict.c" line="67" column="1" bodyfile="src/ALF_dict.c" bodystart="67" bodyend="75"/>
+      </memberdef>
+      <memberdef kind="function" id="ALF__dict_8c_1aaabe57df0f57d9614aa973f04235e95a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ALF_dict_free</definition>
+        <argsstring>(ALF_Dict *dict)</argsstring>
+        <name>ALF_dict_free</name>
+        <param>
+          <type><ref refid="structALF__Dict" kindref="compound">ALF_Dict</ref> *</type>
+          <declname>dict</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/ALF_dict.c" line="77" column="1" bodyfile="src/ALF_dict.c" bodystart="77" bodyend="84"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&quot;<ref refid="ALF__dict_8h" kindref="compound">ALF_dict.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"><ref refid="structALF__Dict" kindref="compound">ALF_Dict</ref><sp/>*<ref refid="ALF__dict_8c_1a4c25803a36ba43c9887482f9338fffa6" kindref="member">ALF_dict_init</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">){</highlight></codeline>
+<codeline lineno="4"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structALF__Dict" kindref="compound">ALF_Dict</ref><sp/>*dict<sp/>=<sp/>malloc(</highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(<ref refid="structALF__Dict" kindref="compound">ALF_Dict</ref><sp/>*));</highlight></codeline>
+<codeline lineno="5"><highlight class="normal"><sp/><sp/><sp/><sp/>dict-&gt;<ref refid="structALF__Dict_1abf4da60193bf9ced8fb3c8b013e23f18" kindref="member">next</ref><sp/>=<sp/>NULL;</highlight></codeline>
+<codeline lineno="6"><highlight class="normal"><sp/><sp/><sp/><sp/>dict-&gt;<ref refid="structALF__Dict_1a00b3284fe9ac4af7137cbdac1a61f67a" kindref="member">value</ref><sp/>=<sp/>NULL;</highlight></codeline>
+<codeline lineno="7"><highlight class="normal"><sp/><sp/><sp/><sp/>dict-&gt;<ref refid="structALF__Dict_1a8850433b9edd2131631fdea81f005ebf" kindref="member">key</ref><sp/>=<sp/>NULL;</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>dict;</highlight></codeline>
+<codeline lineno="9"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="ALF__dict_8c_1ae9e42b0cb2f0344beca767de6fd610d8" kindref="member">ALF_dict_add</ref>(<ref refid="structALF__Dict" kindref="compound">ALF_Dict</ref><sp/>*dict,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*key,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*value){</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structALF__Dict" kindref="compound">ALF_Dict</ref><sp/>*aux<sp/>=<sp/>dict;</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(;<sp/>aux-&gt;<ref refid="structALF__Dict_1abf4da60193bf9ced8fb3c8b013e23f18" kindref="member">next</ref><sp/>!=<sp/>NULL;<sp/>aux<sp/>=<sp/>aux-&gt;<ref refid="structALF__Dict_1abf4da60193bf9ced8fb3c8b013e23f18" kindref="member">next</ref>){</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(strcmp(aux-&gt;<ref refid="structALF__Dict_1a8850433b9edd2131631fdea81f005ebf" kindref="member">key</ref>,<sp/>key)<sp/>==<sp/>0){</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>aux-&gt;<ref refid="structALF__Dict_1a00b3284fe9ac4af7137cbdac1a61f67a" kindref="member">value</ref><sp/>=<sp/>value;</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/>aux-&gt;<ref refid="structALF__Dict_1abf4da60193bf9ced8fb3c8b013e23f18" kindref="member">next</ref><sp/>=<sp/><ref refid="ALF__dict_8c_1a4c25803a36ba43c9887482f9338fffa6" kindref="member">ALF_dict_init</ref>();</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/>aux-&gt;<ref refid="structALF__Dict_1a00b3284fe9ac4af7137cbdac1a61f67a" kindref="member">value</ref><sp/>=<sp/>value;</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/>aux-&gt;<ref refid="structALF__Dict_1a8850433b9edd2131631fdea81f005ebf" kindref="member">key</ref><sp/>=<sp/>malloc(</highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*)<sp/>*<sp/>(strlen(key)<sp/>+<sp/>1));</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/>strcpy(aux-&gt;<ref refid="structALF__Dict_1a8850433b9edd2131631fdea81f005ebf" kindref="member">key</ref>,<sp/>key);</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="24"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*<ref refid="ALF__dict_8c_1a99f047933c746d3dd537ec362d145a88" kindref="member">ALF_dict_get</ref>(<ref refid="structALF__Dict" kindref="compound">ALF_Dict</ref><sp/>*dict,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*key){</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structALF__Dict" kindref="compound">ALF_Dict</ref><sp/>*aux<sp/>=<sp/>dict;</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(;<sp/>aux<sp/>!=<sp/>NULL<sp/>&amp;&amp;<sp/>aux-&gt;<ref refid="structALF__Dict_1a8850433b9edd2131631fdea81f005ebf" kindref="member">key</ref><sp/>!=<sp/>NULL;<sp/>aux<sp/>=<sp/>aux-&gt;<ref refid="structALF__Dict_1abf4da60193bf9ced8fb3c8b013e23f18" kindref="member">next</ref>){</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(strcmp(aux-&gt;<ref refid="structALF__Dict_1a8850433b9edd2131631fdea81f005ebf" kindref="member">key</ref>,<sp/>key)<sp/>==<sp/>0){</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>aux-&gt;<ref refid="structALF__Dict_1a00b3284fe9ac4af7137cbdac1a61f67a" kindref="member">value</ref>;</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>NULL;</highlight></codeline>
+<codeline lineno="34"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="ALF__dict_8c_1ad4c79216626c3050278a8b4d07aac796" kindref="member">ALF_dict_delete</ref>(<ref refid="structALF__Dict" kindref="compound">ALF_Dict</ref><sp/>*dict,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*key){</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structALF__Dict" kindref="compound">ALF_Dict</ref><sp/>*aux<sp/>=<sp/>dict,<sp/>*aux2;</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(aux-&gt;<ref refid="structALF__Dict_1a8850433b9edd2131631fdea81f005ebf" kindref="member">key</ref><sp/>!=<sp/>NULL<sp/>&amp;&amp;<sp/>strcmp(aux-&gt;<ref refid="structALF__Dict_1a8850433b9edd2131631fdea81f005ebf" kindref="member">key</ref>,<sp/>key)<sp/>==<sp/>0){</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>free(aux-&gt;<ref refid="structALF__Dict_1a8850433b9edd2131631fdea81f005ebf" kindref="member">key</ref>);</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>aux2<sp/>=<sp/>aux-&gt;<ref refid="structALF__Dict_1abf4da60193bf9ced8fb3c8b013e23f18" kindref="member">next</ref>;</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>aux-&gt;<ref refid="structALF__Dict_1a8850433b9edd2131631fdea81f005ebf" kindref="member">key</ref><sp/>=<sp/>aux2-&gt;key;</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>aux-&gt;<ref refid="structALF__Dict_1a00b3284fe9ac4af7137cbdac1a61f67a" kindref="member">value</ref><sp/>=<sp/>aux2-&gt;value;</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(aux-&gt;<ref refid="structALF__Dict_1abf4da60193bf9ced8fb3c8b013e23f18" kindref="member">next</ref><sp/>!=<sp/>NULL){</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>aux-&gt;<ref refid="structALF__Dict_1abf4da60193bf9ced8fb3c8b013e23f18" kindref="member">next</ref><sp/>=<sp/>aux2-&gt;next;</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>aux-&gt;<ref refid="structALF__Dict_1abf4da60193bf9ced8fb3c8b013e23f18" kindref="member">next</ref><sp/>=<sp/>NULL;</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>free(aux2-&gt;next);</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(aux-&gt;<ref refid="structALF__Dict_1abf4da60193bf9ced8fb3c8b013e23f18" kindref="member">next</ref><sp/>!=<sp/>NULL){</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(;<sp/>((<ref refid="structALF__Dict" kindref="compound">ALF_Dict</ref><sp/>*)(aux-&gt;<ref refid="structALF__Dict_1abf4da60193bf9ced8fb3c8b013e23f18" kindref="member">next</ref>))-&gt;next<sp/>!=<sp/>NULL;<sp/>aux<sp/>=<sp/>aux-&gt;<ref refid="structALF__Dict_1abf4da60193bf9ced8fb3c8b013e23f18" kindref="member">next</ref>){</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>aux2<sp/>=<sp/>aux-&gt;<ref refid="structALF__Dict_1abf4da60193bf9ced8fb3c8b013e23f18" kindref="member">next</ref>;</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(strcmp(aux2-&gt;key,<sp/>key)<sp/>==<sp/>0){</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>free(aux2-&gt;key);</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>aux2<sp/>=<sp/>aux2-&gt;next;</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>free(aux-&gt;<ref refid="structALF__Dict_1abf4da60193bf9ced8fb3c8b013e23f18" kindref="member">next</ref>);</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>aux-&gt;<ref refid="structALF__Dict_1abf4da60193bf9ced8fb3c8b013e23f18" kindref="member">next</ref><sp/>=<sp/>aux2;</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>-2;</highlight></codeline>
+<codeline lineno="65"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="ALF__dict_8c_1ae4d23e124821b6164d64947aecc41c0a" kindref="member">ALF_dict_length</ref>(<ref refid="structALF__Dict" kindref="compound">ALF_Dict</ref><sp/>*dict){</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structALF__Dict" kindref="compound">ALF_Dict</ref><sp/>*aux<sp/>=<sp/>dict;</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>len<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(;<sp/>aux-&gt;<ref refid="structALF__Dict_1abf4da60193bf9ced8fb3c8b013e23f18" kindref="member">next</ref><sp/>!=<sp/>NULL;<sp/>aux<sp/>=<sp/>aux-&gt;<ref refid="structALF__Dict_1abf4da60193bf9ced8fb3c8b013e23f18" kindref="member">next</ref>){</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>len<sp/>+=<sp/>1;</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>len;</highlight></codeline>
+<codeline lineno="75"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"></highlight></codeline>
+<codeline lineno="77"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="ALF__dict_8c_1aaabe57df0f57d9614aa973f04235e95a" kindref="member">ALF_dict_free</ref>(<ref refid="structALF__Dict" kindref="compound">ALF_Dict</ref><sp/>*dict){</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(dict-&gt;<ref refid="structALF__Dict_1abf4da60193bf9ced8fb3c8b013e23f18" kindref="member">next</ref><sp/>!=<sp/>NULL){</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="ALF__dict_8c_1aaabe57df0f57d9614aa973f04235e95a" kindref="member">ALF_dict_free</ref>(dict-&gt;<ref refid="structALF__Dict_1abf4da60193bf9ced8fb3c8b013e23f18" kindref="member">next</ref>);</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/>free(dict-&gt;<ref refid="structALF__Dict_1a8850433b9edd2131631fdea81f005ebf" kindref="member">key</ref>);</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/>free(dict);</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="84"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="src/ALF_dict.c"/>
+  </compounddef>
+</doxygen>

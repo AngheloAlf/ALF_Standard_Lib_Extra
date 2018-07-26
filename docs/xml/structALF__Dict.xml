@@ -1,0 +1,58 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="structALF__Dict" kind="struct" language="C++" prot="public">
+    <compoundname>ALF_Dict</compoundname>
+    <includes refid="ALF__dict_8h" local="no">ALF_dict.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structALF__Dict_1abf4da60193bf9ced8fb3c8b013e23f18" prot="public" static="no" mutable="no">
+        <type>void *</type>
+        <definition>void* ALF_Dict::next</definition>
+        <argsstring></argsstring>
+        <name>next</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ALF_dict.h" line="16" column="1" bodyfile="include/ALF_dict.h" bodystart="16" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structALF__Dict_1a8850433b9edd2131631fdea81f005ebf" prot="public" static="no" mutable="no">
+        <type>char *</type>
+        <definition>char* ALF_Dict::key</definition>
+        <argsstring></argsstring>
+        <name>key</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ALF_dict.h" line="17" column="1" bodyfile="include/ALF_dict.h" bodystart="17" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structALF__Dict_1a00b3284fe9ac4af7137cbdac1a61f67a" prot="public" static="no" mutable="no">
+        <type>void *</type>
+        <definition>void* ALF_Dict::value</definition>
+        <argsstring></argsstring>
+        <name>value</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ALF_dict.h" line="18" column="1" bodyfile="include/ALF_dict.h" bodystart="18" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="include/ALF_dict.h" line="15" column="1" bodyfile="include/ALF_dict.h" bodystart="15" bodyend="19"/>
+    <listofallmembers>
+      <member refid="structALF__Dict_1a8850433b9edd2131631fdea81f005ebf" prot="public" virt="non-virtual"><scope>ALF_Dict</scope><name>key</name></member>
+      <member refid="structALF__Dict_1abf4da60193bf9ced8fb3c8b013e23f18" prot="public" virt="non-virtual"><scope>ALF_Dict</scope><name>next</name></member>
+      <member refid="structALF__Dict_1a00b3284fe9ac4af7137cbdac1a61f67a" prot="public" virt="non-virtual"><scope>ALF_Dict</scope><name>value</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

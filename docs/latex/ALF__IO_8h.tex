@@ -1,0 +1,182 @@
+\hypertarget{ALF__IO_8h}{}\section{include/\+A\+L\+F\+\_\+\+IO.h File Reference}
+\label{ALF__IO_8h}\index{include/\+A\+L\+F\+\_\+\+I\+O.\+h@{include/\+A\+L\+F\+\_\+\+I\+O.\+h}}
+{\ttfamily \#include \char`\"{}A\+L\+F\+\_\+common.\+h\char`\"{}}\\*
+{\ttfamily \#include $<$string.\+h$>$}\\*
+{\ttfamily \#include $<$stdlib.\+h$>$}\\*
+{\ttfamily \#include $<$stdio.\+h$>$}\\*
+Include dependency graph for A\+L\+F\+\_\+\+I\+O.\+h\+:
+% FIG 0
+This graph shows which files directly or indirectly include this file\+:
+% FIG 1
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{ALF__IO_8h_a58cf8cc899547c797f2663baf70ffc28}{A\+L\+F\+\_\+\+I\+O\+\_\+major\+\_\+version}~(1)
+\item 
+\#define \hyperlink{ALF__IO_8h_ac4eb4026b793e76aa9c48717d811669a}{A\+L\+F\+\_\+\+I\+O\+\_\+minor\+\_\+version}~(0)
+\item 
+\#define \hyperlink{ALF__IO_8h_acbc53a7cb720245c98a7d08c7e628dcd}{A\+L\+F\+\_\+\+I\+O\+\_\+patch\+\_\+version}~(0)
+\item 
+\#define \hyperlink{ALF__IO_8h_a12be2606d379cf4aec806b4c9b8a90c0}{A\+L\+F\+\_\+\+I\+O\+\_\+version}~(\hyperlink{ALF__IO_8h_ac4eb4026b793e76aa9c48717d811669a}{A\+L\+F\+\_\+\+I\+O\+\_\+major\+\_\+version.\+A\+L\+F\+\_\+\+I\+O\+\_\+minor\+\_\+version})
+\item 
+\#define \hyperlink{ALF__IO_8h_af5b864071282467becfdf4bb419a37df}{A\+L\+F\+\_\+\+I\+O\+\_\+version\+\_\+str}~(\hyperlink{ALF__common_8h_ac8dcedbd61f9ec05e6284411a6bf646a}{A\+L\+F\+\_\+\+S\+TR}(\hyperlink{ALF__IO_8h_a58cf8cc899547c797f2663baf70ffc28}{A\+L\+F\+\_\+\+I\+O\+\_\+major\+\_\+version})\char`\"{}.\char`\"{}\hyperlink{ALF__common_8h_ac8dcedbd61f9ec05e6284411a6bf646a}{A\+L\+F\+\_\+\+S\+TR}(\hyperlink{ALF__IO_8h_ac4eb4026b793e76aa9c48717d811669a}{A\+L\+F\+\_\+\+I\+O\+\_\+minor\+\_\+version})\char`\"{}.\char`\"{}\hyperlink{ALF__common_8h_ac8dcedbd61f9ec05e6284411a6bf646a}{A\+L\+F\+\_\+\+S\+TR}(\hyperlink{ALF__IO_8h_acbc53a7cb720245c98a7d08c7e628dcd}{A\+L\+F\+\_\+\+I\+O\+\_\+patch\+\_\+version}))
+\item 
+\#define \hyperlink{ALF__IO_8h_ae79c92711856876cb059bd665546217b}{A\+L\+F\+\_\+\+A\+N\+S\+I\+\_\+\+C\+O\+L\+O\+R\+\_\+\+B\+L\+A\+CK}~\char`\"{}\textbackslash{}x1b\mbox{[}30m\char`\"{}
+\item 
+\#define \hyperlink{ALF__IO_8h_aa05de9cf60eb2d3d95b6a449fe1c0fd7}{A\+L\+F\+\_\+\+A\+N\+S\+I\+\_\+\+C\+O\+L\+O\+R\+\_\+\+R\+ED}~\char`\"{}\textbackslash{}x1b\mbox{[}31m\char`\"{}
+\item 
+\#define \hyperlink{ALF__IO_8h_aa4474b64b1370d2d582adb004826b73b}{A\+L\+F\+\_\+\+A\+N\+S\+I\+\_\+\+C\+O\+L\+O\+R\+\_\+\+G\+R\+E\+EN}~\char`\"{}\textbackslash{}x1b\mbox{[}32m\char`\"{}
+\item 
+\#define \hyperlink{ALF__IO_8h_a5804b3c837c58d68c6bd99930c7d59e9}{A\+L\+F\+\_\+\+A\+N\+S\+I\+\_\+\+C\+O\+L\+O\+R\+\_\+\+Y\+E\+L\+L\+OW}~\char`\"{}\textbackslash{}x1b\mbox{[}33m\char`\"{}
+\item 
+\#define \hyperlink{ALF__IO_8h_a3c9744127118adbf03e16086ccde33ec}{A\+L\+F\+\_\+\+A\+N\+S\+I\+\_\+\+C\+O\+L\+O\+R\+\_\+\+B\+L\+UE}~\char`\"{}\textbackslash{}x1b\mbox{[}34m\char`\"{}
+\item 
+\#define \hyperlink{ALF__IO_8h_a9c198e63838cc79c29612835850c6875}{A\+L\+F\+\_\+\+A\+N\+S\+I\+\_\+\+C\+O\+L\+O\+R\+\_\+\+M\+A\+G\+E\+N\+TA}~\char`\"{}\textbackslash{}x1b\mbox{[}35m\char`\"{}
+\item 
+\#define \hyperlink{ALF__IO_8h_adce364df59a5391bc3c522e84034f719}{A\+L\+F\+\_\+\+A\+N\+S\+I\+\_\+\+C\+O\+L\+O\+R\+\_\+\+C\+Y\+AN}~\char`\"{}\textbackslash{}x1b\mbox{[}36m\char`\"{}
+\item 
+\#define \hyperlink{ALF__IO_8h_a7cd156b8cfd2e3bd82c729f1ed5201e5}{A\+L\+F\+\_\+\+A\+N\+S\+I\+\_\+\+C\+O\+L\+O\+R\+\_\+\+W\+H\+I\+TE}~\char`\"{}\textbackslash{}x1b\mbox{[}37m\char`\"{}
+\item 
+\#define \hyperlink{ALF__IO_8h_a0f3fc340b9d3d253c43cb8a1ae4178ab}{A\+L\+F\+\_\+\+A\+N\+S\+I\+\_\+\+C\+O\+L\+O\+R\+\_\+\+R\+E\+S\+ET}~\char`\"{}\textbackslash{}x1b\mbox{[}0m\char`\"{}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+char $\ast$ \hyperlink{ALF__IO_8h_adc74e291352847d6d64a43b891c57c73}{A\+L\+F\+\_\+raw\+\_\+input} (const char $\ast$out\+Message)
+\begin{DoxyCompactList}\small\item\em Python-\/like input of data. \end{DoxyCompactList}\item 
+void \hyperlink{ALF__IO_8h_a9b05afd3abc63c8699de02a8edcad61f}{A\+L\+F\+\_\+puthex} (unsigned char character)
+\item 
+void \hyperlink{ALF__IO_8h_af2154141da807745cea3f7f8d647d661}{A\+L\+F\+\_\+printf\+Colored\+Block} (unsigned char character, int with\+Number)
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\index{A\+L\+F\+\_\+\+I\+O.\+h@{A\+L\+F\+\_\+\+I\+O.\+h}!A\+L\+F\+\_\+\+A\+N\+S\+I\+\_\+\+C\+O\+L\+O\+R\+\_\+\+B\+L\+A\+CK@{A\+L\+F\+\_\+\+A\+N\+S\+I\+\_\+\+C\+O\+L\+O\+R\+\_\+\+B\+L\+A\+CK}}
+\index{A\+L\+F\+\_\+\+A\+N\+S\+I\+\_\+\+C\+O\+L\+O\+R\+\_\+\+B\+L\+A\+CK@{A\+L\+F\+\_\+\+A\+N\+S\+I\+\_\+\+C\+O\+L\+O\+R\+\_\+\+B\+L\+A\+CK}!A\+L\+F\+\_\+\+I\+O.\+h@{A\+L\+F\+\_\+\+I\+O.\+h}}
+\subsubsection[{\texorpdfstring{A\+L\+F\+\_\+\+A\+N\+S\+I\+\_\+\+C\+O\+L\+O\+R\+\_\+\+B\+L\+A\+CK}{ALF_ANSI_COLOR_BLACK}}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\+L\+F\+\_\+\+A\+N\+S\+I\+\_\+\+C\+O\+L\+O\+R\+\_\+\+B\+L\+A\+CK~\char`\"{}\textbackslash{}x1b\mbox{[}30m\char`\"{}}\hypertarget{ALF__IO_8h_ae79c92711856876cb059bd665546217b}{}\label{ALF__IO_8h_ae79c92711856876cb059bd665546217b}
+\index{A\+L\+F\+\_\+\+I\+O.\+h@{A\+L\+F\+\_\+\+I\+O.\+h}!A\+L\+F\+\_\+\+A\+N\+S\+I\+\_\+\+C\+O\+L\+O\+R\+\_\+\+B\+L\+UE@{A\+L\+F\+\_\+\+A\+N\+S\+I\+\_\+\+C\+O\+L\+O\+R\+\_\+\+B\+L\+UE}}
+\index{A\+L\+F\+\_\+\+A\+N\+S\+I\+\_\+\+C\+O\+L\+O\+R\+\_\+\+B\+L\+UE@{A\+L\+F\+\_\+\+A\+N\+S\+I\+\_\+\+C\+O\+L\+O\+R\+\_\+\+B\+L\+UE}!A\+L\+F\+\_\+\+I\+O.\+h@{A\+L\+F\+\_\+\+I\+O.\+h}}
+\subsubsection[{\texorpdfstring{A\+L\+F\+\_\+\+A\+N\+S\+I\+\_\+\+C\+O\+L\+O\+R\+\_\+\+B\+L\+UE}{ALF_ANSI_COLOR_BLUE}}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\+L\+F\+\_\+\+A\+N\+S\+I\+\_\+\+C\+O\+L\+O\+R\+\_\+\+B\+L\+UE~\char`\"{}\textbackslash{}x1b\mbox{[}34m\char`\"{}}\hypertarget{ALF__IO_8h_a3c9744127118adbf03e16086ccde33ec}{}\label{ALF__IO_8h_a3c9744127118adbf03e16086ccde33ec}
+\index{A\+L\+F\+\_\+\+I\+O.\+h@{A\+L\+F\+\_\+\+I\+O.\+h}!A\+L\+F\+\_\+\+A\+N\+S\+I\+\_\+\+C\+O\+L\+O\+R\+\_\+\+C\+Y\+AN@{A\+L\+F\+\_\+\+A\+N\+S\+I\+\_\+\+C\+O\+L\+O\+R\+\_\+\+C\+Y\+AN}}
+\index{A\+L\+F\+\_\+\+A\+N\+S\+I\+\_\+\+C\+O\+L\+O\+R\+\_\+\+C\+Y\+AN@{A\+L\+F\+\_\+\+A\+N\+S\+I\+\_\+\+C\+O\+L\+O\+R\+\_\+\+C\+Y\+AN}!A\+L\+F\+\_\+\+I\+O.\+h@{A\+L\+F\+\_\+\+I\+O.\+h}}
+\subsubsection[{\texorpdfstring{A\+L\+F\+\_\+\+A\+N\+S\+I\+\_\+\+C\+O\+L\+O\+R\+\_\+\+C\+Y\+AN}{ALF_ANSI_COLOR_CYAN}}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\+L\+F\+\_\+\+A\+N\+S\+I\+\_\+\+C\+O\+L\+O\+R\+\_\+\+C\+Y\+AN~\char`\"{}\textbackslash{}x1b\mbox{[}36m\char`\"{}}\hypertarget{ALF__IO_8h_adce364df59a5391bc3c522e84034f719}{}\label{ALF__IO_8h_adce364df59a5391bc3c522e84034f719}
+\index{A\+L\+F\+\_\+\+I\+O.\+h@{A\+L\+F\+\_\+\+I\+O.\+h}!A\+L\+F\+\_\+\+A\+N\+S\+I\+\_\+\+C\+O\+L\+O\+R\+\_\+\+G\+R\+E\+EN@{A\+L\+F\+\_\+\+A\+N\+S\+I\+\_\+\+C\+O\+L\+O\+R\+\_\+\+G\+R\+E\+EN}}
+\index{A\+L\+F\+\_\+\+A\+N\+S\+I\+\_\+\+C\+O\+L\+O\+R\+\_\+\+G\+R\+E\+EN@{A\+L\+F\+\_\+\+A\+N\+S\+I\+\_\+\+C\+O\+L\+O\+R\+\_\+\+G\+R\+E\+EN}!A\+L\+F\+\_\+\+I\+O.\+h@{A\+L\+F\+\_\+\+I\+O.\+h}}
+\subsubsection[{\texorpdfstring{A\+L\+F\+\_\+\+A\+N\+S\+I\+\_\+\+C\+O\+L\+O\+R\+\_\+\+G\+R\+E\+EN}{ALF_ANSI_COLOR_GREEN}}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\+L\+F\+\_\+\+A\+N\+S\+I\+\_\+\+C\+O\+L\+O\+R\+\_\+\+G\+R\+E\+EN~\char`\"{}\textbackslash{}x1b\mbox{[}32m\char`\"{}}\hypertarget{ALF__IO_8h_aa4474b64b1370d2d582adb004826b73b}{}\label{ALF__IO_8h_aa4474b64b1370d2d582adb004826b73b}
+\index{A\+L\+F\+\_\+\+I\+O.\+h@{A\+L\+F\+\_\+\+I\+O.\+h}!A\+L\+F\+\_\+\+A\+N\+S\+I\+\_\+\+C\+O\+L\+O\+R\+\_\+\+M\+A\+G\+E\+N\+TA@{A\+L\+F\+\_\+\+A\+N\+S\+I\+\_\+\+C\+O\+L\+O\+R\+\_\+\+M\+A\+G\+E\+N\+TA}}
+\index{A\+L\+F\+\_\+\+A\+N\+S\+I\+\_\+\+C\+O\+L\+O\+R\+\_\+\+M\+A\+G\+E\+N\+TA@{A\+L\+F\+\_\+\+A\+N\+S\+I\+\_\+\+C\+O\+L\+O\+R\+\_\+\+M\+A\+G\+E\+N\+TA}!A\+L\+F\+\_\+\+I\+O.\+h@{A\+L\+F\+\_\+\+I\+O.\+h}}
+\subsubsection[{\texorpdfstring{A\+L\+F\+\_\+\+A\+N\+S\+I\+\_\+\+C\+O\+L\+O\+R\+\_\+\+M\+A\+G\+E\+N\+TA}{ALF_ANSI_COLOR_MAGENTA}}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\+L\+F\+\_\+\+A\+N\+S\+I\+\_\+\+C\+O\+L\+O\+R\+\_\+\+M\+A\+G\+E\+N\+TA~\char`\"{}\textbackslash{}x1b\mbox{[}35m\char`\"{}}\hypertarget{ALF__IO_8h_a9c198e63838cc79c29612835850c6875}{}\label{ALF__IO_8h_a9c198e63838cc79c29612835850c6875}
+\index{A\+L\+F\+\_\+\+I\+O.\+h@{A\+L\+F\+\_\+\+I\+O.\+h}!A\+L\+F\+\_\+\+A\+N\+S\+I\+\_\+\+C\+O\+L\+O\+R\+\_\+\+R\+ED@{A\+L\+F\+\_\+\+A\+N\+S\+I\+\_\+\+C\+O\+L\+O\+R\+\_\+\+R\+ED}}
+\index{A\+L\+F\+\_\+\+A\+N\+S\+I\+\_\+\+C\+O\+L\+O\+R\+\_\+\+R\+ED@{A\+L\+F\+\_\+\+A\+N\+S\+I\+\_\+\+C\+O\+L\+O\+R\+\_\+\+R\+ED}!A\+L\+F\+\_\+\+I\+O.\+h@{A\+L\+F\+\_\+\+I\+O.\+h}}
+\subsubsection[{\texorpdfstring{A\+L\+F\+\_\+\+A\+N\+S\+I\+\_\+\+C\+O\+L\+O\+R\+\_\+\+R\+ED}{ALF_ANSI_COLOR_RED}}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\+L\+F\+\_\+\+A\+N\+S\+I\+\_\+\+C\+O\+L\+O\+R\+\_\+\+R\+ED~\char`\"{}\textbackslash{}x1b\mbox{[}31m\char`\"{}}\hypertarget{ALF__IO_8h_aa05de9cf60eb2d3d95b6a449fe1c0fd7}{}\label{ALF__IO_8h_aa05de9cf60eb2d3d95b6a449fe1c0fd7}
+\index{A\+L\+F\+\_\+\+I\+O.\+h@{A\+L\+F\+\_\+\+I\+O.\+h}!A\+L\+F\+\_\+\+A\+N\+S\+I\+\_\+\+C\+O\+L\+O\+R\+\_\+\+R\+E\+S\+ET@{A\+L\+F\+\_\+\+A\+N\+S\+I\+\_\+\+C\+O\+L\+O\+R\+\_\+\+R\+E\+S\+ET}}
+\index{A\+L\+F\+\_\+\+A\+N\+S\+I\+\_\+\+C\+O\+L\+O\+R\+\_\+\+R\+E\+S\+ET@{A\+L\+F\+\_\+\+A\+N\+S\+I\+\_\+\+C\+O\+L\+O\+R\+\_\+\+R\+E\+S\+ET}!A\+L\+F\+\_\+\+I\+O.\+h@{A\+L\+F\+\_\+\+I\+O.\+h}}
+\subsubsection[{\texorpdfstring{A\+L\+F\+\_\+\+A\+N\+S\+I\+\_\+\+C\+O\+L\+O\+R\+\_\+\+R\+E\+S\+ET}{ALF_ANSI_COLOR_RESET}}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\+L\+F\+\_\+\+A\+N\+S\+I\+\_\+\+C\+O\+L\+O\+R\+\_\+\+R\+E\+S\+ET~\char`\"{}\textbackslash{}x1b\mbox{[}0m\char`\"{}}\hypertarget{ALF__IO_8h_a0f3fc340b9d3d253c43cb8a1ae4178ab}{}\label{ALF__IO_8h_a0f3fc340b9d3d253c43cb8a1ae4178ab}
+\index{A\+L\+F\+\_\+\+I\+O.\+h@{A\+L\+F\+\_\+\+I\+O.\+h}!A\+L\+F\+\_\+\+A\+N\+S\+I\+\_\+\+C\+O\+L\+O\+R\+\_\+\+W\+H\+I\+TE@{A\+L\+F\+\_\+\+A\+N\+S\+I\+\_\+\+C\+O\+L\+O\+R\+\_\+\+W\+H\+I\+TE}}
+\index{A\+L\+F\+\_\+\+A\+N\+S\+I\+\_\+\+C\+O\+L\+O\+R\+\_\+\+W\+H\+I\+TE@{A\+L\+F\+\_\+\+A\+N\+S\+I\+\_\+\+C\+O\+L\+O\+R\+\_\+\+W\+H\+I\+TE}!A\+L\+F\+\_\+\+I\+O.\+h@{A\+L\+F\+\_\+\+I\+O.\+h}}
+\subsubsection[{\texorpdfstring{A\+L\+F\+\_\+\+A\+N\+S\+I\+\_\+\+C\+O\+L\+O\+R\+\_\+\+W\+H\+I\+TE}{ALF_ANSI_COLOR_WHITE}}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\+L\+F\+\_\+\+A\+N\+S\+I\+\_\+\+C\+O\+L\+O\+R\+\_\+\+W\+H\+I\+TE~\char`\"{}\textbackslash{}x1b\mbox{[}37m\char`\"{}}\hypertarget{ALF__IO_8h_a7cd156b8cfd2e3bd82c729f1ed5201e5}{}\label{ALF__IO_8h_a7cd156b8cfd2e3bd82c729f1ed5201e5}
+\index{A\+L\+F\+\_\+\+I\+O.\+h@{A\+L\+F\+\_\+\+I\+O.\+h}!A\+L\+F\+\_\+\+A\+N\+S\+I\+\_\+\+C\+O\+L\+O\+R\+\_\+\+Y\+E\+L\+L\+OW@{A\+L\+F\+\_\+\+A\+N\+S\+I\+\_\+\+C\+O\+L\+O\+R\+\_\+\+Y\+E\+L\+L\+OW}}
+\index{A\+L\+F\+\_\+\+A\+N\+S\+I\+\_\+\+C\+O\+L\+O\+R\+\_\+\+Y\+E\+L\+L\+OW@{A\+L\+F\+\_\+\+A\+N\+S\+I\+\_\+\+C\+O\+L\+O\+R\+\_\+\+Y\+E\+L\+L\+OW}!A\+L\+F\+\_\+\+I\+O.\+h@{A\+L\+F\+\_\+\+I\+O.\+h}}
+\subsubsection[{\texorpdfstring{A\+L\+F\+\_\+\+A\+N\+S\+I\+\_\+\+C\+O\+L\+O\+R\+\_\+\+Y\+E\+L\+L\+OW}{ALF_ANSI_COLOR_YELLOW}}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\+L\+F\+\_\+\+A\+N\+S\+I\+\_\+\+C\+O\+L\+O\+R\+\_\+\+Y\+E\+L\+L\+OW~\char`\"{}\textbackslash{}x1b\mbox{[}33m\char`\"{}}\hypertarget{ALF__IO_8h_a5804b3c837c58d68c6bd99930c7d59e9}{}\label{ALF__IO_8h_a5804b3c837c58d68c6bd99930c7d59e9}
+\index{A\+L\+F\+\_\+\+I\+O.\+h@{A\+L\+F\+\_\+\+I\+O.\+h}!A\+L\+F\+\_\+\+I\+O\+\_\+major\+\_\+version@{A\+L\+F\+\_\+\+I\+O\+\_\+major\+\_\+version}}
+\index{A\+L\+F\+\_\+\+I\+O\+\_\+major\+\_\+version@{A\+L\+F\+\_\+\+I\+O\+\_\+major\+\_\+version}!A\+L\+F\+\_\+\+I\+O.\+h@{A\+L\+F\+\_\+\+I\+O.\+h}}
+\subsubsection[{\texorpdfstring{A\+L\+F\+\_\+\+I\+O\+\_\+major\+\_\+version}{ALF_IO_major_version}}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\+L\+F\+\_\+\+I\+O\+\_\+major\+\_\+version~(1)}\hypertarget{ALF__IO_8h_a58cf8cc899547c797f2663baf70ffc28}{}\label{ALF__IO_8h_a58cf8cc899547c797f2663baf70ffc28}
+\index{A\+L\+F\+\_\+\+I\+O.\+h@{A\+L\+F\+\_\+\+I\+O.\+h}!A\+L\+F\+\_\+\+I\+O\+\_\+minor\+\_\+version@{A\+L\+F\+\_\+\+I\+O\+\_\+minor\+\_\+version}}
+\index{A\+L\+F\+\_\+\+I\+O\+\_\+minor\+\_\+version@{A\+L\+F\+\_\+\+I\+O\+\_\+minor\+\_\+version}!A\+L\+F\+\_\+\+I\+O.\+h@{A\+L\+F\+\_\+\+I\+O.\+h}}
+\subsubsection[{\texorpdfstring{A\+L\+F\+\_\+\+I\+O\+\_\+minor\+\_\+version}{ALF_IO_minor_version}}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\+L\+F\+\_\+\+I\+O\+\_\+minor\+\_\+version~(0)}\hypertarget{ALF__IO_8h_ac4eb4026b793e76aa9c48717d811669a}{}\label{ALF__IO_8h_ac4eb4026b793e76aa9c48717d811669a}
+\index{A\+L\+F\+\_\+\+I\+O.\+h@{A\+L\+F\+\_\+\+I\+O.\+h}!A\+L\+F\+\_\+\+I\+O\+\_\+patch\+\_\+version@{A\+L\+F\+\_\+\+I\+O\+\_\+patch\+\_\+version}}
+\index{A\+L\+F\+\_\+\+I\+O\+\_\+patch\+\_\+version@{A\+L\+F\+\_\+\+I\+O\+\_\+patch\+\_\+version}!A\+L\+F\+\_\+\+I\+O.\+h@{A\+L\+F\+\_\+\+I\+O.\+h}}
+\subsubsection[{\texorpdfstring{A\+L\+F\+\_\+\+I\+O\+\_\+patch\+\_\+version}{ALF_IO_patch_version}}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\+L\+F\+\_\+\+I\+O\+\_\+patch\+\_\+version~(0)}\hypertarget{ALF__IO_8h_acbc53a7cb720245c98a7d08c7e628dcd}{}\label{ALF__IO_8h_acbc53a7cb720245c98a7d08c7e628dcd}
+\index{A\+L\+F\+\_\+\+I\+O.\+h@{A\+L\+F\+\_\+\+I\+O.\+h}!A\+L\+F\+\_\+\+I\+O\+\_\+version@{A\+L\+F\+\_\+\+I\+O\+\_\+version}}
+\index{A\+L\+F\+\_\+\+I\+O\+\_\+version@{A\+L\+F\+\_\+\+I\+O\+\_\+version}!A\+L\+F\+\_\+\+I\+O.\+h@{A\+L\+F\+\_\+\+I\+O.\+h}}
+\subsubsection[{\texorpdfstring{A\+L\+F\+\_\+\+I\+O\+\_\+version}{ALF_IO_version}}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\+L\+F\+\_\+\+I\+O\+\_\+version~({\bf A\+L\+F\+\_\+\+I\+O\+\_\+major\+\_\+version.\+A\+L\+F\+\_\+\+I\+O\+\_\+minor\+\_\+version})}\hypertarget{ALF__IO_8h_a12be2606d379cf4aec806b4c9b8a90c0}{}\label{ALF__IO_8h_a12be2606d379cf4aec806b4c9b8a90c0}
+\index{A\+L\+F\+\_\+\+I\+O.\+h@{A\+L\+F\+\_\+\+I\+O.\+h}!A\+L\+F\+\_\+\+I\+O\+\_\+version\+\_\+str@{A\+L\+F\+\_\+\+I\+O\+\_\+version\+\_\+str}}
+\index{A\+L\+F\+\_\+\+I\+O\+\_\+version\+\_\+str@{A\+L\+F\+\_\+\+I\+O\+\_\+version\+\_\+str}!A\+L\+F\+\_\+\+I\+O.\+h@{A\+L\+F\+\_\+\+I\+O.\+h}}
+\subsubsection[{\texorpdfstring{A\+L\+F\+\_\+\+I\+O\+\_\+version\+\_\+str}{ALF_IO_version_str}}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\+L\+F\+\_\+\+I\+O\+\_\+version\+\_\+str~({\bf A\+L\+F\+\_\+\+S\+TR}({\bf A\+L\+F\+\_\+\+I\+O\+\_\+major\+\_\+version})\char`\"{}.\char`\"{}{\bf A\+L\+F\+\_\+\+S\+TR}({\bf A\+L\+F\+\_\+\+I\+O\+\_\+minor\+\_\+version})\char`\"{}.\char`\"{}{\bf A\+L\+F\+\_\+\+S\+TR}({\bf A\+L\+F\+\_\+\+I\+O\+\_\+patch\+\_\+version}))}\hypertarget{ALF__IO_8h_af5b864071282467becfdf4bb419a37df}{}\label{ALF__IO_8h_af5b864071282467becfdf4bb419a37df}
+
+
+\subsection{Function Documentation}
+\index{A\+L\+F\+\_\+\+I\+O.\+h@{A\+L\+F\+\_\+\+I\+O.\+h}!A\+L\+F\+\_\+printf\+Colored\+Block@{A\+L\+F\+\_\+printf\+Colored\+Block}}
+\index{A\+L\+F\+\_\+printf\+Colored\+Block@{A\+L\+F\+\_\+printf\+Colored\+Block}!A\+L\+F\+\_\+\+I\+O.\+h@{A\+L\+F\+\_\+\+I\+O.\+h}}
+\subsubsection[{\texorpdfstring{A\+L\+F\+\_\+printf\+Colored\+Block(unsigned char character, int with\+Number)}{ALF_printfColoredBlock(unsigned char character, int withNumber)}}]{\setlength{\rightskip}{0pt plus 5cm}void A\+L\+F\+\_\+printf\+Colored\+Block (
+\begin{DoxyParamCaption}
+\item[{unsigned char}]{character, }
+\item[{int}]{with\+Number}
+\end{DoxyParamCaption}
+)}\hypertarget{ALF__IO_8h_af2154141da807745cea3f7f8d647d661}{}\label{ALF__IO_8h_af2154141da807745cea3f7f8d647d661}
+
+\begin{DoxyCode}
+46                                                                     \{
+47     \textcolor{keywordflow}{if}(withNumber)\{
+48         printf(\textcolor{stringliteral}{"\(\backslash\)033[%im%i "} \hyperlink{ALF__IO_8h_a0f3fc340b9d3d253c43cb8a1ae4178ab}{ALF\_ANSI\_COLOR\_RESET}, character + 40, character);
+49     \}
+50     \textcolor{keywordflow}{else}\{
+51         printf(\textcolor{stringliteral}{"\(\backslash\)033[%im  "} \hyperlink{ALF__IO_8h_a0f3fc340b9d3d253c43cb8a1ae4178ab}{ALF\_ANSI\_COLOR\_RESET}, character + 40);
+52     \}
+53 \}
+\end{DoxyCode}
+\index{A\+L\+F\+\_\+\+I\+O.\+h@{A\+L\+F\+\_\+\+I\+O.\+h}!A\+L\+F\+\_\+puthex@{A\+L\+F\+\_\+puthex}}
+\index{A\+L\+F\+\_\+puthex@{A\+L\+F\+\_\+puthex}!A\+L\+F\+\_\+\+I\+O.\+h@{A\+L\+F\+\_\+\+I\+O.\+h}}
+\subsubsection[{\texorpdfstring{A\+L\+F\+\_\+puthex(unsigned char character)}{ALF_puthex(unsigned char character)}}]{\setlength{\rightskip}{0pt plus 5cm}void A\+L\+F\+\_\+puthex (
+\begin{DoxyParamCaption}
+\item[{unsigned char}]{character}
+\end{DoxyParamCaption}
+)}\hypertarget{ALF__IO_8h_a9b05afd3abc63c8699de02a8edcad61f}{}\label{ALF__IO_8h_a9b05afd3abc63c8699de02a8edcad61f}
+
+\begin{DoxyCode}
+39                                         \{
+40     \textcolor{keywordflow}{if}(character < 0x10)\{
+41         printf(\textcolor{stringliteral}{"0"});
+42     \}
+43     printf(\textcolor{stringliteral}{"%x"}, character);
+44 \}
+\end{DoxyCode}
+\index{A\+L\+F\+\_\+\+I\+O.\+h@{A\+L\+F\+\_\+\+I\+O.\+h}!A\+L\+F\+\_\+raw\+\_\+input@{A\+L\+F\+\_\+raw\+\_\+input}}
+\index{A\+L\+F\+\_\+raw\+\_\+input@{A\+L\+F\+\_\+raw\+\_\+input}!A\+L\+F\+\_\+\+I\+O.\+h@{A\+L\+F\+\_\+\+I\+O.\+h}}
+\subsubsection[{\texorpdfstring{A\+L\+F\+\_\+raw\+\_\+input(const char $\ast$out\+Message)}{ALF_raw_input(const char *outMessage)}}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ A\+L\+F\+\_\+raw\+\_\+input (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{out\+Message}
+\end{DoxyParamCaption}
+)}\hypertarget{ALF__IO_8h_adc74e291352847d6d64a43b891c57c73}{}\label{ALF__IO_8h_adc74e291352847d6d64a43b891c57c73}
+
+
+Python-\/like input of data. 
+
+This functions prints out a message on screen. Then asks for input via stdin. The input string is propety of the caller, and he have to free it. 
+\begin{DoxyCode}
+3                                            \{
+4     printf(\textcolor{stringliteral}{"%s"}, outMessage);
+5 
+6     \textcolor{keywordtype}{int} inSize = 32;
+7     \textcolor{keywordtype}{char} *inData = malloc(\textcolor{keyword}{sizeof}(\textcolor{keywordtype}{char})*inSize);
+8     \textcolor{keywordflow}{if}(!fgets(inData, inSize, stdin))\{ \textcolor{comment}{// No se pudo leer}
+9         free(inData);
+10         \textcolor{keywordflow}{return} NULL;
+11     \}
+12 
+13     \textcolor{keywordtype}{size\_t} len = strlen(inData);
+14     \textcolor{keywordflow}{if}(inData[len-1] == \textcolor{charliteral}{'\(\backslash\)n'})\{ \textcolor{comment}{// String completo}
+15         inData[len-1] = \textcolor{charliteral}{'\(\backslash\)0'}; \textcolor{comment}{// Eliminando el salto de linea}
+16         inData = realloc(inData, \textcolor{keyword}{sizeof}(\textcolor{keywordtype}{char})*len); \textcolor{comment}{// Liberando memoria no necesaria.}
+17         \textcolor{keywordflow}{return} inData;
+18     \}
+19     \textcolor{keywordflow}{else}\{ \textcolor{comment}{// No se encontro el salto de linea. A seguir leyendo!}
+20         \textcolor{keywordtype}{char} *auxData = malloc(\textcolor{keyword}{sizeof}(\textcolor{keywordtype}{char})*inSize*2); \textcolor{comment}{// String mas grande}
+21         strcpy(auxData, inData); \textcolor{comment}{// Copiando datos al string final}
+22         \textcolor{keywordflow}{while}(fgets(inData, inSize, stdin))\{ \textcolor{comment}{// Lee datos de stdin}
+23             strcat(auxData, inData); \textcolor{comment}{// Se concatena al string grande}
+24             len = strlen(auxData);
+25             \textcolor{keywordflow}{if}(auxData[len-1] == \textcolor{charliteral}{'\(\backslash\)n'})\{ \textcolor{comment}{// Revisando si tenemos toodo el string}
+26                 auxData[len-1] = \textcolor{charliteral}{'\(\backslash\)0'}; \textcolor{comment}{// Elimina salto de linea}
+27                 free(inData);
+28                 auxData = realloc(auxData, \textcolor{keyword}{sizeof}(\textcolor{keywordtype}{char})*len); \textcolor{comment}{// Liberando memoria no necesaria.}
+29                 \textcolor{keywordflow}{return} auxData; \textcolor{comment}{// Yay!}
+30             \}
+31             auxData = realloc(auxData, \textcolor{keyword}{sizeof}(\textcolor{keywordtype}{char})*(len + inSize)); \textcolor{comment}{//String mas grande!}
+32         \}
+33         free(inData);
+34         free(auxData);
+35         \textcolor{keywordflow}{return} NULL; \textcolor{comment}{// En caso de error}
+36     \}
+37 \}
+\end{DoxyCode}

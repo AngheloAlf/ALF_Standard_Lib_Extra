@@ -1,0 +1,234 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="ALF__common_8h" kind="file" language="C++">
+    <compoundname>ALF_common.h</compoundname>
+    <includedby refid="ALF__bool_8h" local="yes">include/ALF_bool.h</includedby>
+    <includedby refid="ALF__dict_8h" local="yes">include/ALF_dict.h</includedby>
+    <includedby refid="ALF__dso__loader_8h" local="yes">include/ALF_dso_loader.h</includedby>
+    <includedby refid="ALF__IO_8h" local="yes">include/ALF_IO.h</includedby>
+    <includedby refid="ALF__jit_8h" local="yes">include/ALF_jit.h</includedby>
+    <includedby refid="ALF__OS_8h" local="yes">include/ALF_OS.h</includedby>
+    <includedby refid="ALF__std_8h" local="yes">include/ALF_std.h</includedby>
+    <includedby refid="ALF__str_8h" local="yes">include/ALF_str.h</includedby>
+    <includedby refid="ALF__std__extra_8h" local="yes">include/ALF_std_extra.h</includedby>
+    <invincdepgraph>
+      <node id="143">
+        <label>src/ALF_dict.c</label>
+        <link refid="ALF__dict_8c"/>
+      </node>
+      <node id="145">
+        <label>src/extra/ALF_dso_loader.c</label>
+        <link refid="ALF__dso__loader_8c"/>
+      </node>
+      <node id="153">
+        <label>include/ALF_str.h</label>
+        <link refid="ALF__str_8h"/>
+        <childnode refid="154" relation="include">
+        </childnode>
+        <childnode refid="141" relation="include">
+        </childnode>
+      </node>
+      <node id="154">
+        <label>src/ALF_str.c</label>
+        <link refid="ALF__str_8c"/>
+      </node>
+      <node id="144">
+        <label>include/ALF_dso_loader.h</label>
+        <link refid="ALF__dso__loader_8h"/>
+        <childnode refid="145" relation="include">
+        </childnode>
+        <childnode refid="146" relation="include">
+        </childnode>
+      </node>
+      <node id="147">
+        <label>include/ALF_IO.h</label>
+        <link refid="ALF__IO_8h"/>
+        <childnode refid="148" relation="include">
+        </childnode>
+        <childnode refid="141" relation="include">
+        </childnode>
+      </node>
+      <node id="152">
+        <label>src/ALF_OS.c</label>
+        <link refid="ALF__OS_8c"/>
+      </node>
+      <node id="142">
+        <label>include/ALF_dict.h</label>
+        <link refid="ALF__dict_8h"/>
+        <childnode refid="143" relation="include">
+        </childnode>
+        <childnode refid="141" relation="include">
+        </childnode>
+      </node>
+      <node id="138">
+        <label>include/ALF_common.h</label>
+        <link refid="ALF_common.h"/>
+        <childnode refid="139" relation="include">
+        </childnode>
+        <childnode refid="142" relation="include">
+        </childnode>
+        <childnode refid="144" relation="include">
+        </childnode>
+        <childnode refid="147" relation="include">
+        </childnode>
+        <childnode refid="149" relation="include">
+        </childnode>
+        <childnode refid="151" relation="include">
+        </childnode>
+        <childnode refid="141" relation="include">
+        </childnode>
+        <childnode refid="153" relation="include">
+        </childnode>
+        <childnode refid="146" relation="include">
+        </childnode>
+      </node>
+      <node id="140">
+        <label>src/ALF_bool.c</label>
+        <link refid="ALF__bool_8c"/>
+      </node>
+      <node id="139">
+        <label>include/ALF_bool.h</label>
+        <link refid="ALF__bool_8h"/>
+        <childnode refid="140" relation="include">
+        </childnode>
+        <childnode refid="141" relation="include">
+        </childnode>
+      </node>
+      <node id="146">
+        <label>include/ALF_std_extra.h</label>
+        <link refid="ALF__std__extra_8h"/>
+      </node>
+      <node id="151">
+        <label>include/ALF_OS.h</label>
+        <link refid="ALF__OS_8h"/>
+        <childnode refid="152" relation="include">
+        </childnode>
+        <childnode refid="141" relation="include">
+        </childnode>
+      </node>
+      <node id="150">
+        <label>src/ALF_jit.c</label>
+        <link refid="ALF__jit_8c"/>
+      </node>
+      <node id="141">
+        <label>include/ALF_std.h</label>
+        <link refid="ALF__std_8h"/>
+      </node>
+      <node id="149">
+        <label>include/ALF_jit.h</label>
+        <link refid="ALF__jit_8h"/>
+        <childnode refid="150" relation="include">
+        </childnode>
+        <childnode refid="141" relation="include">
+        </childnode>
+      </node>
+      <node id="148">
+        <label>src/ALF_IO.c</label>
+        <link refid="ALF__IO_8c"/>
+      </node>
+    </invincdepgraph>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="ALF__common_8h_1a732a561caf59807bbc8a70b4f6b162d3" prot="public" static="no">
+        <name>_ALF_STR</name>
+        <param><defname>x</defname></param>
+        <initializer>#x</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ALF_common.h" line="4" column="9" bodyfile="include/ALF_common.h" bodystart="4" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="ALF__common_8h_1ac8dcedbd61f9ec05e6284411a6bf646a" prot="public" static="no">
+        <name>ALF_STR</name>
+        <param><defname>x</defname></param>
+        <initializer><ref refid="ALF__common_8h_1a732a561caf59807bbc8a70b4f6b162d3" kindref="member">_ALF_STR</ref>(x)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ALF_common.h" line="5" column="9" bodyfile="include/ALF_common.h" bodystart="5" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="ALF__common_8h_1aca5284203a017a23a8d34995b6aed10d" prot="public" static="no">
+        <name>ALF_common_major_version</name>
+        <initializer>(1)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ALF_common.h" line="7" column="9" bodyfile="include/ALF_common.h" bodystart="7" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="ALF__common_8h_1ad5962bf4d8400a14a9ff8aae3e4a4e1c" prot="public" static="no">
+        <name>ALF_common_minor_version</name>
+        <initializer>(0)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ALF_common.h" line="8" column="9" bodyfile="include/ALF_common.h" bodystart="8" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="ALF__common_8h_1a93e4e1de4754e123bffa1f8391bc2d16" prot="public" static="no">
+        <name>ALF_common_patch_version</name>
+        <initializer>(0)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ALF_common.h" line="9" column="9" bodyfile="include/ALF_common.h" bodystart="9" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="ALF__common_8h_1a8bb62ecb044e24fb1bef42f2fef64636" prot="public" static="no">
+        <name>ALF_common_version</name>
+        <initializer>(<ref refid="ALF__common_8h_1ad5962bf4d8400a14a9ff8aae3e4a4e1c" kindref="member">ALF_common_major_version.ALF_common_minor_version</ref>)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ALF_common.h" line="10" column="9" bodyfile="include/ALF_common.h" bodystart="10" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="ALF__common_8h_1adcc3325bf6ab15db269b8bd235f1e598" prot="public" static="no">
+        <name>ALF_common_version_str</name>
+        <initializer>(<ref refid="ALF__common_8h_1ac8dcedbd61f9ec05e6284411a6bf646a" kindref="member">ALF_STR</ref>(<ref refid="ALF__common_8h_1aca5284203a017a23a8d34995b6aed10d" kindref="member">ALF_common_major_version</ref>)&quot;.&quot;<ref refid="ALF__common_8h_1ac8dcedbd61f9ec05e6284411a6bf646a" kindref="member">ALF_STR</ref>(<ref refid="ALF__common_8h_1ad5962bf4d8400a14a9ff8aae3e4a4e1c" kindref="member">ALF_common_minor_version</ref>)&quot;.&quot;<ref refid="ALF__common_8h_1ac8dcedbd61f9ec05e6284411a6bf646a" kindref="member">ALF_STR</ref>(<ref refid="ALF__common_8h_1a93e4e1de4754e123bffa1f8391bc2d16" kindref="member">ALF_common_patch_version</ref>))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ALF_common.h" line="11" column="9" bodyfile="include/ALF_common.h" bodystart="11" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>ALF_common_h</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ALF_common_h</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4" refid="ALF__common_8h_1a732a561caf59807bbc8a70b4f6b162d3" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>_ALF_STR(x)<sp/>#x</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5" refid="ALF__common_8h_1ac8dcedbd61f9ec05e6284411a6bf646a" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ALF_STR(x)<sp/>_ALF_STR(x)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7" refid="ALF__common_8h_1aca5284203a017a23a8d34995b6aed10d" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ALF_common_major_version<sp/>(1)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8" refid="ALF__common_8h_1ad5962bf4d8400a14a9ff8aae3e4a4e1c" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ALF_common_minor_version<sp/>(0)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9" refid="ALF__common_8h_1a93e4e1de4754e123bffa1f8391bc2d16" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ALF_common_patch_version<sp/>(0)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10" refid="ALF__common_8h_1a8bb62ecb044e24fb1bef42f2fef64636" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ALF_common_version<sp/>(ALF_common_major_version.ALF_common_minor_version)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11" refid="ALF__common_8h_1adcc3325bf6ab15db269b8bd235f1e598" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ALF_common_version_str<sp/>(ALF_STR(ALF_common_major_version)&quot;.&quot;ALF_STR(ALF_common_minor_version)&quot;.&quot;ALF_STR(ALF_common_patch_version))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>ALF_common_h<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+    </programlisting>
+    <location file="include/ALF_common.h"/>
+  </compounddef>
+</doxygen>

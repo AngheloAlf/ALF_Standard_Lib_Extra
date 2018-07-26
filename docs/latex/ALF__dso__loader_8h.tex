@@ -1,0 +1,153 @@
+\hypertarget{ALF__dso__loader_8h}{}\section{include/\+A\+L\+F\+\_\+dso\+\_\+loader.h File Reference}
+\label{ALF__dso__loader_8h}\index{include/\+A\+L\+F\+\_\+dso\+\_\+loader.\+h@{include/\+A\+L\+F\+\_\+dso\+\_\+loader.\+h}}
+{\ttfamily \#include \char`\"{}A\+L\+F\+\_\+common.\+h\char`\"{}}\\*
+{\ttfamily \#include $<$stdlib.\+h$>$}\\*
+{\ttfamily \#include $<$string.\+h$>$}\\*
+{\ttfamily \#include $<$dlfcn.\+h$>$}\\*
+Include dependency graph for A\+L\+F\+\_\+dso\+\_\+loader.\+h\+:
+% FIG 0
+This graph shows which files directly or indirectly include this file\+:
+% FIG 1
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{ALF__dso__loader_8h_a422472d3ebc611e2c17d265918c88cc4}{A\+L\+F\+\_\+dso\+\_\+loader\+\_\+major\+\_\+version}~(1)
+\item 
+\#define \hyperlink{ALF__dso__loader_8h_a01bd04ce43e995665620a7b13f71b32f}{A\+L\+F\+\_\+dso\+\_\+loader\+\_\+minor\+\_\+version}~(0)
+\item 
+\#define \hyperlink{ALF__dso__loader_8h_ada46db06c52bb3a6b1eb01a36cc31b44}{A\+L\+F\+\_\+dso\+\_\+loader\+\_\+patch\+\_\+version}~(0)
+\item 
+\#define \hyperlink{ALF__dso__loader_8h_a8e1e7883c4e2bc19675ffbdd3e5ef1c4}{A\+L\+F\+\_\+dso\+\_\+loader\+\_\+version}~(\hyperlink{ALF__dso__loader_8h_a01bd04ce43e995665620a7b13f71b32f}{A\+L\+F\+\_\+dso\+\_\+loader\+\_\+major\+\_\+version.\+A\+L\+F\+\_\+dso\+\_\+loader\+\_\+minor\+\_\+version})
+\item 
+\#define \hyperlink{ALF__dso__loader_8h_a82b5eaedcd56a0a085b7d879c2459bd3}{A\+L\+F\+\_\+dso\+\_\+loader\+\_\+version\+\_\+str}~(\hyperlink{ALF__common_8h_ac8dcedbd61f9ec05e6284411a6bf646a}{A\+L\+F\+\_\+\+S\+TR}(\hyperlink{ALF__dso__loader_8h_a422472d3ebc611e2c17d265918c88cc4}{A\+L\+F\+\_\+dso\+\_\+loader\+\_\+major\+\_\+version})\char`\"{}.\char`\"{}\hyperlink{ALF__common_8h_ac8dcedbd61f9ec05e6284411a6bf646a}{A\+L\+F\+\_\+\+S\+TR}(\hyperlink{ALF__dso__loader_8h_a01bd04ce43e995665620a7b13f71b32f}{A\+L\+F\+\_\+dso\+\_\+loader\+\_\+minor\+\_\+version})\char`\"{}.\char`\"{}\hyperlink{ALF__common_8h_ac8dcedbd61f9ec05e6284411a6bf646a}{A\+L\+F\+\_\+\+S\+TR}(\hyperlink{ALF__dso__loader_8h_ada46db06c52bb3a6b1eb01a36cc31b44}{A\+L\+F\+\_\+dso\+\_\+loader\+\_\+patch\+\_\+version}))
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef void $\ast$ \hyperlink{ALF__dso__loader_8h_af3792a64fee3466efa5b2191f6ddafa0}{A\+L\+F\+\_\+\+D\+S\+O\+\_\+handl}
+\item 
+typedef void $\ast$ \hyperlink{ALF__dso__loader_8h_ac117ba90b55b08361002d8608b15d3a5}{A\+L\+F\+\_\+\+D\+S\+O\+\_\+func}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{ALF__dso__loader_8h_af3792a64fee3466efa5b2191f6ddafa0}{A\+L\+F\+\_\+\+D\+S\+O\+\_\+handl} \hyperlink{ALF__dso__loader_8h_ae1b435a5149e0b88cddcdee460e4ecbf}{A\+L\+F\+\_\+\+D\+S\+O\+\_\+load\+\_\+file} (const char $\ast$file)
+\item 
+\hyperlink{ALF__dso__loader_8h_ac117ba90b55b08361002d8608b15d3a5}{A\+L\+F\+\_\+\+D\+S\+O\+\_\+func} \hyperlink{ALF__dso__loader_8h_aa0b2033f4210c48d0573c4c7a3cd498b}{A\+L\+F\+\_\+\+D\+S\+O\+\_\+load\+\_\+function} (\hyperlink{ALF__dso__loader_8h_af3792a64fee3466efa5b2191f6ddafa0}{A\+L\+F\+\_\+\+D\+S\+O\+\_\+handl} handler, const char $\ast$function)
+\item 
+int \hyperlink{ALF__dso__loader_8h_aed8b2aba3c4f1d914a1edd73cf617fb1}{A\+L\+F\+\_\+\+D\+S\+O\+\_\+close\+\_\+file} (\hyperlink{ALF__dso__loader_8h_af3792a64fee3466efa5b2191f6ddafa0}{A\+L\+F\+\_\+\+D\+S\+O\+\_\+handl} handler)
+\item 
+char $\ast$ \hyperlink{ALF__dso__loader_8h_a9e56afd91fd7a6e49ed84066a8a53500}{A\+L\+F\+\_\+\+D\+S\+O\+\_\+get\+\_\+last\+\_\+error} (void)
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\index{A\+L\+F\+\_\+dso\+\_\+loader.\+h@{A\+L\+F\+\_\+dso\+\_\+loader.\+h}!A\+L\+F\+\_\+dso\+\_\+loader\+\_\+major\+\_\+version@{A\+L\+F\+\_\+dso\+\_\+loader\+\_\+major\+\_\+version}}
+\index{A\+L\+F\+\_\+dso\+\_\+loader\+\_\+major\+\_\+version@{A\+L\+F\+\_\+dso\+\_\+loader\+\_\+major\+\_\+version}!A\+L\+F\+\_\+dso\+\_\+loader.\+h@{A\+L\+F\+\_\+dso\+\_\+loader.\+h}}
+\subsubsection[{\texorpdfstring{A\+L\+F\+\_\+dso\+\_\+loader\+\_\+major\+\_\+version}{ALF_dso_loader_major_version}}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\+L\+F\+\_\+dso\+\_\+loader\+\_\+major\+\_\+version~(1)}\hypertarget{ALF__dso__loader_8h_a422472d3ebc611e2c17d265918c88cc4}{}\label{ALF__dso__loader_8h_a422472d3ebc611e2c17d265918c88cc4}
+\index{A\+L\+F\+\_\+dso\+\_\+loader.\+h@{A\+L\+F\+\_\+dso\+\_\+loader.\+h}!A\+L\+F\+\_\+dso\+\_\+loader\+\_\+minor\+\_\+version@{A\+L\+F\+\_\+dso\+\_\+loader\+\_\+minor\+\_\+version}}
+\index{A\+L\+F\+\_\+dso\+\_\+loader\+\_\+minor\+\_\+version@{A\+L\+F\+\_\+dso\+\_\+loader\+\_\+minor\+\_\+version}!A\+L\+F\+\_\+dso\+\_\+loader.\+h@{A\+L\+F\+\_\+dso\+\_\+loader.\+h}}
+\subsubsection[{\texorpdfstring{A\+L\+F\+\_\+dso\+\_\+loader\+\_\+minor\+\_\+version}{ALF_dso_loader_minor_version}}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\+L\+F\+\_\+dso\+\_\+loader\+\_\+minor\+\_\+version~(0)}\hypertarget{ALF__dso__loader_8h_a01bd04ce43e995665620a7b13f71b32f}{}\label{ALF__dso__loader_8h_a01bd04ce43e995665620a7b13f71b32f}
+\index{A\+L\+F\+\_\+dso\+\_\+loader.\+h@{A\+L\+F\+\_\+dso\+\_\+loader.\+h}!A\+L\+F\+\_\+dso\+\_\+loader\+\_\+patch\+\_\+version@{A\+L\+F\+\_\+dso\+\_\+loader\+\_\+patch\+\_\+version}}
+\index{A\+L\+F\+\_\+dso\+\_\+loader\+\_\+patch\+\_\+version@{A\+L\+F\+\_\+dso\+\_\+loader\+\_\+patch\+\_\+version}!A\+L\+F\+\_\+dso\+\_\+loader.\+h@{A\+L\+F\+\_\+dso\+\_\+loader.\+h}}
+\subsubsection[{\texorpdfstring{A\+L\+F\+\_\+dso\+\_\+loader\+\_\+patch\+\_\+version}{ALF_dso_loader_patch_version}}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\+L\+F\+\_\+dso\+\_\+loader\+\_\+patch\+\_\+version~(0)}\hypertarget{ALF__dso__loader_8h_ada46db06c52bb3a6b1eb01a36cc31b44}{}\label{ALF__dso__loader_8h_ada46db06c52bb3a6b1eb01a36cc31b44}
+\index{A\+L\+F\+\_\+dso\+\_\+loader.\+h@{A\+L\+F\+\_\+dso\+\_\+loader.\+h}!A\+L\+F\+\_\+dso\+\_\+loader\+\_\+version@{A\+L\+F\+\_\+dso\+\_\+loader\+\_\+version}}
+\index{A\+L\+F\+\_\+dso\+\_\+loader\+\_\+version@{A\+L\+F\+\_\+dso\+\_\+loader\+\_\+version}!A\+L\+F\+\_\+dso\+\_\+loader.\+h@{A\+L\+F\+\_\+dso\+\_\+loader.\+h}}
+\subsubsection[{\texorpdfstring{A\+L\+F\+\_\+dso\+\_\+loader\+\_\+version}{ALF_dso_loader_version}}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\+L\+F\+\_\+dso\+\_\+loader\+\_\+version~({\bf A\+L\+F\+\_\+dso\+\_\+loader\+\_\+major\+\_\+version.\+A\+L\+F\+\_\+dso\+\_\+loader\+\_\+minor\+\_\+version})}\hypertarget{ALF__dso__loader_8h_a8e1e7883c4e2bc19675ffbdd3e5ef1c4}{}\label{ALF__dso__loader_8h_a8e1e7883c4e2bc19675ffbdd3e5ef1c4}
+\index{A\+L\+F\+\_\+dso\+\_\+loader.\+h@{A\+L\+F\+\_\+dso\+\_\+loader.\+h}!A\+L\+F\+\_\+dso\+\_\+loader\+\_\+version\+\_\+str@{A\+L\+F\+\_\+dso\+\_\+loader\+\_\+version\+\_\+str}}
+\index{A\+L\+F\+\_\+dso\+\_\+loader\+\_\+version\+\_\+str@{A\+L\+F\+\_\+dso\+\_\+loader\+\_\+version\+\_\+str}!A\+L\+F\+\_\+dso\+\_\+loader.\+h@{A\+L\+F\+\_\+dso\+\_\+loader.\+h}}
+\subsubsection[{\texorpdfstring{A\+L\+F\+\_\+dso\+\_\+loader\+\_\+version\+\_\+str}{ALF_dso_loader_version_str}}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\+L\+F\+\_\+dso\+\_\+loader\+\_\+version\+\_\+str~({\bf A\+L\+F\+\_\+\+S\+TR}({\bf A\+L\+F\+\_\+dso\+\_\+loader\+\_\+major\+\_\+version})\char`\"{}.\char`\"{}{\bf A\+L\+F\+\_\+\+S\+TR}({\bf A\+L\+F\+\_\+dso\+\_\+loader\+\_\+minor\+\_\+version})\char`\"{}.\char`\"{}{\bf A\+L\+F\+\_\+\+S\+TR}({\bf A\+L\+F\+\_\+dso\+\_\+loader\+\_\+patch\+\_\+version}))}\hypertarget{ALF__dso__loader_8h_a82b5eaedcd56a0a085b7d879c2459bd3}{}\label{ALF__dso__loader_8h_a82b5eaedcd56a0a085b7d879c2459bd3}
+
+
+\subsection{Typedef Documentation}
+\index{A\+L\+F\+\_\+dso\+\_\+loader.\+h@{A\+L\+F\+\_\+dso\+\_\+loader.\+h}!A\+L\+F\+\_\+\+D\+S\+O\+\_\+func@{A\+L\+F\+\_\+\+D\+S\+O\+\_\+func}}
+\index{A\+L\+F\+\_\+\+D\+S\+O\+\_\+func@{A\+L\+F\+\_\+\+D\+S\+O\+\_\+func}!A\+L\+F\+\_\+dso\+\_\+loader.\+h@{A\+L\+F\+\_\+dso\+\_\+loader.\+h}}
+\subsubsection[{\texorpdfstring{A\+L\+F\+\_\+\+D\+S\+O\+\_\+func}{ALF_DSO_func}}]{\setlength{\rightskip}{0pt plus 5cm}typedef void$\ast$ {\bf A\+L\+F\+\_\+\+D\+S\+O\+\_\+func}}\hypertarget{ALF__dso__loader_8h_ac117ba90b55b08361002d8608b15d3a5}{}\label{ALF__dso__loader_8h_ac117ba90b55b08361002d8608b15d3a5}
+\index{A\+L\+F\+\_\+dso\+\_\+loader.\+h@{A\+L\+F\+\_\+dso\+\_\+loader.\+h}!A\+L\+F\+\_\+\+D\+S\+O\+\_\+handl@{A\+L\+F\+\_\+\+D\+S\+O\+\_\+handl}}
+\index{A\+L\+F\+\_\+\+D\+S\+O\+\_\+handl@{A\+L\+F\+\_\+\+D\+S\+O\+\_\+handl}!A\+L\+F\+\_\+dso\+\_\+loader.\+h@{A\+L\+F\+\_\+dso\+\_\+loader.\+h}}
+\subsubsection[{\texorpdfstring{A\+L\+F\+\_\+\+D\+S\+O\+\_\+handl}{ALF_DSO_handl}}]{\setlength{\rightskip}{0pt plus 5cm}typedef void$\ast$ {\bf A\+L\+F\+\_\+\+D\+S\+O\+\_\+handl}}\hypertarget{ALF__dso__loader_8h_af3792a64fee3466efa5b2191f6ddafa0}{}\label{ALF__dso__loader_8h_af3792a64fee3466efa5b2191f6ddafa0}
+
+
+\subsection{Function Documentation}
+\index{A\+L\+F\+\_\+dso\+\_\+loader.\+h@{A\+L\+F\+\_\+dso\+\_\+loader.\+h}!A\+L\+F\+\_\+\+D\+S\+O\+\_\+close\+\_\+file@{A\+L\+F\+\_\+\+D\+S\+O\+\_\+close\+\_\+file}}
+\index{A\+L\+F\+\_\+\+D\+S\+O\+\_\+close\+\_\+file@{A\+L\+F\+\_\+\+D\+S\+O\+\_\+close\+\_\+file}!A\+L\+F\+\_\+dso\+\_\+loader.\+h@{A\+L\+F\+\_\+dso\+\_\+loader.\+h}}
+\subsubsection[{\texorpdfstring{A\+L\+F\+\_\+\+D\+S\+O\+\_\+close\+\_\+file(\+A\+L\+F\+\_\+\+D\+S\+O\+\_\+handl handler)}{ALF_DSO_close_file(ALF_DSO_handl handler)}}]{\setlength{\rightskip}{0pt plus 5cm}int A\+L\+F\+\_\+\+D\+S\+O\+\_\+close\+\_\+file (
+\begin{DoxyParamCaption}
+\item[{{\bf A\+L\+F\+\_\+\+D\+S\+O\+\_\+handl}}]{handler}
+\end{DoxyParamCaption}
+)}\hypertarget{ALF__dso__loader_8h_aed8b2aba3c4f1d914a1edd73cf617fb1}{}\label{ALF__dso__loader_8h_aed8b2aba3c4f1d914a1edd73cf617fb1}
+
+\begin{DoxyCode}
+24                                              \{
+25     \textcolor{keywordtype}{int} retVal = 0;
+26 \textcolor{preprocessor}{    #ifdef \_WIN32}
+27         retVal = !FreeLibrary((HMODULE)handler); \textcolor{comment}{// Returns nonzero in success}
+28 \textcolor{preprocessor}{    #else}
+29         retVal = dlclose(handler);
+30 \textcolor{preprocessor}{    #endif}
+31     \textcolor{keywordflow}{return} retVal;
+32 \}
+\end{DoxyCode}
+\index{A\+L\+F\+\_\+dso\+\_\+loader.\+h@{A\+L\+F\+\_\+dso\+\_\+loader.\+h}!A\+L\+F\+\_\+\+D\+S\+O\+\_\+get\+\_\+last\+\_\+error@{A\+L\+F\+\_\+\+D\+S\+O\+\_\+get\+\_\+last\+\_\+error}}
+\index{A\+L\+F\+\_\+\+D\+S\+O\+\_\+get\+\_\+last\+\_\+error@{A\+L\+F\+\_\+\+D\+S\+O\+\_\+get\+\_\+last\+\_\+error}!A\+L\+F\+\_\+dso\+\_\+loader.\+h@{A\+L\+F\+\_\+dso\+\_\+loader.\+h}}
+\subsubsection[{\texorpdfstring{A\+L\+F\+\_\+\+D\+S\+O\+\_\+get\+\_\+last\+\_\+error(void)}{ALF_DSO_get_last_error(void)}}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ A\+L\+F\+\_\+\+D\+S\+O\+\_\+get\+\_\+last\+\_\+error (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{ALF__dso__loader_8h_a9e56afd91fd7a6e49ed84066a8a53500}{}\label{ALF__dso__loader_8h_a9e56afd91fd7a6e49ed84066a8a53500}
+
+\begin{DoxyCode}
+34                                   \{
+35     \textcolor{keywordtype}{char} *result = NULL;
+36 
+37 \textcolor{preprocessor}{    #ifdef \_\_WIN32\_\_}
+38         result = malloc(\textcolor{keyword}{sizeof}(\textcolor{keywordtype}{char}) * 32);
+39         sprintf(result, \textcolor{stringliteral}{"%lu"}, GetLastError());
+40 \textcolor{preprocessor}{    #else}
+41         \textcolor{keywordtype}{char} *aux = dlerror();
+42         result = malloc(\textcolor{keyword}{sizeof}(\textcolor{keywordtype}{char}) * (strlen(aux) + 1));
+43         strcpy(result, aux);
+44 \textcolor{preprocessor}{    #endif}
+45 
+46     \textcolor{keywordflow}{return} result;
+47 \}
+\end{DoxyCode}
+\index{A\+L\+F\+\_\+dso\+\_\+loader.\+h@{A\+L\+F\+\_\+dso\+\_\+loader.\+h}!A\+L\+F\+\_\+\+D\+S\+O\+\_\+load\+\_\+file@{A\+L\+F\+\_\+\+D\+S\+O\+\_\+load\+\_\+file}}
+\index{A\+L\+F\+\_\+\+D\+S\+O\+\_\+load\+\_\+file@{A\+L\+F\+\_\+\+D\+S\+O\+\_\+load\+\_\+file}!A\+L\+F\+\_\+dso\+\_\+loader.\+h@{A\+L\+F\+\_\+dso\+\_\+loader.\+h}}
+\subsubsection[{\texorpdfstring{A\+L\+F\+\_\+\+D\+S\+O\+\_\+load\+\_\+file(const char $\ast$file)}{ALF_DSO_load_file(const char *file)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf A\+L\+F\+\_\+\+D\+S\+O\+\_\+handl} A\+L\+F\+\_\+\+D\+S\+O\+\_\+load\+\_\+file (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{file}
+\end{DoxyParamCaption}
+)}\hypertarget{ALF__dso__loader_8h_ae1b435a5149e0b88cddcdee460e4ecbf}{}\label{ALF__dso__loader_8h_ae1b435a5149e0b88cddcdee460e4ecbf}
+
+\begin{DoxyCode}
+4                                                  \{
+5     \hyperlink{ALF__dso__loader_8h_af3792a64fee3466efa5b2191f6ddafa0}{ALF\_DSO\_handl} handler = NULL;
+6 \textcolor{preprocessor}{    #ifdef \_WIN32}
+7         handler = (\hyperlink{ALF__dso__loader_8h_af3792a64fee3466efa5b2191f6ddafa0}{ALF\_DSO\_handl})LoadLibrary(file);
+8 \textcolor{preprocessor}{    #else}
+9         handler = (\hyperlink{ALF__dso__loader_8h_af3792a64fee3466efa5b2191f6ddafa0}{ALF\_DSO\_handl})dlopen(file, RTLD\_LAZY);
+10 \textcolor{preprocessor}{    #endif}
+11     \textcolor{keywordflow}{return} handler;
+12 \}
+\end{DoxyCode}
+\index{A\+L\+F\+\_\+dso\+\_\+loader.\+h@{A\+L\+F\+\_\+dso\+\_\+loader.\+h}!A\+L\+F\+\_\+\+D\+S\+O\+\_\+load\+\_\+function@{A\+L\+F\+\_\+\+D\+S\+O\+\_\+load\+\_\+function}}
+\index{A\+L\+F\+\_\+\+D\+S\+O\+\_\+load\+\_\+function@{A\+L\+F\+\_\+\+D\+S\+O\+\_\+load\+\_\+function}!A\+L\+F\+\_\+dso\+\_\+loader.\+h@{A\+L\+F\+\_\+dso\+\_\+loader.\+h}}
+\subsubsection[{\texorpdfstring{A\+L\+F\+\_\+\+D\+S\+O\+\_\+load\+\_\+function(\+A\+L\+F\+\_\+\+D\+S\+O\+\_\+handl handler, const char $\ast$function)}{ALF_DSO_load_function(ALF_DSO_handl handler, const char *function)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf A\+L\+F\+\_\+\+D\+S\+O\+\_\+func} A\+L\+F\+\_\+\+D\+S\+O\+\_\+load\+\_\+function (
+\begin{DoxyParamCaption}
+\item[{{\bf A\+L\+F\+\_\+\+D\+S\+O\+\_\+handl}}]{handler, }
+\item[{const char $\ast$}]{function}
+\end{DoxyParamCaption}
+)}\hypertarget{ALF__dso__loader_8h_aa0b2033f4210c48d0573c4c7a3cd498b}{}\label{ALF__dso__loader_8h_aa0b2033f4210c48d0573c4c7a3cd498b}
+
+\begin{DoxyCode}
+14                                                                                \{
+15     \hyperlink{ALF__dso__loader_8h_ac117ba90b55b08361002d8608b15d3a5}{ALF\_DSO\_func} func = NULL;
+16 \textcolor{preprocessor}{    #ifdef \_WIN32}
+17         func = (\hyperlink{ALF__dso__loader_8h_ac117ba90b55b08361002d8608b15d3a5}{ALF\_DSO\_func})GetProcAddress((HMODULE)handler, \textcolor{keyword}{function});
+18 \textcolor{preprocessor}{    #else}
+19         func = (\hyperlink{ALF__dso__loader_8h_ac117ba90b55b08361002d8608b15d3a5}{ALF\_DSO\_func})dlsym(handler, \textcolor{keyword}{function});
+20 \textcolor{preprocessor}{    #endif}
+21     \textcolor{keywordflow}{return} func;
+22 \}
+\end{DoxyCode}

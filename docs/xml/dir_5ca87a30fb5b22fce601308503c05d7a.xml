@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="dir_5ca87a30fb5b22fce601308503c05d7a" kind="dir">
+    <compoundname>src/extra</compoundname>
+    <innerfile refid="ALF__dso__loader_8c">ALF_dso_loader.c</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="src/extra/"/>
+  </compounddef>
+</doxygen>

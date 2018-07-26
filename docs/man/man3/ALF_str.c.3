@@ -1,0 +1,106 @@
+.TH "src/ALF_str.c" 3 "Wed Jul 18 2018" "Version 1.0" "ALF Standard Lib" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+src/ALF_str.c \- 
+.SH SYNOPSIS
+.br
+.PP
+\fC#include 'ALF_str\&.h'\fP
+.br
+
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "char ** \fBALF_split\fP (char *string, char *delimiters)"
+.br
+.ti -1c
+.RI "void \fBALF_charCopy\fP (unsigned char *dst, const unsigned char *src, size_t size)"
+.br
+.ti -1c
+.RI "unsigned char * \fBALF_newCharFromIndex\fP (const unsigned char *src, size_t size, size_t start)"
+.br
+.ti -1c
+.RI "char * \fBALF_changeExtension\fP (const char *word, const char *newExt, int lenExt)"
+.br
+.in -1c
+.SH "Function Documentation"
+.PP 
+.SS "char* ALF_changeExtension (const char * word, const char * newExt, int lenExt)"
+
+.PP
+.nf
+30                                                                            {
+31     int oldLen = 0, lastDotLen = 0, lenChange = 0;
+32     char* newWord;
+33 
+34     for(int i = 0; word[i]!= 0x0; i++){
+35         if(word[i] == '\&.'){
+36             lastDotLen = i;
+37         }
+38         oldLen += 1;
+39     }
+40 
+41     if(lastDotLen != 0){
+42         lenChange = lastDotLen;
+43     }
+44     else{
+45         lenChange = oldLen;
+46     }
+47     newWord = malloc(sizeof(char)*(lenChange + lenExt + 2));
+48 
+49     for(int i = 0; i < lenChange; i++){
+50         newWord[i] = word[i];
+51     }
+52     newWord[lenChange] = '\&.';
+53     for(int i = 0; i < lenExt; i++){
+54         newWord[lenChange + i + 1] = newExt[i];
+55     }
+56     newWord[lenChange + lenExt + 1] = 0x0;
+57 
+58     return newWord;
+59 }
+.fi
+.SS "void ALF_charCopy (unsigned char * dst, const unsigned char * src, size_t size)"
+
+.PP
+.nf
+16                                                                             {
+17     for(size_t i = 0; i < size; i++){
+18         dst[i] = src[i];
+19     }
+20 }
+.fi
+.SS "unsigned char* ALF_newCharFromIndex (const unsigned char * src, size_t size, size_t start)"
+
+.PP
+.nf
+22                                                                                         {
+23     unsigned char* dst = malloc(sizeof(unsigned char));
+24     for(size_t i = 0; i < size; i++){
+25         dst[i] = src[start + i];
+26     }
+27     return dst;
+28 }
+.fi
+.SS "char** ALF_split (char * string, char * delimiters)"
+
+.PP
+.nf
+3                                                 {
+4     char **splitted = malloc(sizeof(char *));
+5     char *token = strtok(string, delimiters);
+6     int i = 0;
+7     splitted[i++] = token;
+8     while(token != NULL){
+9         splitted = realloc(splitted, sizeof(char *) * (i + 1));
+10         token = strtok(NULL, delimiters);
+11         splitted[i++] = token;
+12     }
+13     return splitted;
+14 }
+.fi
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for ALF Standard Lib from the source code\&.

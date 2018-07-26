@@ -1,0 +1,158 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="ALF__IO_8c" kind="file" language="C++">
+    <compoundname>ALF_IO.c</compoundname>
+    <includes refid="ALF__IO_8h" local="yes">ALF_IO.h</includes>
+    <incdepgraph>
+      <node id="234">
+        <label>stdlib.h</label>
+      </node>
+      <node id="231">
+        <label>ALF_IO.h</label>
+        <link refid="ALF__IO_8h"/>
+        <childnode refid="232" relation="include">
+        </childnode>
+        <childnode refid="233" relation="include">
+        </childnode>
+        <childnode refid="234" relation="include">
+        </childnode>
+        <childnode refid="235" relation="include">
+        </childnode>
+      </node>
+      <node id="232">
+        <label>ALF_common.h</label>
+        <link refid="ALF__common_8h"/>
+      </node>
+      <node id="233">
+        <label>string.h</label>
+      </node>
+      <node id="235">
+        <label>stdio.h</label>
+      </node>
+      <node id="230">
+        <label>src/ALF_IO.c</label>
+        <link refid="ALF_IO.c"/>
+        <childnode refid="231" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="ALF__IO_8c_1adc74e291352847d6d64a43b891c57c73" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>char *</type>
+        <definition>char* ALF_raw_input</definition>
+        <argsstring>(const char *outMessage)</argsstring>
+        <name>ALF_raw_input</name>
+        <param>
+          <type>const char *</type>
+          <declname>outMessage</declname>
+        </param>
+        <briefdescription>
+<para>Python-like input of data. </para>        </briefdescription>
+        <detaileddescription>
+<para>This functions prints out a message on screen. Then asks for input via stdin. The input string is propety of the caller, and he have to free it. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/ALF_IO.c" line="3" column="1" bodyfile="src/ALF_IO.c" bodystart="3" bodyend="37"/>
+      </memberdef>
+      <memberdef kind="function" id="ALF__IO_8c_1a9b05afd3abc63c8699de02a8edcad61f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ALF_puthex</definition>
+        <argsstring>(unsigned char character)</argsstring>
+        <name>ALF_puthex</name>
+        <param>
+          <type>unsigned char</type>
+          <declname>character</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/ALF_IO.c" line="39" column="1" bodyfile="src/ALF_IO.c" bodystart="39" bodyend="44"/>
+      </memberdef>
+      <memberdef kind="function" id="ALF__IO_8c_1af2154141da807745cea3f7f8d647d661" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ALF_printfColoredBlock</definition>
+        <argsstring>(unsigned char character, int withNumber)</argsstring>
+        <name>ALF_printfColoredBlock</name>
+        <param>
+          <type>unsigned char</type>
+          <declname>character</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>withNumber</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/ALF_IO.c" line="46" column="1" bodyfile="src/ALF_IO.c" bodystart="46" bodyend="53"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&quot;<ref refid="ALF__IO_8h" kindref="compound">ALF_IO.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<ref refid="ALF__IO_8c_1adc74e291352847d6d64a43b891c57c73" kindref="member">ALF_raw_input</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*outMessage){</highlight></codeline>
+<codeline lineno="4"><highlight class="normal"><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;%s&quot;</highlight><highlight class="normal">,<sp/>outMessage);</highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>inSize<sp/>=<sp/>32;</highlight></codeline>
+<codeline lineno="7"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*inData<sp/>=<sp/>malloc(</highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal">)*inSize);</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(!fgets(inData,<sp/>inSize,<sp/>stdin)){<sp/></highlight><highlight class="comment">//<sp/>No<sp/>se<sp/>pudo<sp/>leer</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>free(inData);</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>NULL;</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>len<sp/>=<sp/>strlen(inData);</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(inData[len-1]<sp/>==<sp/></highlight><highlight class="charliteral">&apos;\n&apos;</highlight><highlight class="normal">){<sp/></highlight><highlight class="comment">//<sp/>String<sp/>completo</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>inData[len-1]<sp/>=<sp/></highlight><highlight class="charliteral">&apos;\0&apos;</highlight><highlight class="normal">;<sp/></highlight><highlight class="comment">//<sp/>Eliminando<sp/>el<sp/>salto<sp/>de<sp/>linea</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>inData<sp/>=<sp/>realloc(inData,<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal">)*len);<sp/></highlight><highlight class="comment">//<sp/>Liberando<sp/>memoria<sp/>no<sp/>necesaria.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>inData;</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal">{<sp/></highlight><highlight class="comment">//<sp/>No<sp/>se<sp/>encontro<sp/>el<sp/>salto<sp/>de<sp/>linea.<sp/>A<sp/>seguir<sp/>leyendo!</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*auxData<sp/>=<sp/>malloc(</highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal">)*inSize*2);<sp/></highlight><highlight class="comment">//<sp/>String<sp/>mas<sp/>grande</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>strcpy(auxData,<sp/>inData);<sp/></highlight><highlight class="comment">//<sp/>Copiando<sp/>datos<sp/>al<sp/>string<sp/>final</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal">(fgets(inData,<sp/>inSize,<sp/>stdin)){<sp/></highlight><highlight class="comment">//<sp/>Lee<sp/>datos<sp/>de<sp/>stdin</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>strcat(auxData,<sp/>inData);<sp/></highlight><highlight class="comment">//<sp/>Se<sp/>concatena<sp/>al<sp/>string<sp/>grande</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>len<sp/>=<sp/>strlen(auxData);</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(auxData[len-1]<sp/>==<sp/></highlight><highlight class="charliteral">&apos;\n&apos;</highlight><highlight class="normal">){<sp/></highlight><highlight class="comment">//<sp/>Revisando<sp/>si<sp/>tenemos<sp/>toodo<sp/>el<sp/>string</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>auxData[len-1]<sp/>=<sp/></highlight><highlight class="charliteral">&apos;\0&apos;</highlight><highlight class="normal">;<sp/></highlight><highlight class="comment">//<sp/>Elimina<sp/>salto<sp/>de<sp/>linea</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>free(inData);</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>auxData<sp/>=<sp/>realloc(auxData,<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal">)*len);<sp/></highlight><highlight class="comment">//<sp/>Liberando<sp/>memoria<sp/>no<sp/>necesaria.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>auxData;<sp/></highlight><highlight class="comment">//<sp/>Yay!</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>auxData<sp/>=<sp/>realloc(auxData,<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal">)*(len<sp/>+<sp/>inSize));<sp/></highlight><highlight class="comment">//String<sp/>mas<sp/>grande!</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>free(inData);</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>free(auxData);</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>NULL;<sp/></highlight><highlight class="comment">//<sp/>En<sp/>caso<sp/>de<sp/>error</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="37"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="ALF__IO_8c_1a9b05afd3abc63c8699de02a8edcad61f" kindref="member">ALF_puthex</ref>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>character){</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(character<sp/>&lt;<sp/>0x10){</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;0&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;%x&quot;</highlight><highlight class="normal">,<sp/>character);</highlight></codeline>
+<codeline lineno="44"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="ALF__IO_8c_1af2154141da807745cea3f7f8d647d661" kindref="member">ALF_printfColoredBlock</ref>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>character,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>withNumber){</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(withNumber){</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;\033[%im%i<sp/>&quot;</highlight><highlight class="normal"><sp/><ref refid="ALF__IO_8h_1a0f3fc340b9d3d253c43cb8a1ae4178ab" kindref="member">ALF_ANSI_COLOR_RESET</ref>,<sp/>character<sp/>+<sp/>40,<sp/>character);</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;\033[%im<sp/><sp/>&quot;</highlight><highlight class="normal"><sp/><ref refid="ALF__IO_8h_1a0f3fc340b9d3d253c43cb8a1ae4178ab" kindref="member">ALF_ANSI_COLOR_RESET</ref>,<sp/>character<sp/>+<sp/>40);</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="53"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="src/ALF_IO.c"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,75 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="ALF__bool_8c" kind="file" language="C++">
+    <compoundname>ALF_bool.c</compoundname>
+    <includes refid="ALF__bool_8h" local="yes">ALF_bool.h</includes>
+    <incdepgraph>
+      <node id="222">
+        <label>ALF_common.h</label>
+        <link refid="ALF__common_8h"/>
+      </node>
+      <node id="220">
+        <label>src/ALF_bool.c</label>
+        <link refid="ALF_bool.c"/>
+        <childnode refid="221" relation="include">
+        </childnode>
+      </node>
+      <node id="221">
+        <label>ALF_bool.h</label>
+        <link refid="ALF__bool_8h"/>
+        <childnode refid="222" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="ALF__bool_8c_1a98a19863e0262cf1bc6c33ade7e63431" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="ALF__bool_8h_1af6a258d8f3ee5206d682d799316314b1" kindref="member">bool</ref></type>
+        <definition>bool ALF_true</definition>
+        <argsstring>(void)</argsstring>
+        <name>ALF_true</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/ALF_bool.c" line="3" column="1" bodyfile="src/ALF_bool.c" bodystart="3" bodyend="5"/>
+      </memberdef>
+      <memberdef kind="function" id="ALF__bool_8c_1a0f92c8dcf8ba67b694938f6919fba1ae" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="ALF__bool_8h_1af6a258d8f3ee5206d682d799316314b1" kindref="member">bool</ref></type>
+        <definition>bool ALF_false</definition>
+        <argsstring>(void)</argsstring>
+        <name>ALF_false</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/ALF_bool.c" line="7" column="1" bodyfile="src/ALF_bool.c" bodystart="7" bodyend="9"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&quot;<ref refid="ALF__bool_8h" kindref="compound">ALF_bool.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="ALF__bool_8c_1a98a19863e0262cf1bc6c33ade7e63431" kindref="member">ALF_true</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">){</highlight></codeline>
+<codeline lineno="4"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="5"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="ALF__bool_8c_1a0f92c8dcf8ba67b694938f6919fba1ae" kindref="member">ALF_false</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">){</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="9"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="src/ALF_bool.c"/>
+  </compounddef>
+</doxygen>

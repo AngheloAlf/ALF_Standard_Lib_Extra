@@ -1,0 +1,478 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="ALF__OS_8h" kind="file" language="C++">
+    <compoundname>ALF_OS.h</compoundname>
+    <includes refid="ALF__common_8h" local="yes">ALF_common.h</includes>
+    <includedby refid="ALF__OS_8c" local="yes">src/ALF_OS.c</includedby>
+    <includedby refid="ALF__std_8h" local="yes">include/ALF_std.h</includedby>
+    <incdepgraph>
+      <node id="187">
+        <label>ALF_common.h</label>
+        <link refid="ALF__common_8h"/>
+      </node>
+      <node id="186">
+        <label>include/ALF_OS.h</label>
+        <link refid="ALF_OS.h"/>
+        <childnode refid="187" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="189">
+        <label>src/ALF_OS.c</label>
+        <link refid="ALF__OS_8c"/>
+      </node>
+      <node id="188">
+        <label>include/ALF_OS.h</label>
+        <link refid="ALF_OS.h"/>
+        <childnode refid="189" relation="include">
+        </childnode>
+        <childnode refid="190" relation="include">
+        </childnode>
+      </node>
+      <node id="190">
+        <label>include/ALF_std.h</label>
+        <link refid="ALF__std_8h"/>
+      </node>
+    </invincdepgraph>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="ALF__OS_8h_1a29c81074f96495b7e674e27499fabb57" prot="public" static="no">
+        <name>ALF_OS_major_version</name>
+        <initializer>(1)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ALF_OS.h" line="14" column="9" bodyfile="include/ALF_OS.h" bodystart="14" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="ALF__OS_8h_1ae05413203b799d61acec5ab6e5de7daa" prot="public" static="no">
+        <name>ALF_OS_minor_version</name>
+        <initializer>(0)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ALF_OS.h" line="15" column="9" bodyfile="include/ALF_OS.h" bodystart="15" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="ALF__OS_8h_1a4860ef2f358f7a206ccad45ff1a7a475" prot="public" static="no">
+        <name>ALF_OS_patch_version</name>
+        <initializer>(0)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ALF_OS.h" line="16" column="9" bodyfile="include/ALF_OS.h" bodystart="16" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="ALF__OS_8h_1a69bf4ac402f231d317ce473fd8fdc2fe" prot="public" static="no">
+        <name>ALF_OS_version</name>
+        <initializer>(<ref refid="ALF__OS_8h_1ae05413203b799d61acec5ab6e5de7daa" kindref="member">ALF_OS_major_version.ALF_OS_minor_version</ref>)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ALF_OS.h" line="17" column="9" bodyfile="include/ALF_OS.h" bodystart="17" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="ALF__OS_8h_1a5712128228a8849f946ad0a2dc641ac9" prot="public" static="no">
+        <name>ALF_OS_version_str</name>
+        <initializer>(<ref refid="ALF__common_8h_1ac8dcedbd61f9ec05e6284411a6bf646a" kindref="member">ALF_STR</ref>(<ref refid="ALF__OS_8h_1a29c81074f96495b7e674e27499fabb57" kindref="member">ALF_OS_major_version</ref>)&quot;.&quot;<ref refid="ALF__common_8h_1ac8dcedbd61f9ec05e6284411a6bf646a" kindref="member">ALF_STR</ref>(<ref refid="ALF__OS_8h_1ae05413203b799d61acec5ab6e5de7daa" kindref="member">ALF_OS_minor_version</ref>)&quot;.&quot;<ref refid="ALF__common_8h_1ac8dcedbd61f9ec05e6284411a6bf646a" kindref="member">ALF_STR</ref>(<ref refid="ALF__OS_8h_1a4860ef2f358f7a206ccad45ff1a7a475" kindref="member">ALF_OS_patch_version</ref>))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ALF_OS.h" line="18" column="9" bodyfile="include/ALF_OS.h" bodystart="18" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="ALF__OS_8h_1ac91bab94715fab9a9e292be875f5f885" prot="public" static="no">
+        <name>ALF_isMac</name>
+        <param></param>
+        <initializer><ref refid="ALF__OS_8h_1a6bc1be8b569f23983df74028b601f615" kindref="member">ALF_isOSX</ref>()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ALF_OS.h" line="22" column="9" bodyfile="include/ALF_OS.h" bodystart="22" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="ALF__OS_8h_1a7696665f6f1335b44d8fe4a404527d60" prot="public" static="no">
+        <name>ALF_isIphone</name>
+        <param></param>
+        <initializer><ref refid="ALF__OS_8h_1a5de464f6434bf6126d2f790c01ff6285" kindref="member">ALF_isIOS</ref>()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ALF_OS.h" line="36" column="9" bodyfile="include/ALF_OS.h" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="ALF__OS_8h_1afe3aff0a229fc0334ae4feeefc208535" prot="public" static="no">
+        <name>ALF_isIphoneSimulator</name>
+        <param></param>
+        <initializer><ref refid="ALF__OS_8h_1acf5f74eeb34a4d4a681d23d9b438748a" kindref="member">ALF_isIOSSimulator</ref>()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ALF_OS.h" line="38" column="9" bodyfile="include/ALF_OS.h" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="ALF__OS_8h_1a6e1118b7231c8bcbb587f1f19b3c4704" prot="public" static="no">
+        <name>ALF_isMACOther</name>
+        <param></param>
+        <initializer><ref refid="ALF__OS_8h_1a8acd523707ab064898afd953128b79a5" kindref="member">ALF_isOSXOther</ref>()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ALF_OS.h" line="40" column="9" bodyfile="include/ALF_OS.h" bodystart="40" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="ALF__OS_8h_1ac3aabc6ca82687aea9b215201e72e19c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>char</type>
+        <definition>char ALF_isWindows</definition>
+        <argsstring>(void)</argsstring>
+        <name>ALF_isWindows</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ALF_OS.h" line="20" column="1" bodyfile="src/ALF_OS.c" bodystart="7" bodyend="13"/>
+      </memberdef>
+      <memberdef kind="function" id="ALF__OS_8h_1a6bc1be8b569f23983df74028b601f615" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>char</type>
+        <definition>char ALF_isOSX</definition>
+        <argsstring>(void)</argsstring>
+        <name>ALF_isOSX</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ALF_OS.h" line="21" column="1" bodyfile="src/ALF_OS.c" bodystart="14" bodyend="20"/>
+      </memberdef>
+      <memberdef kind="function" id="ALF__OS_8h_1a63ad832a05d0398903fe1a4eadb73dd1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>char</type>
+        <definition>char ALF_isLinux</definition>
+        <argsstring>(void)</argsstring>
+        <name>ALF_isLinux</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ALF_OS.h" line="23" column="1" bodyfile="src/ALF_OS.c" bodystart="21" bodyend="27"/>
+      </memberdef>
+      <memberdef kind="function" id="ALF__OS_8h_1acf26f72ecb4ecdd27a206ec35877a315" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>char</type>
+        <definition>char ALF_isWindows32</definition>
+        <argsstring>(void)</argsstring>
+        <name>ALF_isWindows32</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ALF_OS.h" line="25" column="1" bodyfile="src/ALF_OS.c" bodystart="29" bodyend="35"/>
+      </memberdef>
+      <memberdef kind="function" id="ALF__OS_8h_1a789c881bee38049aa2b72e7ab816d02a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>char</type>
+        <definition>char ALF_isWindows64</definition>
+        <argsstring>(void)</argsstring>
+        <name>ALF_isWindows64</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ALF_OS.h" line="26" column="1" bodyfile="src/ALF_OS.c" bodystart="36" bodyend="42"/>
+      </memberdef>
+      <memberdef kind="function" id="ALF__OS_8h_1a0f5b9008d84b99f1233a30d1f064cdcc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>char</type>
+        <definition>char ALF_isUnix</definition>
+        <argsstring>(void)</argsstring>
+        <name>ALF_isUnix</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ALF_OS.h" line="28" column="1" bodyfile="src/ALF_OS.c" bodystart="44" bodyend="50"/>
+      </memberdef>
+      <memberdef kind="function" id="ALF__OS_8h_1a620cbe089d0b3954afd6d088447033c3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>char</type>
+        <definition>char ALF_isUnixOther</definition>
+        <argsstring>(void)</argsstring>
+        <name>ALF_isUnixOther</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ALF_OS.h" line="29" column="1" bodyfile="src/ALF_OS.c" bodystart="51" bodyend="61"/>
+      </memberdef>
+      <memberdef kind="function" id="ALF__OS_8h_1a63be7a22b89efb5f2e8676b850d85e66" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>char</type>
+        <definition>char ALF_isPosix</definition>
+        <argsstring>(void)</argsstring>
+        <name>ALF_isPosix</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ALF_OS.h" line="31" column="1" bodyfile="src/ALF_OS.c" bodystart="63" bodyend="69"/>
+      </memberdef>
+      <memberdef kind="function" id="ALF__OS_8h_1af79985de7b31fd20e4b5baaa0162271f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>char</type>
+        <definition>char ALF_isAndroid</definition>
+        <argsstring>(void)</argsstring>
+        <name>ALF_isAndroid</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ALF_OS.h" line="33" column="1" bodyfile="src/ALF_OS.c" bodystart="71" bodyend="77"/>
+      </memberdef>
+      <memberdef kind="function" id="ALF__OS_8h_1a5de464f6434bf6126d2f790c01ff6285" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>char</type>
+        <definition>char ALF_isIOS</definition>
+        <argsstring>(void)</argsstring>
+        <name>ALF_isIOS</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ALF_OS.h" line="35" column="1" bodyfile="src/ALF_OS.c" bodystart="79" bodyend="85"/>
+      </memberdef>
+      <memberdef kind="function" id="ALF__OS_8h_1acf5f74eeb34a4d4a681d23d9b438748a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>char</type>
+        <definition>char ALF_isIOSSimulator</definition>
+        <argsstring>(void)</argsstring>
+        <name>ALF_isIOSSimulator</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ALF_OS.h" line="37" column="1" bodyfile="src/ALF_OS.c" bodystart="86" bodyend="92"/>
+      </memberdef>
+      <memberdef kind="function" id="ALF__OS_8h_1a8acd523707ab064898afd953128b79a5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>char</type>
+        <definition>char ALF_isOSXOther</definition>
+        <argsstring>(void)</argsstring>
+        <name>ALF_isOSXOther</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ALF_OS.h" line="39" column="1" bodyfile="src/ALF_OS.c" bodystart="94" bodyend="100"/>
+      </memberdef>
+      <memberdef kind="function" id="ALF__OS_8h_1ad56e00ee02e1678488c879379b00cb11" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>char</type>
+        <definition>char ALF_isAppleOther</definition>
+        <argsstring>(void)</argsstring>
+        <name>ALF_isAppleOther</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ALF_OS.h" line="41" column="1" bodyfile="src/ALF_OS.c" bodystart="101" bodyend="107"/>
+      </memberdef>
+      <memberdef kind="function" id="ALF__OS_8h_1a2d24648f128d22e21115cc313d2cb708" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>char</type>
+        <definition>char ALF_isFreeBSD</definition>
+        <argsstring>(void)</argsstring>
+        <name>ALF_isFreeBSD</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ALF_OS.h" line="43" column="1" bodyfile="src/ALF_OS.c" bodystart="109" bodyend="115"/>
+      </memberdef>
+      <memberdef kind="function" id="ALF__OS_8h_1a633f4cdcacf06c71047293cfeb1b44bc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>char</type>
+        <definition>char ALF_isOther</definition>
+        <argsstring>(void)</argsstring>
+        <name>ALF_isOther</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Detects the not detected by this library. </para>        </briefdescription>
+        <detaileddescription>
+<para>Returns 1 only if none of the others are detected by this library. 0 Otherwise. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ALF_OS.h" line="50" column="1" bodyfile="src/ALF_OS.c" bodystart="117" bodyend="123"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>A Operative System detector using the defined macros. This library tries to detect differents operative systems using the macros defined by the compiler. Any of the function return non-zero if at compile time detected it was compiled on the system it think it is. 0 Otherwise. Some macros are implemented, so the caller can use any of them by any name. </para>    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"></codeline>
+<codeline lineno="9"><highlight class="preprocessor">#ifndef<sp/>ALF_OS_h</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ALF_OS_h</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="ALF__common_8h" kindref="compound">ALF_common.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14" refid="ALF__OS_8h_1a29c81074f96495b7e674e27499fabb57" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ALF_OS_major_version<sp/>(1)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15" refid="ALF__OS_8h_1ae05413203b799d61acec5ab6e5de7daa" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ALF_OS_minor_version<sp/>(0)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16" refid="ALF__OS_8h_1a4860ef2f358f7a206ccad45ff1a7a475" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ALF_OS_patch_version<sp/>(0)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17" refid="ALF__OS_8h_1a69bf4ac402f231d317ce473fd8fdc2fe" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ALF_OS_version<sp/>(ALF_OS_major_version.ALF_OS_minor_version)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18" refid="ALF__OS_8h_1a5712128228a8849f946ad0a2dc641ac9" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ALF_OS_version_str<sp/>(ALF_STR(ALF_OS_major_version)&quot;.&quot;ALF_STR(ALF_OS_minor_version)&quot;.&quot;ALF_STR(ALF_OS_patch_version))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/><ref refid="ALF__OS_8h_1ac3aabc6ca82687aea9b215201e72e19c" kindref="member">ALF_isWindows</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/><ref refid="ALF__OS_8h_1a6bc1be8b569f23983df74028b601f615" kindref="member">ALF_isOSX</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="22" refid="ALF__OS_8h_1ac91bab94715fab9a9e292be875f5f885" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ALF_isMac()<sp/>ALF_isOSX()</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/><ref refid="ALF__OS_8h_1a63ad832a05d0398903fe1a4eadb73dd1" kindref="member">ALF_isLinux</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/><ref refid="ALF__OS_8h_1acf26f72ecb4ecdd27a206ec35877a315" kindref="member">ALF_isWindows32</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/><ref refid="ALF__OS_8h_1a789c881bee38049aa2b72e7ab816d02a" kindref="member">ALF_isWindows64</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/><ref refid="ALF__OS_8h_1a0f5b9008d84b99f1233a30d1f064cdcc" kindref="member">ALF_isUnix</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/><ref refid="ALF__OS_8h_1a620cbe089d0b3954afd6d088447033c3" kindref="member">ALF_isUnixOther</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/><ref refid="ALF__OS_8h_1a63be7a22b89efb5f2e8676b850d85e66" kindref="member">ALF_isPosix</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/><ref refid="ALF__OS_8h_1af79985de7b31fd20e4b5baaa0162271f" kindref="member">ALF_isAndroid</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/><ref refid="ALF__OS_8h_1a5de464f6434bf6126d2f790c01ff6285" kindref="member">ALF_isIOS</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="36" refid="ALF__OS_8h_1a7696665f6f1335b44d8fe4a404527d60" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ALF_isIphone()<sp/>ALF_isIOS()</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/><ref refid="ALF__OS_8h_1acf5f74eeb34a4d4a681d23d9b438748a" kindref="member">ALF_isIOSSimulator</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="38" refid="ALF__OS_8h_1afe3aff0a229fc0334ae4feeefc208535" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ALF_isIphoneSimulator()<sp/>ALF_isIOSSimulator()</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/><ref refid="ALF__OS_8h_1a8acd523707ab064898afd953128b79a5" kindref="member">ALF_isOSXOther</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="40" refid="ALF__OS_8h_1a6e1118b7231c8bcbb587f1f19b3c4704" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ALF_isMACOther()<sp/>ALF_isOSXOther()</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/><ref refid="ALF__OS_8h_1ad56e00ee02e1678488c879379b00cb11" kindref="member">ALF_isAppleOther</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/><ref refid="ALF__OS_8h_1a2d24648f128d22e21115cc313d2cb708" kindref="member">ALF_isFreeBSD</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"></codeline>
+<codeline lineno="50"><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/><ref refid="ALF__OS_8h_1a633f4cdcacf06c71047293cfeb1b44bc" kindref="member">ALF_isOther</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>OS<sp/>DETECTOR<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="54"><highlight class="comment">#ifdef<sp/>__WIN32__</highlight></codeline>
+<codeline lineno="55"><highlight class="comment"><sp/><sp/><sp/><sp/>//define<sp/>something<sp/>for<sp/>Windows<sp/>(32-bit<sp/>and<sp/>64-bit,<sp/>this<sp/>part<sp/>is<sp/>common)</highlight></codeline>
+<codeline lineno="56"><highlight class="comment"><sp/><sp/><sp/><sp/>#include<sp/>&lt;windows.h&gt;</highlight></codeline>
+<codeline lineno="57"><highlight class="comment"><sp/><sp/><sp/><sp/>//<sp/>#include<sp/>&lt;winbase.h&gt;</highlight></codeline>
+<codeline lineno="58"><highlight class="comment"><sp/><sp/><sp/><sp/>//<sp/>#include<sp/>&lt;windef.h&gt;</highlight></codeline>
+<codeline lineno="59"><highlight class="comment"></highlight></codeline>
+<codeline lineno="60"><highlight class="comment"><sp/><sp/><sp/><sp/>#ifdef<sp/>__WIN64__</highlight></codeline>
+<codeline lineno="61"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>//define<sp/>something<sp/>for<sp/>Windows<sp/>(64-bit<sp/>only)</highlight></codeline>
+<codeline lineno="62"><highlight class="comment"><sp/><sp/><sp/><sp/>#else</highlight></codeline>
+<codeline lineno="63"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>//define<sp/>something<sp/>for<sp/>Windows<sp/>(32-bit<sp/>only)</highlight></codeline>
+<codeline lineno="64"><highlight class="comment"><sp/><sp/><sp/><sp/>#endif</highlight></codeline>
+<codeline lineno="65"><highlight class="comment"></highlight></codeline>
+<codeline lineno="66"><highlight class="comment">#elif<sp/>__unix__<sp/></highlight></codeline>
+<codeline lineno="67"><highlight class="comment"><sp/><sp/><sp/><sp/>//<sp/>Unix</highlight></codeline>
+<codeline lineno="68"><highlight class="comment"></highlight></codeline>
+<codeline lineno="69"><highlight class="comment"><sp/><sp/><sp/><sp/>#if<sp/>__APPLE__</highlight></codeline>
+<codeline lineno="70"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>#include<sp/>&quot;TargetConditionals.h&quot;</highlight></codeline>
+<codeline lineno="71"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>#if<sp/>TARGET_IPHONE_SIMULATOR</highlight></codeline>
+<codeline lineno="72"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>//<sp/>iOS<sp/>Simulator</highlight></codeline>
+<codeline lineno="73"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>#elif<sp/>TARGET_OS_IPHONE</highlight></codeline>
+<codeline lineno="74"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>//<sp/>iOS<sp/>device</highlight></codeline>
+<codeline lineno="75"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>#elif<sp/>TARGET_OS_MAC</highlight></codeline>
+<codeline lineno="76"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>//<sp/>Other<sp/>kinds<sp/>of<sp/>Mac<sp/>OS</highlight></codeline>
+<codeline lineno="77"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>#else</highlight></codeline>
+<codeline lineno="78"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>#error<sp/>&quot;Unknown<sp/>Apple<sp/>platform&quot;</highlight></codeline>
+<codeline lineno="79"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>#endif</highlight></codeline>
+<codeline lineno="80"><highlight class="comment"><sp/><sp/><sp/><sp/>#elif<sp/>defined(__ANDROID__)</highlight></codeline>
+<codeline lineno="81"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>//<sp/>Android</highlight></codeline>
+<codeline lineno="82"><highlight class="comment"><sp/><sp/><sp/><sp/>#elif<sp/>__linux__</highlight></codeline>
+<codeline lineno="83"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>//<sp/>linux</highlight></codeline>
+<codeline lineno="84"><highlight class="comment"></highlight></codeline>
+<codeline lineno="85"><highlight class="comment"><sp/><sp/><sp/><sp/>#include<sp/>&lt;unistd.h&gt;</highlight></codeline>
+<codeline lineno="86"><highlight class="comment"><sp/><sp/><sp/><sp/>#elif<sp/>defined(_POSIX_VERSION)</highlight></codeline>
+<codeline lineno="87"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>//<sp/>POSIX</highlight></codeline>
+<codeline lineno="88"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>#error<sp/>&quot;Supported?&quot;</highlight></codeline>
+<codeline lineno="89"><highlight class="comment"></highlight></codeline>
+<codeline lineno="90"><highlight class="comment"><sp/><sp/><sp/><sp/>#endif</highlight></codeline>
+<codeline lineno="91"><highlight class="comment">#else</highlight></codeline>
+<codeline lineno="92"><highlight class="comment"><sp/><sp/><sp/><sp/>#error<sp/>&quot;Unknown<sp/>compiler&quot;</highlight></codeline>
+<codeline lineno="93"><highlight class="comment">#endif</highlight></codeline>
+<codeline lineno="94"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="95"><highlight class="normal"></highlight></codeline>
+<codeline lineno="96"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>ALF_OS_h<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+    </programlisting>
+    <location file="include/ALF_OS.h"/>
+  </compounddef>
+</doxygen>

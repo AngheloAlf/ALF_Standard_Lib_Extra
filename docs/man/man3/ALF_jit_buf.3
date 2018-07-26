@@ -1,0 +1,35 @@
+.TH "ALF_jit_buf" 3 "Wed Jul 18 2018" "Version 1.0" "ALF Standard Lib" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+ALF_jit_buf \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <ALF_jit\&.h>\fP
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "uint64_t \fBposition\fP"
+.br
+.ti -1c
+.RI "uint8_t \fBstate\fP"
+.br
+.ti -1c
+.RI "uint8_t * \fBcode\fP"
+.br
+.in -1c
+.SH "Member Data Documentation"
+.PP 
+.SS "uint8_t* ALF_jit_buf::code"
+
+.SS "uint64_t ALF_jit_buf::position"
+
+.SS "uint8_t ALF_jit_buf::state"
+Posible states: 0x0: Normal\&. Data can be inserted\&. 0x1: Ready for execution\&. 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for ALF Standard Lib from the source code\&.

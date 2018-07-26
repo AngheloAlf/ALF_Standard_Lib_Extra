@@ -1,0 +1,52 @@
+.TH "include/ALF_common.h" 3 "Wed Jul 18 2018" "Version 1.0" "ALF Standard Lib" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+include/ALF_common.h \- 
+.SH SYNOPSIS
+.br
+.PP
+.SS "Macros"
+
+.in +1c
+.ti -1c
+.RI "#define \fB_ALF_STR\fP(x)   #x"
+.br
+.ti -1c
+.RI "#define \fBALF_STR\fP(x)   \fB_ALF_STR\fP(x)"
+.br
+.ti -1c
+.RI "#define \fBALF_common_major_version\fP   (1)"
+.br
+.ti -1c
+.RI "#define \fBALF_common_minor_version\fP   (0)"
+.br
+.ti -1c
+.RI "#define \fBALF_common_patch_version\fP   (0)"
+.br
+.ti -1c
+.RI "#define \fBALF_common_version\fP   (\fBALF_common_major_version\&.ALF_common_minor_version\fP)"
+.br
+.ti -1c
+.RI "#define \fBALF_common_version_str\fP   (\fBALF_STR\fP(\fBALF_common_major_version\fP)'\&.'\fBALF_STR\fP(\fBALF_common_minor_version\fP)'\&.'\fBALF_STR\fP(\fBALF_common_patch_version\fP))"
+.br
+.in -1c
+.SH "Macro Definition Documentation"
+.PP 
+.SS "#define _ALF_STR(x)   #x"
+
+.SS "#define ALF_common_major_version   (1)"
+
+.SS "#define ALF_common_minor_version   (0)"
+
+.SS "#define ALF_common_patch_version   (0)"
+
+.SS "#define ALF_common_version   (\fBALF_common_major_version\&.ALF_common_minor_version\fP)"
+
+.SS "#define ALF_common_version_str   (\fBALF_STR\fP(\fBALF_common_major_version\fP)'\&.'\fBALF_STR\fP(\fBALF_common_minor_version\fP)'\&.'\fBALF_STR\fP(\fBALF_common_patch_version\fP))"
+
+.SS "#define ALF_STR(x)   \fB_ALF_STR\fP(x)"
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for ALF Standard Lib from the source code\&.

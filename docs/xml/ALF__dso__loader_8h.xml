@@ -1,0 +1,253 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="ALF__dso__loader_8h" kind="file" language="C++">
+    <compoundname>ALF_dso_loader.h</compoundname>
+    <includes refid="ALF__common_8h" local="yes">ALF_common.h</includes>
+    <includes local="no">stdlib.h</includes>
+    <includes local="no">string.h</includes>
+    <includes local="no">dlfcn.h</includes>
+    <includedby refid="ALF__dso__loader_8c" local="yes">src/extra/ALF_dso_loader.c</includedby>
+    <includedby refid="ALF__std__extra_8h" local="yes">include/ALF_std_extra.h</includedby>
+    <incdepgraph>
+      <node id="164">
+        <label>stdlib.h</label>
+      </node>
+      <node id="162">
+        <label>include/ALF_dso_loader.h</label>
+        <link refid="ALF_dso_loader.h"/>
+        <childnode refid="163" relation="include">
+        </childnode>
+        <childnode refid="164" relation="include">
+        </childnode>
+        <childnode refid="165" relation="include">
+        </childnode>
+        <childnode refid="166" relation="include">
+        </childnode>
+      </node>
+      <node id="163">
+        <label>ALF_common.h</label>
+        <link refid="ALF__common_8h"/>
+      </node>
+      <node id="165">
+        <label>string.h</label>
+      </node>
+      <node id="166">
+        <label>dlfcn.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="168">
+        <label>src/extra/ALF_dso_loader.c</label>
+        <link refid="ALF__dso__loader_8c"/>
+      </node>
+      <node id="167">
+        <label>include/ALF_dso_loader.h</label>
+        <link refid="ALF_dso_loader.h"/>
+        <childnode refid="168" relation="include">
+        </childnode>
+        <childnode refid="169" relation="include">
+        </childnode>
+      </node>
+      <node id="169">
+        <label>include/ALF_std_extra.h</label>
+        <link refid="ALF__std__extra_8h"/>
+      </node>
+    </invincdepgraph>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="ALF__dso__loader_8h_1a422472d3ebc611e2c17d265918c88cc4" prot="public" static="no">
+        <name>ALF_dso_loader_major_version</name>
+        <initializer>(1)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ALF_dso_loader.h" line="6" column="9" bodyfile="include/ALF_dso_loader.h" bodystart="6" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="ALF__dso__loader_8h_1a01bd04ce43e995665620a7b13f71b32f" prot="public" static="no">
+        <name>ALF_dso_loader_minor_version</name>
+        <initializer>(0)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ALF_dso_loader.h" line="7" column="9" bodyfile="include/ALF_dso_loader.h" bodystart="7" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="ALF__dso__loader_8h_1ada46db06c52bb3a6b1eb01a36cc31b44" prot="public" static="no">
+        <name>ALF_dso_loader_patch_version</name>
+        <initializer>(0)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ALF_dso_loader.h" line="8" column="9" bodyfile="include/ALF_dso_loader.h" bodystart="8" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="ALF__dso__loader_8h_1a8e1e7883c4e2bc19675ffbdd3e5ef1c4" prot="public" static="no">
+        <name>ALF_dso_loader_version</name>
+        <initializer>(<ref refid="ALF__dso__loader_8h_1a01bd04ce43e995665620a7b13f71b32f" kindref="member">ALF_dso_loader_major_version.ALF_dso_loader_minor_version</ref>)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ALF_dso_loader.h" line="9" column="9" bodyfile="include/ALF_dso_loader.h" bodystart="9" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="ALF__dso__loader_8h_1a82b5eaedcd56a0a085b7d879c2459bd3" prot="public" static="no">
+        <name>ALF_dso_loader_version_str</name>
+        <initializer>(<ref refid="ALF__common_8h_1ac8dcedbd61f9ec05e6284411a6bf646a" kindref="member">ALF_STR</ref>(<ref refid="ALF__dso__loader_8h_1a422472d3ebc611e2c17d265918c88cc4" kindref="member">ALF_dso_loader_major_version</ref>)&quot;.&quot;<ref refid="ALF__common_8h_1ac8dcedbd61f9ec05e6284411a6bf646a" kindref="member">ALF_STR</ref>(<ref refid="ALF__dso__loader_8h_1a01bd04ce43e995665620a7b13f71b32f" kindref="member">ALF_dso_loader_minor_version</ref>)&quot;.&quot;<ref refid="ALF__common_8h_1ac8dcedbd61f9ec05e6284411a6bf646a" kindref="member">ALF_STR</ref>(<ref refid="ALF__dso__loader_8h_1ada46db06c52bb3a6b1eb01a36cc31b44" kindref="member">ALF_dso_loader_patch_version</ref>))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ALF_dso_loader.h" line="10" column="9" bodyfile="include/ALF_dso_loader.h" bodystart="10" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="ALF__dso__loader_8h_1af3792a64fee3466efa5b2191f6ddafa0" prot="public" static="no">
+        <type>void *</type>
+        <definition>typedef void* ALF_DSO_handl</definition>
+        <argsstring></argsstring>
+        <name>ALF_DSO_handl</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ALF_dso_loader.h" line="21" column="1" bodyfile="include/ALF_dso_loader.h" bodystart="21" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="ALF__dso__loader_8h_1ac117ba90b55b08361002d8608b15d3a5" prot="public" static="no">
+        <type>void *</type>
+        <definition>typedef void* ALF_DSO_func</definition>
+        <argsstring></argsstring>
+        <name>ALF_DSO_func</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ALF_dso_loader.h" line="22" column="1" bodyfile="include/ALF_dso_loader.h" bodystart="22" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="ALF__dso__loader_8h_1ae1b435a5149e0b88cddcdee460e4ecbf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="ALF__dso__loader_8h_1af3792a64fee3466efa5b2191f6ddafa0" kindref="member">ALF_DSO_handl</ref></type>
+        <definition>ALF_DSO_handl ALF_DSO_load_file</definition>
+        <argsstring>(const char *file)</argsstring>
+        <name>ALF_DSO_load_file</name>
+        <param>
+          <type>const char *</type>
+          <declname>file</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ALF_dso_loader.h" line="25" column="1" bodyfile="src/extra/ALF_dso_loader.c" bodystart="4" bodyend="12"/>
+      </memberdef>
+      <memberdef kind="function" id="ALF__dso__loader_8h_1aa0b2033f4210c48d0573c4c7a3cd498b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="ALF__dso__loader_8h_1ac117ba90b55b08361002d8608b15d3a5" kindref="member">ALF_DSO_func</ref></type>
+        <definition>ALF_DSO_func ALF_DSO_load_function</definition>
+        <argsstring>(ALF_DSO_handl handler, const char *function)</argsstring>
+        <name>ALF_DSO_load_function</name>
+        <param>
+          <type><ref refid="ALF__dso__loader_8h_1af3792a64fee3466efa5b2191f6ddafa0" kindref="member">ALF_DSO_handl</ref></type>
+          <declname>handler</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>function</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ALF_dso_loader.h" line="26" column="1" bodyfile="src/extra/ALF_dso_loader.c" bodystart="14" bodyend="22"/>
+      </memberdef>
+      <memberdef kind="function" id="ALF__dso__loader_8h_1aed8b2aba3c4f1d914a1edd73cf617fb1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int ALF_DSO_close_file</definition>
+        <argsstring>(ALF_DSO_handl handler)</argsstring>
+        <name>ALF_DSO_close_file</name>
+        <param>
+          <type><ref refid="ALF__dso__loader_8h_1af3792a64fee3466efa5b2191f6ddafa0" kindref="member">ALF_DSO_handl</ref></type>
+          <declname>handler</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ALF_dso_loader.h" line="27" column="1" bodyfile="src/extra/ALF_dso_loader.c" bodystart="24" bodyend="32"/>
+      </memberdef>
+      <memberdef kind="function" id="ALF__dso__loader_8h_1a9e56afd91fd7a6e49ed84066a8a53500" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>char *</type>
+        <definition>char* ALF_DSO_get_last_error</definition>
+        <argsstring>(void)</argsstring>
+        <name>ALF_DSO_get_last_error</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ALF_dso_loader.h" line="28" column="1" bodyfile="src/extra/ALF_dso_loader.c" bodystart="34" bodyend="47"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>ALF_dso_loader_h</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ALF_dso_loader_h</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="ALF__common_8h" kindref="compound">ALF_common.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6" refid="ALF__dso__loader_8h_1a422472d3ebc611e2c17d265918c88cc4" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ALF_dso_loader_major_version<sp/>(1)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7" refid="ALF__dso__loader_8h_1a01bd04ce43e995665620a7b13f71b32f" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ALF_dso_loader_minor_version<sp/>(0)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8" refid="ALF__dso__loader_8h_1ada46db06c52bb3a6b1eb01a36cc31b44" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ALF_dso_loader_patch_version<sp/>(0)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9" refid="ALF__dso__loader_8h_1a8e1e7883c4e2bc19675ffbdd3e5ef1c4" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ALF_dso_loader_version<sp/>(ALF_dso_loader_major_version.ALF_dso_loader_minor_version)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10" refid="ALF__dso__loader_8h_1a82b5eaedcd56a0a085b7d879c2459bd3" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ALF_dso_loader_version_str<sp/>(ALF_STR(ALF_dso_loader_major_version)&quot;.&quot;ALF_STR(ALF_dso_loader_minor_version)&quot;.&quot;ALF_STR(ALF_dso_loader_patch_version))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdlib.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;string.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>_WIN32</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="preprocessor">#<sp/><sp/><sp/>include<sp/>&lt;windows.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="preprocessor">#else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="preprocessor">#<sp/><sp/><sp/>include<sp/>&lt;dlfcn.h&gt;</highlight><highlight class="normal"><sp/></highlight><highlight class="comment">//<sp/>DSO<sp/>library</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21" refid="ALF__dso__loader_8h_1af3792a64fee3466efa5b2191f6ddafa0" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/><ref refid="ALF__dso__loader_8h_1af3792a64fee3466efa5b2191f6ddafa0" kindref="member">ALF_DSO_handl</ref>;</highlight></codeline>
+<codeline lineno="22" refid="ALF__dso__loader_8h_1ac117ba90b55b08361002d8608b15d3a5" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/><ref refid="ALF__dso__loader_8h_1ac117ba90b55b08361002d8608b15d3a5" kindref="member">ALF_DSO_func</ref>;</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><ref refid="ALF__dso__loader_8h_1af3792a64fee3466efa5b2191f6ddafa0" kindref="member">ALF_DSO_handl</ref><sp/><ref refid="ALF__dso__loader_8h_1ae1b435a5149e0b88cddcdee460e4ecbf" kindref="member">ALF_DSO_load_file</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*file);</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><ref refid="ALF__dso__loader_8h_1ac117ba90b55b08361002d8608b15d3a5" kindref="member">ALF_DSO_func</ref><sp/><ref refid="ALF__dso__loader_8h_1aa0b2033f4210c48d0573c4c7a3cd498b" kindref="member">ALF_DSO_load_function</ref>(<ref refid="ALF__dso__loader_8h_1af3792a64fee3466efa5b2191f6ddafa0" kindref="member">ALF_DSO_handl</ref><sp/>handler,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*</highlight><highlight class="keyword">function</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="ALF__dso__loader_8h_1aed8b2aba3c4f1d914a1edd73cf617fb1" kindref="member">ALF_DSO_close_file</ref>(<ref refid="ALF__dso__loader_8h_1af3792a64fee3466efa5b2191f6ddafa0" kindref="member">ALF_DSO_handl</ref><sp/>handler);</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<ref refid="ALF__dso__loader_8h_1a9e56afd91fd7a6e49ed84066a8a53500" kindref="member">ALF_DSO_get_last_error</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>ALF_dso_loader_h<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+    </programlisting>
+    <location file="include/ALF_dso_loader.h"/>
+  </compounddef>
+</doxygen>

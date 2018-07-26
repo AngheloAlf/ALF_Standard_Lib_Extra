@@ -1,0 +1,42 @@
+digraph "include/ALF_std.h"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="include/ALF_std.h",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid"];
+  Node2 [label="ALF_common.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$ALF__common_8h.html"];
+  Node1 -> Node3 [color="midnightblue",fontsize="10",style="solid"];
+  Node3 [label="ALF_bool.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$ALF__bool_8h.html"];
+  Node3 -> Node2 [color="midnightblue",fontsize="10",style="solid"];
+  Node1 -> Node4 [color="midnightblue",fontsize="10",style="solid"];
+  Node4 [label="ALF_dict.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$ALF__dict_8h.html"];
+  Node4 -> Node2 [color="midnightblue",fontsize="10",style="solid"];
+  Node4 -> Node5 [color="midnightblue",fontsize="10",style="solid"];
+  Node5 [label="stdlib.h",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node4 -> Node6 [color="midnightblue",fontsize="10",style="solid"];
+  Node6 [label="string.h",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node1 -> Node7 [color="midnightblue",fontsize="10",style="solid"];
+  Node7 [label="ALF_IO.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$ALF__IO_8h.html"];
+  Node7 -> Node2 [color="midnightblue",fontsize="10",style="solid"];
+  Node7 -> Node6 [color="midnightblue",fontsize="10",style="solid"];
+  Node7 -> Node5 [color="midnightblue",fontsize="10",style="solid"];
+  Node7 -> Node8 [color="midnightblue",fontsize="10",style="solid"];
+  Node8 [label="stdio.h",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node1 -> Node9 [color="midnightblue",fontsize="10",style="solid"];
+  Node9 [label="ALF_str.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$ALF__str_8h.html"];
+  Node9 -> Node2 [color="midnightblue",fontsize="10",style="solid"];
+  Node9 -> Node5 [color="midnightblue",fontsize="10",style="solid"];
+  Node9 -> Node6 [color="midnightblue",fontsize="10",style="solid"];
+  Node1 -> Node10 [color="midnightblue",fontsize="10",style="solid"];
+  Node10 [label="ALF_jit.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$ALF__jit_8h.html"];
+  Node10 -> Node2 [color="midnightblue",fontsize="10",style="solid"];
+  Node10 -> Node11 [color="midnightblue",fontsize="10",style="solid"];
+  Node11 [label="stdint.h",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node10 -> Node12 [color="midnightblue",fontsize="10",style="solid"];
+  Node12 [label="unistd.h",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node10 -> Node13 [color="midnightblue",fontsize="10",style="solid"];
+  Node13 [label="sys/mman.h",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node1 -> Node14 [color="midnightblue",fontsize="10",style="solid"];
+  Node14 [label="ALF_OS.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$ALF__OS_8h.html"];
+  Node14 -> Node2 [color="midnightblue",fontsize="10",style="solid"];
+}

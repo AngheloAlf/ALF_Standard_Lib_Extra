@@ -1,0 +1,199 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="ALF__str_8c" kind="file" language="C++">
+    <compoundname>ALF_str.c</compoundname>
+    <includes refid="ALF__str_8h" local="yes">ALF_str.h</includes>
+    <incdepgraph>
+      <node id="253">
+        <label>stdlib.h</label>
+      </node>
+      <node id="251">
+        <label>ALF_str.h</label>
+        <link refid="ALF__str_8h"/>
+        <childnode refid="252" relation="include">
+        </childnode>
+        <childnode refid="253" relation="include">
+        </childnode>
+        <childnode refid="254" relation="include">
+        </childnode>
+      </node>
+      <node id="250">
+        <label>src/ALF_str.c</label>
+        <link refid="ALF_str.c"/>
+        <childnode refid="251" relation="include">
+        </childnode>
+      </node>
+      <node id="252">
+        <label>ALF_common.h</label>
+        <link refid="ALF__common_8h"/>
+      </node>
+      <node id="254">
+        <label>string.h</label>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="ALF__str_8c_1afedba9b74fed7ee54e793acd664efad5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>char **</type>
+        <definition>char** ALF_split</definition>
+        <argsstring>(char *string, char *delimiters)</argsstring>
+        <name>ALF_split</name>
+        <param>
+          <type>char *</type>
+          <declname>string</declname>
+        </param>
+        <param>
+          <type>char *</type>
+          <declname>delimiters</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/ALF_str.c" line="3" column="1" bodyfile="src/ALF_str.c" bodystart="3" bodyend="14"/>
+      </memberdef>
+      <memberdef kind="function" id="ALF__str_8c_1a7a88a1c47ef4d52250aa69ec115e1b93" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ALF_charCopy</definition>
+        <argsstring>(unsigned char *dst, const unsigned char *src, size_t size)</argsstring>
+        <name>ALF_charCopy</name>
+        <param>
+          <type>unsigned char *</type>
+          <declname>dst</declname>
+        </param>
+        <param>
+          <type>const unsigned char *</type>
+          <declname>src</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/ALF_str.c" line="16" column="1" bodyfile="src/ALF_str.c" bodystart="16" bodyend="20"/>
+      </memberdef>
+      <memberdef kind="function" id="ALF__str_8c_1a932315cc22b5cf39ca4e2d87b3e6675c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>unsigned char *</type>
+        <definition>unsigned char* ALF_newCharFromIndex</definition>
+        <argsstring>(const unsigned char *src, size_t size, size_t start)</argsstring>
+        <name>ALF_newCharFromIndex</name>
+        <param>
+          <type>const unsigned char *</type>
+          <declname>src</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>size</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>start</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/ALF_str.c" line="22" column="1" bodyfile="src/ALF_str.c" bodystart="22" bodyend="28"/>
+      </memberdef>
+      <memberdef kind="function" id="ALF__str_8c_1a53a799bbb9946fbc756629cf7ac24121" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>char *</type>
+        <definition>char* ALF_changeExtension</definition>
+        <argsstring>(const char *word, const char *newExt, int lenExt)</argsstring>
+        <name>ALF_changeExtension</name>
+        <param>
+          <type>const char *</type>
+          <declname>word</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>newExt</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>lenExt</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/ALF_str.c" line="30" column="1" bodyfile="src/ALF_str.c" bodystart="30" bodyend="59"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&quot;<ref refid="ALF__str_8h" kindref="compound">ALF_str.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>**<ref refid="ALF__str_8c_1afedba9b74fed7ee54e793acd664efad5" kindref="member">ALF_split</ref>(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*</highlight><highlight class="keywordtype">string</highlight><highlight class="normal">,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*delimiters){</highlight></codeline>
+<codeline lineno="4"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>**splitted<sp/>=<sp/>malloc(</highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*));</highlight></codeline>
+<codeline lineno="5"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*token<sp/>=<sp/>strtok(</highlight><highlight class="keywordtype">string</highlight><highlight class="normal">,<sp/>delimiters);</highlight></codeline>
+<codeline lineno="6"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="7"><highlight class="normal"><sp/><sp/><sp/><sp/>splitted[i++]<sp/>=<sp/>token;</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal">(token<sp/>!=<sp/>NULL){</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>splitted<sp/>=<sp/>realloc(splitted,<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*)<sp/>*<sp/>(i<sp/>+<sp/>1));</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>token<sp/>=<sp/>strtok(NULL,<sp/>delimiters);</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>splitted[i++]<sp/>=<sp/>token;</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>splitted;</highlight></codeline>
+<codeline lineno="14"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="ALF__str_8c_1a7a88a1c47ef4d52250aa69ec115e1b93" kindref="member">ALF_charCopy</ref>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>dst,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>src,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>size){</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>size;<sp/>i++){</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>dst[i]<sp/>=<sp/>src[i];</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="20"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<ref refid="ALF__str_8c_1a932315cc22b5cf39ca4e2d87b3e6675c" kindref="member">ALF_newCharFromIndex</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>src,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>size,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>start){</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>dst<sp/>=<sp/>malloc(</highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">));</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>size;<sp/>i++){</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>dst[i]<sp/>=<sp/>src[start<sp/>+<sp/>i];</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>dst;</highlight></codeline>
+<codeline lineno="28"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/><ref refid="ALF__str_8c_1a53a799bbb9946fbc756629cf7ac24121" kindref="member">ALF_changeExtension</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>word,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>newExt,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>lenExt){</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>oldLen<sp/>=<sp/>0,<sp/>lastDotLen<sp/>=<sp/>0,<sp/>lenChange<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>newWord;</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>word[i]!=<sp/>0x0;<sp/>i++){</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(word[i]<sp/>==<sp/></highlight><highlight class="charliteral">&apos;.&apos;</highlight><highlight class="normal">){</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>lastDotLen<sp/>=<sp/>i;</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>oldLen<sp/>+=<sp/>1;</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(lastDotLen<sp/>!=<sp/>0){</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>lenChange<sp/>=<sp/>lastDotLen;</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>lenChange<sp/>=<sp/>oldLen;</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/>newWord<sp/>=<sp/>malloc(</highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal">)*(lenChange<sp/>+<sp/>lenExt<sp/>+<sp/>2));</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>lenChange;<sp/>i++){</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>newWord[i]<sp/>=<sp/>word[i];</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/>newWord[lenChange]<sp/>=<sp/></highlight><highlight class="charliteral">&apos;.&apos;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>lenExt;<sp/>i++){</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>newWord[lenChange<sp/>+<sp/>i<sp/>+<sp/>1]<sp/>=<sp/>newExt[i];</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/>newWord[lenChange<sp/>+<sp/>lenExt<sp/>+<sp/>1]<sp/>=<sp/>0x0;</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>newWord;</highlight></codeline>
+<codeline lineno="59"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="src/ALF_str.c"/>
+  </compounddef>
+</doxygen>

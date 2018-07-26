@@ -26,7 +26,7 @@ FOLDERS		= $(OBJ_DIR) $(OUT_DIR) $(TESTS_OUT)
 RM_FOLDERS	= $(OBJ_DIR) $(OUT_DIR)
 
 # Compiler
-CC			= gcc
+CC			= @gcc
 LANG_EXT	= c
 HEADER_EXT	= h
 OBJ_EXT		= o

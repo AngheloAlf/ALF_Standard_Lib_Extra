@@ -118,7 +118,7 @@ make_objects: makefolders $(OBJ_O)
 
 make_debug_objects: makefolders
 	$(ECHO) "Making objects"
-	$(CC) -c $(SRC_DIR)$(PATH_SEPARATOR)*.$(LANG_EXT) -o $(OUT_DIR)$(PATH_SEPARATOR)*.$(OBJ_EXT) $(FLAGS) $(DEBUG_FLAG)
+	$(CC) -c $(SRC_DIR)$(PATH_SEPARATOR)*.$(LANG_EXT) $(FLAGS) $(DEBUG_FLAG)
 	$(ECHO) "->Moving files"
 	$(MOVE) *.$(OBJ_EXT) $(OBJ_DIR)$(PATH_SEPARATOR)
 	$(ECHO) "\tObjects done\n"
